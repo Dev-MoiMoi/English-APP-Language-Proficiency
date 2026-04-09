@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Headphones, ChevronLeft, CheckCircle, XCircle, ExternalLink, Send, Mail, RotateCcw } from 'lucide-react';
+import { Headphones, ChevronLeft, CheckCircle, XCircle, Send, Mail, RotateCcw } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { LISTENING_DATA } from '../data/listeningData';
@@ -87,10 +87,10 @@ export default function ListeningModule() {
             <h2 style={{ fontSize:'1.3rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{lesson.title}</h2>
             <p style={{ color:'var(--text-secondary)', marginBottom:20, lineHeight:1.7 }}>{lesson.description}</p>
 
-            {/* Audio link */}
-            <div style={{ background:'#f3e5f5', borderRadius:12, padding:'16px 20px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:12 }}>
+            {/* Audio Player */}
+            <div style={{ background:'#f3e5f5', borderRadius:12, padding:'20px', display:'flex', flexDirection:'column', gap:16 }}>
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ width:48, height:48, borderRadius:'50%', background:'var(--listening)', display:'flex', alignItems:'center', justifyContent:'center' }}>
+                <div style={{ width:48, height:48, borderRadius:'50%', background:'var(--listening)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink: 0 }}>
                   <Headphones size={22} color="white" />
                 </div>
                 <div>
@@ -98,13 +98,14 @@ export default function ListeningModule() {
                   <div style={{ fontSize:'0.85rem', color:'var(--text-secondary)' }}>{data.audioNote}</div>
                 </div>
               </div>
-              <a href={data.audioUrl} target="_blank" rel="noopener noreferrer"
-                style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 18px', borderRadius:999,
-                  background:'var(--listening)', color:'white', fontWeight:600, fontSize:'0.9rem', textDecoration:'none', transition:'opacity 0.2s' }}
-                onMouseEnter={e=>e.currentTarget.style.opacity='0.85'}
-                onMouseLeave={e=>e.currentTarget.style.opacity='1'}>
-                <ExternalLink size={16} /> Open Audio
-              </a>
+              
+              <audio 
+                controls 
+                src={lesson.audioFile} 
+                style={{ width: '100%', height: '40px', outline: 'none' }} 
+              >
+                Your browser does not support the audio element.
+              </audio>
             </div>
           </div>
 
