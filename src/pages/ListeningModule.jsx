@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Headphones, ChevronLeft, CheckCircle, XCircle, Send, Mail, RotateCcw } from 'lucide-react';
+import { Headphones, ChevronLeft, CheckCircle, XCircle, Send, Mail, RotateCcw, PartyPopper } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { LISTENING_DATA } from '../data/listeningData';
@@ -159,10 +159,10 @@ export default function ListeningModule() {
                     <div style={{ fontSize:'1.3rem', fontWeight:700, color:'#388e3c' }}>
                       Score: {score} / {lesson.questions.length}
                     </div>
-                    <div style={{ color:'#555', fontSize:'0.9rem' }}>
-                      {score===lesson.questions.length ? '🎉 Perfect score!' :
-                       score>=lesson.questions.length*0.7 ? '✅ Great job! Review any incorrect answers.' :
-                       '🎧 Try listening again and re-answering the questions.'}
+                    <div style={{ color:'#555', fontSize:'0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      {score===lesson.questions.length ? <><PartyPopper size={16} /> Perfect score!</> :
+                       score>=lesson.questions.length*0.7 ? <><CheckCircle size={16} /> Great job! Review any incorrect answers.</> :
+                       <><Headphones size={16} /> Try listening again and re-answering the questions.</>}
                     </div>
                   </div>
                 </div>

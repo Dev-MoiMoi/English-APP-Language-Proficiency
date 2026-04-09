@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, ChevronLeft, CheckCircle, XCircle, Mail, Send, RotateCcw } from 'lucide-react';
+import { BookOpen, ChevronLeft, CheckCircle, XCircle, Mail, Send, RotateCcw, PartyPopper } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { READING_DATA } from '../data/readingData';
@@ -156,10 +156,10 @@ export default function ReadingModule() {
                     <div style={{ fontSize:'1.3rem', fontWeight:700, color:'#388e3c' }}>
                       Score: {score} / {story.questions.length}
                     </div>
-                    <div style={{ color:'#555', fontSize:'0.9rem' }}>
-                      {score === story.questions.length ? '🎉 Perfect score! Excellent work!' :
-                       score >= story.questions.length * 0.7 ? '✅ Great job! Review the incorrect answers above.' :
-                       '📚 Keep practicing! Read the passage again carefully.'}
+                    <div style={{ color:'#555', fontSize:'0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      {score === story.questions.length ? <><PartyPopper size={16} /> Perfect score! Excellent work!</> :
+                       score >= story.questions.length * 0.7 ? <><CheckCircle size={16} /> Great job! Review the incorrect answers above.</> :
+                       <><BookOpen size={16} /> Keep practicing! Read the passage again carefully.</>}
                     </div>
                   </div>
                 </div>

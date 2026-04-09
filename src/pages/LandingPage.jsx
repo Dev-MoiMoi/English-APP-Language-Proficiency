@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Headphones, Mic, BookOpen, Edit3, ChevronRight, CheckCircle, Shield, Mail } from 'lucide-react';
+import { Headphones, Mic, BookOpen, Edit3, ChevronRight, CheckCircle, Shield, Mail, Target, BarChart2, CheckCircle2, RotateCcw, GraduationCap } from 'lucide-react';
 import LevelSelectorModal from '../components/LevelSelectorModal';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -9,7 +9,7 @@ const SKILLS = [
   {
     id: 'listening',
     label: 'Listening',
-    icon: '🎧',
+    icon: <Headphones size={36} />,
     color: '#7B1FA2',
     colorLight: '#F3E5F5',
     path: '/listening',
@@ -19,7 +19,7 @@ const SKILLS = [
   {
     id: 'speaking',
     label: 'Speaking',
-    icon: '🎙️',
+    icon: <Mic size={36} />,
     color: '#F57C00',
     colorLight: '#FFF3E0',
     path: '/speaking',
@@ -29,7 +29,7 @@ const SKILLS = [
   {
     id: 'reading',
     label: 'Reading',
-    icon: '📖',
+    icon: <BookOpen size={36} />,
     color: '#1976D2',
     colorLight: '#E3F2FD',
     path: '/reading',
@@ -39,7 +39,7 @@ const SKILLS = [
   {
     id: 'writing',
     label: 'Writing',
-    icon: '✍️',
+    icon: <Edit3 size={36} />,
     color: '#388E3C',
     colorLight: '#E8F5E9',
     path: '/writing',
@@ -60,25 +60,25 @@ const LEVELS = [
 const HOW_TO_STEPS = [
   {
     num: 1,
-    icon: '🎯',
+    icon: <Target size={24} color="white" />,
     title: 'Choose a Skill',
     desc: 'Select one of the four macro skills: Listening, Speaking, Reading, or Writing. Each skill targets a specific area of English communication.',
   },
   {
     num: 2,
-    icon: '📊',
+    icon: <BarChart2 size={24} color="white" />,
     title: 'Pick Your Level',
     desc: 'Choose your CEFR level (A1–C2) based on your current English ability. The content will automatically adapt to your selected level.',
   },
   {
     num: 3,
-    icon: '✅',
+    icon: <CheckCircle2 size={24} color="white" />,
     title: 'Complete the Tasks',
     desc: 'Follow the instructions and complete the activities provided. Each task is designed to build your skills step by step.',
   },
   {
     num: 4,
-    icon: '🔄',
+    icon: <RotateCcw size={24} color="white" />,
     title: 'Practice Regularly',
     desc: 'Repeat tasks and try different levels to improve your confidence and accuracy. Consistent practice leads to better results.',
   },
@@ -101,8 +101,8 @@ export default function LandingPage() {
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="hero-badge">
-            🇵🇭 &nbsp;Designed for Filipino Students &nbsp;·&nbsp; CEFR A1–C2
+          <div className="hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <GraduationCap size={16} /> Designed for Filipino Students &nbsp;·&nbsp; CEFR A1–C2
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '32px', gap: '20px' }}>

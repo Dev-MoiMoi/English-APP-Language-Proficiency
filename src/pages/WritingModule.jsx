@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { PenLine, ChevronLeft, CheckCircle, Send, Mail, RotateCcw } from 'lucide-react';
+import { Edit3, ChevronLeft, CheckCircle, Send, Mail, RotateCcw, Sparkles } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { WRITING_DATA } from '../data/writingData';
@@ -141,7 +141,7 @@ export default function WritingModule() {
 
               {/* AI Feedback simulation */}
               <div style={{ background:'#fff8e1', border:'1px solid #ffd54f', borderRadius:12, padding:'18px 22px', marginBottom:20 }}>
-                <p style={{ fontWeight:700, color:'#f57c00', marginBottom:8, fontSize:'0.95rem' }}>✦ AI Feedback (Simulated)</p>
+                <p style={{ fontWeight:700, color:'#f57c00', marginBottom:8, fontSize:'0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}><Sparkles size={16} /> AI Feedback (Simulated)</p>
                 <p style={{ color:'#555', fontSize:'0.9rem', lineHeight:1.7 }}>
                   Your writing shows effort and ideas. Focus on: using varied vocabulary, clear paragraph structure, and appropriate connectors (however, furthermore, in conclusion). 
                   Review grammar for tense consistency and subject-verb agreement to improve your overall score.

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Mic, ChevronLeft, Square, Play, RotateCcw, Send, Mail, CheckCircle } from 'lucide-react';
+import { Mic, ChevronLeft, Square, Play, RotateCcw, Send, Mail, CheckCircle, Sparkles } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { SPEAKING_DATA } from '../data/speakingData';
@@ -185,7 +185,7 @@ export default function SpeakingModule() {
 
               {/* AI Feedback */}
               <div style={{ background:'#fff8e1', border:'1px solid #ffd54f', borderRadius:12, padding:'18px 22px', marginBottom:20 }}>
-                <p style={{ fontWeight:700, color:'#f57c00', marginBottom:8, fontSize:'0.95rem' }}>✦ AI Feedback (Simulated)</p>
+                <p style={{ fontWeight:700, color:'#f57c00', marginBottom:8, fontSize:'0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}><Sparkles size={16} /> AI Feedback (Simulated)</p>
                 <p style={{ color:'#555', fontSize:'0.9rem', lineHeight:1.7 }}>
                   Focus on: clear pronunciation of key words, natural pausing between ideas, and using topic-specific vocabulary. 
                   Try to avoid long silences and use connectors like "firstly", "in addition", and "to conclude" to structure your speech.
