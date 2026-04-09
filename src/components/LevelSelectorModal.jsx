@@ -1,67 +1,83 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { X } from 'lucide-react';
 
-const levels = [
-  { id: 'A1', label: 'Beginner', desc: 'Can understand basic phrases.' },
-  { id: 'A2', label: 'Elementary', desc: 'Can communicate in simple routine tasks.' },
-  { id: 'B1', label: 'Intermediate', desc: 'Can deal with most travel situations.' },
-  { id: 'B2', label: 'Upper-Intermediate', desc: 'Can understand complex text.' },
-  { id: 'C1', label: 'Advanced', desc: 'Can express ideas fluently.' },
-  { id: 'C2', label: 'Proficient', desc: 'Can understand almost everything.' }
+const LEVELS = [
+  { code: 'A1', name: 'Beginner',          desc: 'Basic words and phrases' },
+  { code: 'A2', name: 'Elementary',        desc: 'Simple everyday topics' },
+  { code: 'B1', name: 'Intermediate',      desc: 'Clear, familiar topics' },
+  { code: 'B2', name: 'Upper-Intermediate',desc: 'Complex texts and ideas' },
+  { code: 'C1', name: 'Advanced',          desc: 'Fluent and flexible' },
+  { code: 'C2', name: 'Proficient',        desc: 'Near-native mastery' },
 ];
 
-export default function LevelSelectorModal({ onSelect, onSkip }) {
-  const [selected, setSelected] = useState(null);
+export default function LevelSelectorModal({ skill, skillPath, accentColor, onClose }) {
+  const [selected, setSelected] = useState('B1');
+  const navigate = useNavigate();
+
+  const handleConfirm = () => {
+    navigate(`${skillPath}?level=${selected}`);
+    onClose();
+  };
 
   return (
-    <div className="modal-overlay">
-      <div className="card" style={{ maxWidth: '600px', width: '90%', maxHeight: '90vh', overflowY: 'auto' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '8px', color: 'var(--primary)' }}>Choose your English level</h2>
-        <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '24px' }}>
-          Select your CEFR proficiency level to personalize your learning experience.
-        </p>
+    <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
+      <div className="modal-box">
+        {/* Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+          <div>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: '700', marginBottom: '4px' }}>
+              Choose Your English Level
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>
+              Select the level that best matches your current ability
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            style={{
+              padding: '6px', borderRadius: '8px', color: 'var(--text-muted)',
+              transition: 'all 0.2s', flexShrink: 0
+            }}
+          >
+            <X size={20} />
+          </button>
+        </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-          {levels.map(lvl => (
-            <button 
-              key={lvl.id}
-              onClick={() => setSelected(lvl.id)}
-              style={{
-                border: `2px solid ${selected === lvl.id ? 'var(--primary)' : 'var(--border)'}`,
-                borderRadius: 'var(--radius-md)',
-                padding: '16px',
-                textAlign: 'left',
-                background: selected === lvl.id ? 'var(--primary-light)' : 'var(--surface)',
-                color: selected === lvl.id ? 'white' : 'var(--text-main)',
-                transition: 'all 0.2s',
-                cursor: 'pointer'
-              }}
+        {/* Skill Context */}
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: '8px',
+          background: `${accentColor}22`, border: `1px solid ${accentColor}44`,
+          borderRadius: 'var(--radius-full)', padding: '4px 14px',
+          fontSize: '0.8rem', fontWeight: '600', color: accentColor,
+          marginBottom: '4px'
+        }}>
+          Skill: {skill}
+        </div>
+
+        {/* Level Grid */}
+        <div className="level-grid">
+          {LEVELS.map((lvl) => (
+            <div
+              key={lvl.code}
+              className={`level-card ${selected === lvl.code ? 'selected' : ''}`}
+              onClick={() => setSelected(lvl.code)}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                <span style={{ 
-                  fontWeight: 'bold', 
-                  fontSize: '1.25rem',
-                  color: selected === lvl.id ? 'white' : 'var(--primary)'
-                }}>{lvl.id}</span>
-                <span style={{ fontWeight: '600' }}>{lvl.label}</span>
-              </div>
-              <p style={{ fontSize: '0.875rem', opacity: 0.9, margin: 0 }}>{lvl.desc}</p>
-            </button>
+              <div className="level-card-badge" style={{ marginBottom: '8px' }}>{lvl.code}</div>
+              <div className="level-card-name" style={{ marginBottom: '6px', fontSize: '1rem' }}>{lvl.name}</div>
+              <div className="level-card-desc" style={{ lineHeight: '1.4', fontSize: '0.85rem' }}>{lvl.desc}</div>
+            </div>
           ))}
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', marginTop: '32px' }}>
-          <button 
-            className="btn-primary" 
-            style={{ width: '100%', maxWidth: '300px' }}
-            disabled={!selected}
-            onClick={() => selected && onSelect(selected)}
-          >
-            Confirm Level
-          </button>
-          <button onClick={onSkip} style={{ color: 'var(--text-muted)', textDecoration: 'underline', fontSize: '0.875rem' }}>
-            Skip for now
-          </button>
-        </div>
+        {/* Confirm Button */}
+        <button
+          className="btn btn-primary"
+          style={{ width: '100%', justifyContent: 'center', fontSize: '0.95rem', padding: '13px' }}
+          onClick={handleConfirm}
+        >
+          Confirm Level — {selected}
+        </button>
       </div>
     </div>
   );

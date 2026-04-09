@@ -1,48 +1,34 @@
-import { Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import { Sparkles, RefreshCw } from 'lucide-react';
 
-export default function AIFeedbackCard({ score, feedbackText, suggestions, onTryAgain }) {
+export default function AIFeedbackCard({ feedback, onTryAgain, accentColor = 'var(--primary)' }) {
   return (
     <div className="ai-feedback-card">
-      <div style={{ flexShrink: 0, marginTop: '2px' }}>
-        <Sparkles size={24} color="var(--primary)" />
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+        <span className="ai-badge">
+          <Sparkles size={12} />
+          AI Feedback
+        </span>
+        <button
+          onClick={onTryAgain}
+          className="btn"
+          style={{
+            padding: '6px 16px',
+            fontSize: '0.82rem',
+            background: 'white',
+            border: `2px solid ${accentColor}`,
+            color: accentColor,
+            borderRadius: 'var(--radius-full)',
+            gap: '6px'
+          }}
+        >
+          <RefreshCw size={13} />
+          Try Again
+        </button>
       </div>
-      <div style={{ flex: 1 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-          <span className="ai-feedback-badge">
-            AI Feedback
-          </span>
-          {score && (
-            <span style={{ fontWeight: 'bold', color: 'var(--primary)' }}>
-              Score: {score}
-            </span>
-          )}
-        </div>
-        
-        <p style={{ marginBottom: '16px', color: 'var(--text-main)' }}>
-          {feedbackText}
-        </p>
-        
-        {suggestions && suggestions.length > 0 && (
-          <div style={{ 
-            background: 'var(--accent-ai)', 
-            padding: '12px', 
-            borderRadius: 'var(--radius-md)',
-            marginBottom: '16px'
-          }}>
-            <h4 style={{ marginBottom: '8px', fontSize: '0.875rem' }}>Suggestions for improvement:</h4>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.875rem', color: 'var(--text-main)', margin: 0 }}>
-              {suggestions.map((suggestion, idx) => (
-                <li key={idx} style={{ marginBottom: '4px' }}>{suggestion}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        
-        {onTryAgain && (
-          <button className="btn-outline" onClick={onTryAgain}>
-            Try Again
-          </button>
-        )}
+
+      <div style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+        {feedback}
       </div>
     </div>
   );

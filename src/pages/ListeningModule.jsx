@@ -1,129 +1,194 @@
-import { useState } from 'react';
-import { ArrowLeft, Play, Pause } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import AIFeedbackCard from '../components/AIFeedbackCard';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Headphones, ChevronLeft, CheckCircle, XCircle, ExternalLink, Send, Mail, RotateCcw } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { LISTENING_DATA } from '../data/listeningData';
+
+const VALID_LEVELS = ['A1','A2','B1','B2','C1','C2'];
 
 export default function ListeningModule() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const urlLevel = new URLSearchParams(location.search).get('level');
 
-  // Mock audio player logic
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-    if (!isPlaying && progress < 100) {
-      // Simulate progress
-      const interval = setInterval(() => {
-        setProgress(p => {
-          if (p >= 100) {
-            clearInterval(interval);
-            setIsPlaying(false);
-            return 100;
-          }
-          return p + 5;
-        });
-      }, 500);
-      // store interval conceptually
+  const [level, setLevel] = useState(() =>
+    VALID_LEVELS.includes(urlLevel) ? urlLevel : null
+  );
+  const [lessonIdx, setLessonIdx] = useState(0);
+  const [answers, setAnswers] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState('');
+  const [sent, setSent] = useState(false);
+
+  useEffect(() => {
+    if (VALID_LEVELS.includes(urlLevel)) {
+      setLevel(urlLevel); setLessonIdx(0); setAnswers({}); setSubmitted(false); setSent(false);
     }
-  };
+  }, [urlLevel]);
+
+  const data = level ? LISTENING_DATA[level] : null;
+  const lesson = data ? data.lessons[lessonIdx] : null;
+
+  const score = lesson ? lesson.answerKey.reduce((acc, correct, i) =>
+    answers[i] === correct ? acc+1 : acc, 0) : 0;
+
+  const handleAnswer = (qi, ai) => { if (!submitted) setAnswers(prev=>({...prev,[qi]:ai})); };
 
   const handleSubmit = () => {
-    if (selectedAnswer !== null) setSubmitted(true);
+    if (Object.keys(answers).length < lesson.questions.length) {
+      alert('Please answer all questions before submitting.'); return;
+    }
+    setSubmitted(true);
   };
 
+  const handleReset = () => { setAnswers({}); setSubmitted(false); };
+  const handleSend = () => { if (!email) { alert('Please enter your email.'); return; } setSent(true); };
+
+  if (!level) {
+    navigate('/', { replace: true });
+    return null;
+  }
+
   return (
-    <div style={{ padding: '40px 24px', backgroundColor: 'var(--bg)', minHeight: 'calc(100vh - 140px)' }}>
-      <div className="container" style={{ maxWidth: '800px' }}>
-        <Link to="/dashboard" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px', color: 'var(--text-muted)' }}>
-          <ArrowLeft size={20} /> Back to Dashboard
-        </Link>
-        
-        <div style={{ marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <h1 style={{ margin: 0, color: 'var(--accent-listening)' }}>Listening Practice</h1>
-          <span style={{ background: 'var(--accent-listening-light)', color: 'var(--accent-listening)', padding: '4px 12px', borderRadius: 'var(--radius-full)', fontSize: '0.875rem', fontWeight: 'bold' }}>Level B1</span>
-        </div>
-
-        {/* Audio Player Card */}
-        <div className="card" style={{ marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <button 
-            onClick={togglePlay}
-            style={{ 
-              background: 'var(--accent-listening)', 
-              color: 'white', 
-              width: '56px', height: '56px', 
-              borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0
-            }}
-          >
-            {isPlaying ? <Pause fill="white" size={24} /> : <Play fill="white" size={24} style={{ marginLeft: '4px' }}/>}
-          </button>
-          
-          <div style={{ flex: 1 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '0.875rem', color: 'var(--text-muted)' }}>
-              <span>Conversation at a cafe</span>
-              <span>0:15 / 1:30</span>
-            </div>
-            <div style={{ height: '8px', background: 'var(--border)', borderRadius: 'var(--radius-full)', overflow: 'hidden', cursor: 'pointer' }}>
-              <div style={{ width: `${progress}%`, height: '100%', background: 'var(--accent-listening)', transition: 'width 0.2s' }}></div>
-            </div>
+    <>
+      <Navbar />
+      <div className="min-h-screen" style={{ background:'var(--bg-secondary)', paddingTop:'80px' }}>
+        <div className="container" style={{ padding:'40px 20px', maxWidth:900 }}>
+          {/* Header */}
+          <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:24 }}>
+            <button className="btn-ghost" onClick={() => navigate('/')} style={{ display:'flex', alignItems:'center', gap:6 }}>
+              <ChevronLeft size={16} /> Back to Home
+            </button>
+            <span style={{ color:'var(--text-muted)' }}>/</span>
+            <span className="skill-badge skill-badge-listening">{data.levelLabel}</span>
           </div>
-        </div>
 
-        {/* Quiz Section */}
-        <div className="card">
-          <h3 style={{ marginBottom: '16px' }}>Comprehension Question</h3>
-          <p style={{ marginBottom: '16px', fontWeight: '500' }}>What does the customer order?</p>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
-            {['A black coffee and a muffin', 'A cappuccino and a croissant', 'An iced latte', 'Tea with milk'].map((option, idx) => (
-              <label 
-                key={idx} 
-                style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '12px', 
-                  padding: '16px', 
-                  border: `2px solid ${selectedAnswer === idx ? 'var(--accent-listening)' : 'var(--border)'}`,
-                  borderRadius: 'var(--radius-md)',
-                  cursor: 'pointer',
-                  background: selectedAnswer === idx ? 'var(--accent-listening-light)' : 'transparent',
-                  transition: 'all 0.2s'
-                }}
-              >
-                <input 
-                  type="radio" 
-                  name="listening-q1" 
-                  checked={selectedAnswer === idx}
-                  onChange={() => setSelectedAnswer(idx)}
-                  disabled={submitted}
-                  style={{ width: '20px', height: '20px', accentColor: 'var(--accent-listening)' }}
-                />
-                <span style={{ fontSize: '1.05rem', color: submitted && idx === 1 ? 'var(--accent-listening)' : 'inherit', fontWeight: submitted && idx === 1 ? 'bold' : 'normal' }}>
-                  {option}
-                </span>
-                {submitted && idx === 1 && <span style={{ marginLeft: 'auto', color: 'var(--accent-writing)', fontWeight: 'bold' }}>✓ Correct</span>}
-                {submitted && selectedAnswer === idx && idx !== 1 && <span style={{ marginLeft: 'auto', color: 'red', fontWeight: 'bold' }}>✗ Incorrect</span>}
-              </label>
+          {/* Lesson selector */}
+          <div style={{ display:'flex', gap:12, marginBottom:24, flexWrap:'wrap' }}>
+            {data.lessons.map((l, i) => (
+              <button key={i} onClick={() => { setLessonIdx(i); setAnswers({}); setSubmitted(false); setSent(false); }}
+                style={{ padding:'8px 18px', borderRadius:999, border:`2px solid ${i===lessonIdx?'var(--listening)':'var(--border)'}`,
+                  background: i===lessonIdx ? 'var(--listening)' : 'white',
+                  color: i===lessonIdx ? 'white' : 'var(--text-secondary)',
+                  fontWeight:600, cursor:'pointer', fontSize:'0.85rem', transition:'all 0.2s' }}>
+                {l.title}
+              </button>
             ))}
           </div>
 
-          {!submitted ? (
-            <button className="btn-primary" style={{ background: 'var(--accent-listening)', width: '100%' }} onClick={handleSubmit} disabled={selectedAnswer === null}>
-              Submit Answer
-            </button>
-          ) : (
-            <AIFeedbackCard 
-              score={selectedAnswer === 1 ? "100%" : "0%"}
-              feedbackText={selectedAnswer === 1 
-                ? "Perfect! You correctly heard that the customer requested a cappuccino and a croissant."
-                : "Not quite. Listen carefully around the 0:25 mark where she specifically asks for a cappuccino to go."}
-              onTryAgain={() => { setSubmitted(false); setSelectedAnswer(null); }}
-            />
-          )}
+          {/* Intro */}
+          <div className="card" style={{ marginBottom:24, padding:'20px 24px', borderLeft:'4px solid var(--listening)' }}>
+            <p style={{ color:'var(--text-secondary)', fontSize:'0.95rem', lineHeight:1.7 }}>{data.intro}</p>
+          </div>
+
+          {/* Lesson card */}
+          <div className="card" style={{ marginBottom:28, padding:32 }}>
+            <h2 style={{ fontSize:'1.3rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{lesson.title}</h2>
+            <p style={{ color:'var(--text-secondary)', marginBottom:20, lineHeight:1.7 }}>{lesson.description}</p>
+
+            {/* Audio link */}
+            <div style={{ background:'#f3e5f5', borderRadius:12, padding:'16px 20px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:12 }}>
+              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ width:48, height:48, borderRadius:'50%', background:'var(--listening)', display:'flex', alignItems:'center', justifyContent:'center' }}>
+                  <Headphones size={22} color="white" />
+                </div>
+                <div>
+                  <div style={{ fontWeight:700, color:'var(--text-primary)' }}>Audio Recording</div>
+                  <div style={{ fontSize:'0.85rem', color:'var(--text-secondary)' }}>{data.audioNote}</div>
+                </div>
+              </div>
+              <a href={data.audioUrl} target="_blank" rel="noopener noreferrer"
+                style={{ display:'flex', alignItems:'center', gap:8, padding:'10px 18px', borderRadius:999,
+                  background:'var(--listening)', color:'white', fontWeight:600, fontSize:'0.9rem', textDecoration:'none', transition:'opacity 0.2s' }}
+                onMouseEnter={e=>e.currentTarget.style.opacity='0.85'}
+                onMouseLeave={e=>e.currentTarget.style.opacity='1'}>
+                <ExternalLink size={16} /> Open Audio
+              </a>
+            </div>
+          </div>
+
+          {/* Quiz */}
+          <div className="card" style={{ padding:32, marginBottom:24 }}>
+            <h3 style={{ fontSize:'1.1rem', fontWeight:700, color:'var(--text-primary)', marginBottom:24 }}>
+              Listening Comprehension Questions
+            </h3>
+            {lesson.questions.map((item, qi) => {
+              const selected = answers[qi];
+              const correct = lesson.answerKey[qi];
+              return (
+                <div key={qi} style={{ marginBottom:28, paddingBottom:24, borderBottom: qi < lesson.questions.length-1 ? '1px solid var(--border)' : 'none' }}>
+                  <p style={{ fontWeight:600, color:'var(--text-primary)', marginBottom:12, fontSize:'0.95rem' }}>
+                    {qi+1}. {item.q}
+                  </p>
+                  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                    {item.options.map((opt, ai) => {
+                      let bg='white', border='var(--border)', color='var(--text-secondary)';
+                      if (selected===ai && !submitted) { bg='#f3e5f5'; border='var(--listening)'; color='var(--listening)'; }
+                      if (submitted) {
+                        if (ai===correct) { bg='#e8f5e9'; border='#388e3c'; color='#388e3c'; }
+                        else if (selected===ai) { bg='#ffebee'; border='#d32f2f'; color='#d32f2f'; }
+                      }
+                      return (
+                        <button key={ai} onClick={() => handleAnswer(qi, ai)}
+                          style={{ padding:'12px 16px', borderRadius:10, border:`2px solid ${border}`, background:bg, color,
+                            textAlign:'left', cursor:submitted?'default':'pointer', fontWeight:500, fontSize:'0.88rem',
+                            display:'flex', alignItems:'center', gap:8, transition:'all 0.2s' }}>
+                          <span style={{ fontWeight:700, minWidth:20 }}>{String.fromCharCode(65+ai)}.</span>
+                          {opt}
+                          {submitted && ai===correct && <CheckCircle size={16} color="#388e3c" style={{ marginLeft:'auto' }} />}
+                          {submitted && selected===ai && ai!==correct && <XCircle size={16} color="#d32f2f" style={{ marginLeft:'auto' }} />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+
+            {!submitted ? (
+              <button className="btn-primary" onClick={handleSubmit} style={{ marginTop:8, background:'var(--listening)' }}>
+                Submit Answers
+              </button>
+            ) : (
+              <div>
+                <div style={{ background:'#e8f5e9', borderRadius:12, padding:'20px 24px', marginBottom:20, display:'flex', alignItems:'center', gap:16 }}>
+                  <CheckCircle size={32} color="#388e3c" />
+                  <div>
+                    <div style={{ fontSize:'1.3rem', fontWeight:700, color:'#388e3c' }}>
+                      Score: {score} / {lesson.questions.length}
+                    </div>
+                    <div style={{ color:'#555', fontSize:'0.9rem' }}>
+                      {score===lesson.questions.length ? '🎉 Perfect score!' :
+                       score>=lesson.questions.length*0.7 ? '✅ Great job! Review any incorrect answers.' :
+                       '🎧 Try listening again and re-answering the questions.'}
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center' }}>
+                  <button className="btn-ghost" onClick={handleReset} style={{ display:'flex', alignItems:'center', gap:6 }}>
+                    <RotateCcw size={16} /> Try Again
+                  </button>
+                  {!sent ? (
+                    <div style={{ display:'flex', gap:8, flex:1, minWidth:280 }}>
+                      <input type="email" placeholder="Enter your email" value={email} onChange={e=>setEmail(e.target.value)}
+                        style={{ flex:1, padding:'10px 14px', borderRadius:10, border:'2px solid var(--border)', fontSize:'0.9rem', outline:'none' }} />
+                      <button className="btn-primary" onClick={handleSend} style={{ display:'flex', alignItems:'center', gap:6, background:'var(--listening)', flexShrink:0 }}>
+                        <Send size={16} /> Send
+                      </button>
+                    </div>
+                  ) : (
+                    <div style={{ display:'flex', alignItems:'center', gap:8, color:'#388e3c', fontWeight:600 }}>
+                      <Mail size={18} /> Results sent to {email}!
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
