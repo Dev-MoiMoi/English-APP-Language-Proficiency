@@ -1,8 +1,12 @@
 // ─────────────────────────────────────────────
 // READING MODULE DATA  (from Reading.docx)
 // Each level has: title, intro, stories[], 
-// each story: title, text, questions[], answerKey[]
+// each story: title, text, image, questions[], answerKey[]
 // ─────────────────────────────────────────────
+
+import imgA2 from '../assets/Reading/A2 LEVEL/IMG_9699.PNG';
+import imgB1_1 from '../assets/Reading/B1 LEVEL/IMG_9698.PNG';
+import imgB1_2 from '../assets/Reading/B1 LEVEL/IMG_9700.PNG';
 
 export const READING_DATA = {
   A1: {
@@ -78,6 +82,7 @@ Emma moved away soon after. She does not live alone now. She keeps the lights on
     stories: [
       {
         title: 'Thieves Break Into Downtown Banks',
+        image: imgA2,
         text: `Yesterday afternoon thieves broke into three banks in the centre of Abidjan and escaped with $25 million. This was the biggest robbery in the country's history. Police have not made any comment and the investigation is still ongoing.
 
 According to witnesses, the three banks were attacked at the same time and in the same way. Three identical black vans arrived at 2:30 pm outside the banks, an hour before closing time. A number of armed robbers got out of the vans and walked into each bank. There were five people in each team. It was impossible to identify them on the cameras because everyone was wearing a helmet and black clothing. No one spoke. The robbers made signs to tell the customers to lie on the floor.
@@ -131,6 +136,7 @@ Now there is a fishmeal factory in Fatima's village. They need workers. Fatima w
     stories: [
       {
         title: 'The Magician',
+        image: imgB1_1,
         text: `Milo the magician had been amazing audiences for nearly half a century. People loved his shows — the bright lights, the loud music, and, of course, his wonderful magic tricks. He could pull a rabbit from an empty hat, make coins disappear, and even float in the air.
 
 But one evening, something strange happened. Milo stood on the bright stage, ready to do his famous card trick. He said the magic words — "Abracadabra!" — and waved his hand. Nothing happened.
@@ -161,6 +167,7 @@ That evening, Milo returned to the theatre. The audience waited, curious. He did
       },
       {
         title: 'Bad Secrets',
+        image: imgB1_2,
         text: `Peter kicked his desk and walked out of the classroom. "Detention!" called Mr Clark, but Peter didn't stop. Peter often walked out of class.
 
 Maria didn't have her sports kit for class again. It was the second time this term. "I forgot it," she told the teacher. But it wasn't true.

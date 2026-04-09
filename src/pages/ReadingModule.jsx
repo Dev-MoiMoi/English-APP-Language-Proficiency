@@ -101,6 +101,9 @@ export default function ReadingModule() {
           {/* Story Text */}
           <div className="card" style={{ marginBottom:28, padding:32 }}>
             <h2 style={{ fontSize:'1.4rem', fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{story.title}</h2>
+            {story.image && (
+              <img src={story.image} alt={story.title} style={{ width:'100%', maxHeight:'350px', objectFit:'cover', borderRadius:12, marginBottom:24 }} />
+            )}
             <div style={{ lineHeight:1.9, color:'var(--text-secondary)', fontSize:'0.95rem', whiteSpace:'pre-line' }}>
               {story.text}
             </div>
