@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BookOpen, Edit3, Mic, Headphones } from 'lucide-react';
 import LevelSelectorModal from '../components/LevelSelectorModal';
+import PushButton from '../components/PushButton';
 
 export default function Dashboard() {
   const [showLevelModal, setShowLevelModal] = useState(true);
   const [level, setLevel] = useState('B1'); // Default fallback
+  const navigate = useNavigate();
 
   const handleSelectLevel = (selected) => {
     setLevel(selected);
@@ -13,10 +15,10 @@ export default function Dashboard() {
   };
 
   const modules = [
-    { title: 'Reading Module', path: '/reading', desc: 'Read a passage and answer questions.', progress: 15, max: 20, icon: <BookOpen color="var(--accent-reading)" />, color: 'var(--accent-reading)' },
-    { title: 'Writing Module', path: '/writing', desc: 'Write a response to a prompt.', progress: 4, max: 20, icon: <Edit3 color="var(--accent-writing)" />, color: 'var(--accent-writing)' },
-    { title: 'Speaking Module', path: '/speaking', desc: 'Record your reading of a phrase.', progress: 8, max: 20, icon: <Mic color="var(--accent-speaking)" />, color: 'var(--accent-speaking)' },
-    { title: 'Listening Module', path: '/listening', desc: 'Listen to audio and answer the quiz.', progress: 12, max: 20, icon: <Headphones color="var(--accent-listening)" />, color: 'var(--accent-listening)' },
+    { title: 'Reading Module', path: '/reading', desc: 'Read a passage and answer questions.', progress: 15, max: 20, icon: <BookOpen color="var(--reading)" />, color: 'var(--reading)', variant: 'reading', get btnText() { return 'Start Reading'; }, btnIcon: '📖' },
+    { title: 'Writing Module', path: '/writing', desc: 'Write a response to a prompt.', progress: 4, max: 20, icon: <Edit3 color="var(--writing)" />, color: 'var(--writing)', variant: 'writing', get btnText() { return 'Start Writing'; }, btnIcon: '✍️' },
+    { title: 'Speaking Module', path: '/speaking', desc: 'Record your reading of a phrase.', progress: 8, max: 20, icon: <Mic color="var(--speaking)" />, color: 'var(--speaking)', variant: 'speaking', get btnText() { return 'Start Speaking'; }, btnIcon: '🎙️' },
+    { title: 'Listening Module', path: '/listening', desc: 'Listen to audio and answer the quiz.', progress: 12, max: 20, icon: <Headphones color="var(--listening)" />, color: 'var(--listening)', variant: 'listening', get btnText() { return 'Start Listening'; }, btnIcon: '🎧' },
   ];
 
   return (
@@ -51,9 +53,15 @@ export default function Dashboard() {
                   <div style={{ background: mod.color, height: '100%', width: `${(mod.progress / mod.max) * 100}%` }}></div>
                 </div>
 
-                <Link to={mod.path} className="btn-primary" style={{ display: 'block', textAlign: 'center', background: mod.color }}>
-                  Continue
-                </Link>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <PushButton
+                    variant={mod.variant}
+                    text={mod.btnText}
+                    icon={<span>{mod.btnIcon}</span>}
+                    onClick={() => navigate(mod.path)}
+                    style={{ width: '100%' }}
+                  />
+                </div>
               </div>
             </div>
           ))}

@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, ChevronLeft, CheckCircle, XCircle, Mail, Send, RotateCcw, PartyPopper } from 'lucide-react';
+import { BookOpen, ChevronLeft, CheckCircle, XCircle, PartyPopper, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { READING_DATA } from '../data/readingData';
+import { getReadingFeedback } from '../services/geminiService';
+import AIFeedbackCard from '../components/AIFeedbackCard';
+import EmailResultCard from '../components/EmailResultCard';
+import PushButton from '../components/PushButton';
 
 const VALID_LEVELS = ['A1','A2','B1','B2','C1','C2'];
 
@@ -19,8 +23,9 @@ export default function ReadingModule() {
   const [storyIdx, setStoryIdx] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState('');
-  const [sent, setSent] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState('');
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   // If URL changes (e.g. user navigates back then picks again), sync level
   useEffect(() => {
@@ -29,7 +34,7 @@ export default function ReadingModule() {
       setStoryIdx(0);
       setAnswers({});
       setSubmitted(false);
-      setSent(false);
+      setAiFeedback(''); setAiLoading(false); setAiError('');
     }
   }, [urlLevel]);
 
@@ -43,22 +48,37 @@ export default function ReadingModule() {
     if (!submitted) setAnswers(prev => ({ ...prev, [qi]: ai }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (Object.keys(answers).length < story.questions.length) {
       alert('Please answer all questions before submitting.');
       return;
     }
     setSubmitted(true);
+    setAiLoading(true);
+    setAiFeedback('');
+    setAiError('');
+    const qaSummary = story.questions.map((item, qi) => {
+      const studentIdx = answers[qi];
+      const correctIdx = story.answerKey[qi];
+      const studentAns = studentIdx !== undefined ? item.options[studentIdx] : 'Not answered';
+      const correctAns = item.options[correctIdx];
+      const isCorrect = studentIdx === correctIdx;
+      return `Q${qi+1}: ${item.q}\nStudent answered: ${studentAns} (${isCorrect ? 'Correct' : 'Wrong'})\nCorrect answer: ${correctAns}`;
+    }).join('\n\n');
+    try {
+      const feedback = await getReadingFeedback(level, score, story.questions.length, qaSummary);
+      setAiFeedback(feedback);
+    } catch (err) {
+      setAiError(err.message || 'AI feedback could not be loaded. Your score has been recorded.');
+    } finally {
+      setAiLoading(false);
+    }
   };
 
   const handleReset = () => {
     setAnswers({});
     setSubmitted(false);
-  };
-
-  const handleSend = () => {
-    if (!email) { alert('Please enter your email.'); return; }
-    setSent(true);
+    setAiFeedback(''); setAiError('');
   };
 
   if (!level) {
@@ -84,7 +104,7 @@ export default function ReadingModule() {
           {/* Story Selector */}
           <div style={{ display:'flex', gap:12, marginBottom:24, flexWrap:'wrap' }}>
             {data.stories.map((s, i) => (
-              <button key={i} onClick={() => { setStoryIdx(i); setAnswers({}); setSubmitted(false); setSent(false); }}
+              <button key={i} onClick={() => { setStoryIdx(i); setAnswers({}); setSubmitted(false); setAiFeedback(''); setAiError(''); }}
                 style={{ padding:'8px 18px', borderRadius:999, border:`2px solid ${i===storyIdx?'var(--reading)':'var(--border)'}`,
                   background: i===storyIdx ? 'var(--reading)' : 'white', color: i===storyIdx ? 'white' : 'var(--text-secondary)',
                   fontWeight:600, cursor:'pointer', fontSize:'0.85rem', transition:'all 0.2s' }}>
@@ -148,9 +168,13 @@ export default function ReadingModule() {
             })}
 
             {!submitted ? (
-              <button className="btn-primary" onClick={handleSubmit} style={{ marginTop:8, background:'var(--reading)' }}>
-                Submit Answers
-              </button>
+              <PushButton
+                variant="primary"
+                text="Submit Answers"
+                icon={<Check size={18} />}
+                onClick={handleSubmit}
+                isLoading={aiLoading}
+              />
             ) : (
               <div>
                 <div style={{ background:'#e8f5e9', borderRadius:12, padding:'20px 24px', marginBottom:20, display:'flex', alignItems:'center', gap:16 }}>
@@ -166,24 +190,31 @@ export default function ReadingModule() {
                     </div>
                   </div>
                 </div>
-                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center' }}>
-                  <button className="btn-ghost" onClick={handleReset} style={{ display:'flex', alignItems:'center', gap:6 }}>
-                    <RotateCcw size={16} /> Try Again
-                  </button>
-                  {!sent ? (
-                    <div style={{ display:'flex', gap:8, flex:1, minWidth:280 }}>
-                      <input type="email" placeholder="Enter your email to receive results" value={email} onChange={e=>setEmail(e.target.value)}
-                        style={{ flex:1, padding:'10px 14px', borderRadius:10, border:'2px solid var(--border)', fontSize:'0.9rem', outline:'none' }} />
-                      <button className="btn-primary" onClick={handleSend} style={{ display:'flex', alignItems:'center', gap:6, background:'var(--reading)', flexShrink:0 }}>
-                        <Send size={16} /> Send
-                      </button>
+                  <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center', flexDirection:'column' }}>
+                    {/* AI Feedback */}
+                    <div style={{ width:'100%' }}>
+                      <AIFeedbackCard
+                        isLoading={aiLoading}
+                        feedback={aiFeedback}
+                        error={aiError}
+                        accentColor="var(--reading)"
+                        onRetry={() => handleSubmit()}
+                      />
                     </div>
-                  ) : (
-                    <div style={{ display:'flex', alignItems:'center', gap:8, color:'#388e3c', fontWeight:600 }}>
-                      <Mail size={18} /> Results sent to {email}!
-                    </div>
-                  )}
-                </div>
+
+                    {/* Email Result Card */}
+                    <EmailResultCard
+                      skillName="Reading"
+                      skillColor="var(--reading)"
+                      level={level}
+                      levelLabel={data.levelLabel}
+                      activityName={story.title}
+                      score={score}
+                      totalQuestions={story.questions.length}
+                      aiFeedback={aiFeedback}
+                      onTryAgain={handleReset}
+                    />
+                  </div>
               </div>
             )}
           </div>

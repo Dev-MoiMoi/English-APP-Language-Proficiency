@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Edit3, ChevronLeft, CheckCircle, Send, Mail, RotateCcw, Sparkles } from 'lucide-react';
+import { Edit3, ChevronLeft, CheckCircle, RotateCcw, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { WRITING_DATA } from '../data/writingData';
+import { getWritingFeedback } from '../services/geminiService';
+import AIFeedbackCard from '../components/AIFeedbackCard';
+import EmailResultCard from '../components/EmailResultCard';
+import PushButton from '../components/PushButton';
 
 const VALID_LEVELS = ['A1','A2','B1','B2','C1','C2'];
 
@@ -18,12 +22,14 @@ export default function WritingModule() {
   const [taskIdx, setTaskIdx] = useState(0);
   const [text, setText] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState('');
-  const [sent, setSent] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState('');
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   useEffect(() => {
     if (VALID_LEVELS.includes(urlLevel)) {
-      setLevel(urlLevel); setTaskIdx(0); setText(''); setSubmitted(false); setSent(false);
+      setLevel(urlLevel); setTaskIdx(0); setText(''); setSubmitted(false);
+      setAiFeedback(''); setAiLoading(false); setAiError('');
     }
   }, [urlLevel]);
 
@@ -36,12 +42,22 @@ export default function WritingModule() {
   const isReady = wordCount >= minW;
   const isOver = wordCount > maxW;
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!isReady) { alert(`Please write at least ${minW} words.`); return; }
     setSubmitted(true);
+    setAiLoading(true);
+    setAiFeedback('');
+    setAiError('');
+    try {
+      const feedback = await getWritingFeedback(level, task.prompt, text);
+      setAiFeedback(feedback);
+    } catch (err) {
+      setAiError(err.message || 'Failed to get AI feedback. Please check your API key.');
+    } finally {
+      setAiLoading(false);
+    }
   };
-  const handleReset = () => { setText(''); setSubmitted(false); setSent(false); };
-  const handleSend = () => { if (!email) { alert('Please enter your email.'); return; } setSent(true); };
+  const handleReset = () => { setText(''); setSubmitted(false); setAiFeedback(''); setAiError(''); };
 
   if (!level) {
     navigate('/', { replace: true });
@@ -120,9 +136,16 @@ export default function WritingModule() {
                   <div style={{ height:'100%', width:`${progress}%`, background: isOver?'#d32f2f':isReady?'#388e3c':'var(--writing)', borderRadius:999, transition:'width 0.3s' }} />
                 </div>
               </div>
-              <button className="btn-primary" onClick={handleSubmit} style={{ marginTop:20, background:'var(--writing)' }}>
-                Submit Writing
-              </button>
+              <div style={{ marginTop:20 }}>
+                <PushButton
+                  variant="primary"
+                  text="Submit Writing"
+                  icon={<Check size={18} />}
+                  onClick={handleSubmit}
+                  isLoading={aiLoading}
+                  disabled={!isReady || isOver}
+                />
+              </div>
             </div>
           ) : (
             <div className="card" style={{ padding:28, marginBottom:24 }}>
@@ -139,33 +162,25 @@ export default function WritingModule() {
                 {text}
               </div>
 
-              {/* AI Feedback simulation */}
-              <div style={{ background:'#fff8e1', border:'1px solid #ffd54f', borderRadius:12, padding:'18px 22px', marginBottom:20 }}>
-                <p style={{ fontWeight:700, color:'#f57c00', marginBottom:8, fontSize:'0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}><Sparkles size={16} /> AI Feedback (Simulated)</p>
-                <p style={{ color:'#555', fontSize:'0.9rem', lineHeight:1.7 }}>
-                  Your writing shows effort and ideas. Focus on: using varied vocabulary, clear paragraph structure, and appropriate connectors (however, furthermore, in conclusion). 
-                  Review grammar for tense consistency and subject-verb agreement to improve your overall score.
-                </p>
-              </div>
+              {/* AI Feedback */}
+              <AIFeedbackCard
+                isLoading={aiLoading}
+                feedback={aiFeedback}
+                error={aiError}
+                accentColor="var(--writing)"
+                onRetry={handleReset}
+              />
 
-              <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center' }}>
-                <button className="btn-ghost" onClick={handleReset} style={{ display:'flex', alignItems:'center', gap:6 }}>
-                  <RotateCcw size={16} /> Try Another Task
-                </button>
-                {!sent ? (
-                  <div style={{ display:'flex', gap:8, flex:1, minWidth:280 }}>
-                    <input type="email" placeholder="Enter your email" value={email} onChange={e=>setEmail(e.target.value)}
-                      style={{ flex:1, padding:'10px 14px', borderRadius:10, border:'2px solid var(--border)', fontSize:'0.9rem', outline:'none' }} />
-                    <button className="btn-primary" onClick={handleSend} style={{ display:'flex', alignItems:'center', gap:6, background:'var(--writing)', flexShrink:0 }}>
-                      <Send size={16} /> Send
-                    </button>
-                  </div>
-                ) : (
-                  <div style={{ display:'flex', alignItems:'center', gap:8, color:'#388e3c', fontWeight:600 }}>
-                    <Mail size={18} /> Results sent to {email}!
-                  </div>
-                )}
-              </div>
+              {/* Email Result Card */}
+              <EmailResultCard
+                skillName="Writing"
+                skillColor="var(--writing)"
+                level={level}
+                levelLabel={data.levelLabel}
+                activityName={task.title}
+                aiFeedback={aiFeedback}
+                onTryAgain={handleReset}
+              />
             </div>
           )}
         </div>

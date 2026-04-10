@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="footer-inner">
           <div className="footer-top">
             <div>
-              <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                <img src={logoImg} alt="DigiLing Logo" style={{ height: '40px' }} />
+              <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px', fontSize: '2rem', fontWeight: 800, color: 'var(--primary)', letterSpacing: '-0.04em', fontFamily: 'Poppins, Inter, sans-serif' }}>
+                <img src={logoImg} alt="DigiLing Logo" style={{ height: '0.58em', transform: 'translateY(0.04em)' }} />
                 DigiLing
               </div>
               <div className="footer-tagline">Your English Learning Companion</div>

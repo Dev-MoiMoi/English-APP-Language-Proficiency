@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Headphones, ChevronLeft, CheckCircle, XCircle, Send, Mail, RotateCcw, PartyPopper } from 'lucide-react';
+import { Headphones, ChevronLeft, CheckCircle, XCircle, RotateCcw, PartyPopper, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { LISTENING_DATA } from '../data/listeningData';
+import { getListeningFeedback } from '../services/geminiService';
+import AIFeedbackCard from '../components/AIFeedbackCard';
+import EmailResultCard from '../components/EmailResultCard';
+import PushButton from '../components/PushButton';
 
 const VALID_LEVELS = ['A1','A2','B1','B2','C1','C2'];
 
@@ -18,12 +22,14 @@ export default function ListeningModule() {
   const [lessonIdx, setLessonIdx] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState('');
-  const [sent, setSent] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState('');
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   useEffect(() => {
     if (VALID_LEVELS.includes(urlLevel)) {
-      setLevel(urlLevel); setLessonIdx(0); setAnswers({}); setSubmitted(false); setSent(false);
+      setLevel(urlLevel); setLessonIdx(0); setAnswers({}); setSubmitted(false);
+      setAiFeedback(''); setAiLoading(false); setAiError('');
     }
   }, [urlLevel]);
 
@@ -35,14 +41,34 @@ export default function ListeningModule() {
 
   const handleAnswer = (qi, ai) => { if (!submitted) setAnswers(prev=>({...prev,[qi]:ai})); };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (Object.keys(answers).length < lesson.questions.length) {
       alert('Please answer all questions before submitting.'); return;
     }
     setSubmitted(true);
+    setAiLoading(true);
+    setAiFeedback('');
+    setAiError('');
+    // Build Q&A summary for the prompt
+    const qaSummary = lesson.questions.map((item, qi) => {
+      const studentIdx = answers[qi];
+      const correctIdx = lesson.answerKey[qi];
+      const studentAns = studentIdx !== undefined ? item.options[studentIdx] : 'Not answered';
+      const correctAns = item.options[correctIdx];
+      const isCorrect = studentIdx === correctIdx;
+      return `Q${qi+1}: ${item.q}\nStudent answered: ${studentAns} (${isCorrect ? 'Correct' : 'Wrong'})\nCorrect answer: ${correctAns}`;
+    }).join('\n\n');
+    try {
+      const feedback = await getListeningFeedback(level, score, lesson.questions.length, qaSummary);
+      setAiFeedback(feedback);
+    } catch (err) {
+      setAiError(err.message || 'Failed to get AI feedback. Please check your API key.');
+    } finally {
+      setAiLoading(false);
+    }
   };
 
-  const handleReset = () => { setAnswers({}); setSubmitted(false); };
+  const handleReset = () => { setAnswers({}); setSubmitted(false); setAiFeedback(''); setAiError(''); };
   const handleSend = () => { if (!email) { alert('Please enter your email.'); return; } setSent(true); };
 
   if (!level) {
@@ -67,7 +93,7 @@ export default function ListeningModule() {
           {/* Lesson selector */}
           <div style={{ display:'flex', gap:12, marginBottom:24, flexWrap:'wrap' }}>
             {data.lessons.map((l, i) => (
-              <button key={i} onClick={() => { setLessonIdx(i); setAnswers({}); setSubmitted(false); setSent(false); }}
+              <button key={i} onClick={() => { setLessonIdx(i); setAnswers({}); setSubmitted(false); setAiFeedback(''); setAiError(''); }}
                 style={{ padding:'8px 18px', borderRadius:999, border:`2px solid ${i===lessonIdx?'var(--listening)':'var(--border)'}`,
                   background: i===lessonIdx ? 'var(--listening)' : 'white',
                   color: i===lessonIdx ? 'white' : 'var(--text-secondary)',
@@ -86,6 +112,14 @@ export default function ListeningModule() {
           <div className="card" style={{ marginBottom:28, padding:32 }}>
             <h2 style={{ fontSize:'1.3rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{lesson.title}</h2>
             <p style={{ color:'var(--text-secondary)', marginBottom:20, lineHeight:1.7 }}>{lesson.description}</p>
+
+            {lesson.imageFile && (
+              <img 
+                src={lesson.imageFile} 
+                alt={lesson.title} 
+                style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '12px', display: 'block', margin: '0 auto 24px auto', objectFit: 'cover' }} 
+              />
+            )}
 
             {/* Audio Player */}
             <div style={{ background:'#f3e5f5', borderRadius:12, padding:'20px', display:'flex', flexDirection:'column', gap:16 }}>
@@ -148,9 +182,13 @@ export default function ListeningModule() {
             })}
 
             {!submitted ? (
-              <button className="btn-primary" onClick={handleSubmit} style={{ marginTop:8, background:'var(--listening)' }}>
-                Submit Answers
-              </button>
+              <PushButton
+                variant="primary"
+                text="Submit Answers"
+                icon={<Check size={18} />}
+                onClick={handleSubmit}
+                isLoading={aiLoading}
+              />
             ) : (
               <div>
                 <div style={{ background:'#e8f5e9', borderRadius:12, padding:'20px 24px', marginBottom:20, display:'flex', alignItems:'center', gap:16 }}>
@@ -166,23 +204,30 @@ export default function ListeningModule() {
                     </div>
                   </div>
                 </div>
-                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center' }}>
-                  <button className="btn-ghost" onClick={handleReset} style={{ display:'flex', alignItems:'center', gap:6 }}>
-                    <RotateCcw size={16} /> Try Again
-                  </button>
-                  {!sent ? (
-                    <div style={{ display:'flex', gap:8, flex:1, minWidth:280 }}>
-                      <input type="email" placeholder="Enter your email" value={email} onChange={e=>setEmail(e.target.value)}
-                        style={{ flex:1, padding:'10px 14px', borderRadius:10, border:'2px solid var(--border)', fontSize:'0.9rem', outline:'none' }} />
-                      <button className="btn-primary" onClick={handleSend} style={{ display:'flex', alignItems:'center', gap:6, background:'var(--listening)', flexShrink:0 }}>
-                        <Send size={16} /> Send
-                      </button>
-                    </div>
-                  ) : (
-                    <div style={{ display:'flex', alignItems:'center', gap:8, color:'#388e3c', fontWeight:600 }}>
-                      <Mail size={18} /> Results sent to {email}!
-                    </div>
-                  )}
+                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center', flexDirection:'column' }}>
+                  {/* AI Feedback */}
+                  <div style={{ width:'100%' }}>
+                    <AIFeedbackCard
+                      isLoading={aiLoading}
+                      feedback={aiFeedback}
+                      error={aiError}
+                      accentColor="var(--listening)"
+                      onRetry={() => handleSubmit()}
+                    />
+                  </div>
+
+                  {/* Email Result Card */}
+                  <EmailResultCard
+                    skillName="Listening"
+                    skillColor="var(--listening)"
+                    level={level}
+                    levelLabel={data.levelLabel}
+                    activityName={lesson.title}
+                    score={score}
+                    totalQuestions={lesson.questions.length}
+                    aiFeedback={aiFeedback}
+                    onTryAgain={handleReset}
+                  />
                 </div>
               </div>
             )}

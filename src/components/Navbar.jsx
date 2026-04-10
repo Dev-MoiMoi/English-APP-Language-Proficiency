@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         {/* LEFT: Logo */}
         <Link to="/" className="navbar-logo" onClick={() => setMobileMenuOpen(false)}>
-          <img src={logoImg} alt="DigiLing Logo" style={{ height: '36px' }} />
+          <img src={logoImg} alt="DigiLing Logo" />
           DigiLing
         </Link>
 

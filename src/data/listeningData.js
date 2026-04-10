@@ -13,6 +13,19 @@ import audioC1L2 from '../assets/Listening/C1-C2/LE_listening_C1_Introverts_redd
 import audioC2L1 from '../assets/Listening/C1-C2/LE_listening_C1_The_history_of_hand_gestures.mp3';
 import audioC2L2 from '../assets/Listening/C1-C2/LE_listening_C1_Challenges_at_work.mp3';
 
+import imgA1L1 from '../assets/Listening Images/A1/The First English Class.jpg';
+import imgA1L2 from '../assets/Listening Images/A1/Organizing a group project.jpg';
+import imgA2L1 from '../assets/Listening Images/A2/An invitation to a party_.jpg';
+import imgA2L2 from '../assets/Listening Images/A2/Leaving a message_.jpg';
+import imgB1L1 from '../assets/Listening Images/B1/A student discussion.jpg';
+import imgB1L2 from '../assets/Listening Images/B1/A weather forecast.jpg';
+import imgB2L1 from '../assets/Listening Images/B2/A talk about motivation.jpg';
+import imgB2L2 from '../assets/Listening Images/B2/Getting advice.jpg';
+import imgC1L1 from '../assets/Listening Images/C1-C2/An interview about two books.jpg';
+import imgC1L2 from '../assets/Listening Images/C1-C2/Introverts – redressing the balance.jpg';
+import imgC2L1 from '../assets/Listening Images/C1-C2/The history of hand gestures_.jpg';
+import imgC2L2 from '../assets/Listening Images/C1-C2/Challenges at work_.jpg';
+
 export const LISTENING_DATA = {
   A1: {
     levelLabel: 'A1 – Beginner',
@@ -23,6 +36,7 @@ export const LISTENING_DATA = {
         title: 'The First English Class',
         description: 'Listen to a teacher introducing a new course to help you develop and strengthen your listening skills.',
         audioFile: audioA1L1,
+        imageFile: imgA1L1,
         questions: [
           { q: 'What is the name of the teacher?', options: ['Linda Brown', 'Lindsay Black', 'Liza Black', 'Lisa Brown'], answer: 1 },
           { q: 'Where is the classroom located?', options: ['Room 7B', 'Room 13', 'Room 3', 'Room 30'], answer: 1 },
@@ -41,6 +55,7 @@ export const LISTENING_DATA = {
         title: 'Organizing a Group Project',
         description: 'Listen to individuals planning a group project and answer questions to enhance your listening comprehension.',
         audioFile: audioA1L2,
+        imageFile: imgA1L2,
         questions: [
           { q: 'What is the group working on?', options: ['A test', 'A group project', 'A game', 'A report card'], answer: 1 },
           { q: 'How many members are in the group?', options: ['Three', 'Four', 'Five', 'Six'], answer: 1 },
@@ -67,6 +82,7 @@ export const LISTENING_DATA = {
         title: 'An Invitation to a Party',
         description: 'Listen to phone messages that give directions to enhance your listening comprehension.',
         audioFile: audioA2L1,
+        imageFile: imgA2L1,
         questions: [
           { q: 'What time was the first call received?', options: ['3:15 p.m.', '3:30 p.m.', '3:45 p.m.', '4:00 p.m.'], answer: 0 },
           { q: 'What event is the speaker planning?', options: ['A meeting', 'A trip', 'A birthday party', 'A class'], answer: 2 },
@@ -85,6 +101,7 @@ export const LISTENING_DATA = {
         title: 'Leaving a Message',
         description: 'Listen to someone recording a message to strengthen your listening skills.',
         audioFile: audioA2L2,
+        imageFile: imgA2L2,
         questions: [
           { q: 'Who answers the phone?', options: ['Maria Fernandez', 'Peter Griffin', 'Jane Solomon', 'The manager'], answer: 2 },
           { q: 'What department does Jane work in?', options: ['Marketing', 'Sales', 'HR', 'Finance'], answer: 1 },
@@ -111,6 +128,7 @@ export const LISTENING_DATA = {
         title: 'A Student Discussion',
         description: 'Listen to two students comparing Mars and Earth to practise and improve your listening skills.',
         audioFile: audioB1L1,
+        imageFile: imgB1L1,
         questions: [
           { q: 'What is the main topic of the discussion?', options: ['The Moon', 'Jupiter', 'Mars and Earth', 'The Sun'], answer: 2 },
           { q: "What does Student 2 say about Mars' temperature?", options: ['It is very hot', 'It is the same as Earth', 'It is much colder', 'It is unpredictable'], answer: 2 },
@@ -129,6 +147,7 @@ export const LISTENING_DATA = {
         title: 'A Weather Forecast',
         description: 'Listen to a weather forecast and answer the questions to practise and improve your listening skills.',
         audioFile: audioB1L2,
+        imageFile: imgB1L2,
         questions: [
           { q: 'What is the general weather condition in the south at the start of the week?', options: ['Very rainy', 'Mostly dry with some cloud', 'Snowy', 'Very windy'], answer: 1 },
           { q: 'What might occur on the east coast?', options: ['Heavy snow', 'Thunderstorms', 'A few showers', 'Strong winds'], answer: 2 },
@@ -155,6 +174,7 @@ export const LISTENING_DATA = {
         title: 'A Talk About Motivation',
         description: 'Listen to a talk on motivation to develop and refine your listening skills.',
         audioFile: audioB2L1,
+        imageFile: imgB2L1,
         questions: [
           { q: 'What is the main idea about motivation in different environments?', options: ['Motivation is only important in schools', 'Motivation depends entirely on salary', 'Motivation can be influenced by rewards and incentives', 'Motivation cannot be controlled'], answer: 2 },
           { q: 'What was the most surprising finding of the experiment?', options: ['Rewards improved performance significantly', 'Both groups performed equally', 'The rewarded group performed worse', 'The control group failed the task'], answer: 2 },
@@ -173,6 +193,7 @@ export const LISTENING_DATA = {
         title: 'Getting Advice',
         description: 'Listen to a conversation where someone receives advice from a friend.',
         audioFile: audioB2L2,
+        imageFile: imgB2L2,
         questions: [
           { q: 'Who are the speakers?', options: ['John and Mary', 'Clara and Ben', 'David and Emma', 'Ali and Dina'], answer: 1 },
           { q: 'What problem does Ben describe?', options: ['Physical injury', 'Struggling and not sleeping well', 'Financial issues', 'Time management issues'], answer: 1 },
@@ -199,6 +220,7 @@ export const LISTENING_DATA = {
         title: 'An Interview About Two Books',
         description: 'Listen to an interview about two books to practise and improve your listening skills.',
         audioFile: audioC1L1,
+        imageFile: imgC1L1,
         questions: [
           { q: 'What is the overarching focus of the discussion?', options: ['Film adaptations', 'Symbolism in novels', 'Darker psychological and familial themes in literature', "Children's literature"], answer: 2 },
           { q: 'How many narrative perspectives are presented in Her Mother\'s Daughter?', options: ['One', 'Two', 'Three', 'Four'], answer: 1 },
@@ -217,6 +239,7 @@ export const LISTENING_DATA = {
         title: 'Introverts – Redressing the Balance',
         description: 'Listen to a talk about social psychology to practise and improve your listening skills.',
         audioFile: audioC1L2,
+        imageFile: imgC1L2,
         questions: [
           { q: 'The passage primarily challenges which commonly held belief?', options: ['Leadership requires technical skill', 'Personality plays no role in leadership', 'Leadership effectiveness is closely tied to outward personality traits', 'Introverts cannot communicate effectively'], answer: 2 },
           { q: 'The reference to "bias" most strongly suggests that:', options: ['Differences in culture are unavoidable', 'One personality type is systematically preferred over another', 'Leadership is universally defined', 'Communication styles are irrelevant'], answer: 1 },
@@ -243,6 +266,7 @@ export const LISTENING_DATA = {
         title: 'The History of Hand Gestures',
         description: 'Listen to a lecture about the history of hand gestures.',
         audioFile: audioC2L1,
+        imageFile: imgC2L1,
         questions: [
           { q: 'What is the lecturer primarily examining?', options: ['Historical events across civilizations', 'The evolution and significance of nonverbal communication', 'Cultural rituals in modern societies', 'Military traditions and protocols'], answer: 1 },
           { q: 'Which gesture is most strongly linked to authority and formal discipline?', options: ['High five', 'Thumbs up', 'Salute', 'Handshake'], answer: 2 },
@@ -261,6 +285,7 @@ export const LISTENING_DATA = {
         title: 'Challenges at Work',
         description: 'Listen to four people talking about different business challenges.',
         audioFile: audioC2L2,
+        imageFile: imgC2L2,
         questions: [
           { q: "What is the speaker's primary objective in Passage A?", options: ['To express dissatisfaction', 'To establish and maintain a professional relationship', 'To promote a product aggressively', 'To schedule a formal meeting'], answer: 1 },
           { q: 'What awkward situation occurred during the greeting?', options: ['Mutual silence', 'A disagreement', 'A conflicting mix of handshake and embrace', 'Misidentification of each other'], answer: 2 },
