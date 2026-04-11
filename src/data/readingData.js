@@ -622,57 +622,423 @@ Clare crossed her arms. “Next time, pick up the phone!”`,
 
   B2: {
     levelLabel: 'B2 – Upper-Intermediate',
-    intro: 'Read engaging stories and articles with more complex ideas, varied vocabulary, and detailed narratives. Topics include social issues and psychological themes.',
+    intro: 'Read engaging stories and articles with more complex ideas, varied vocabulary, and detailed narratives. Topics include social issues, literature, and current events.',
     stories: [
       {
         title: 'The Hole in the Wall',
-        text: `Joanna Paresi was the last one left in a family of market traders. She lived at the foot of mountains where stone fruit grew. Her family were the only ones who knew about a hidden valley. The fruit turned silver when ripe and was very popular. Joanna dreamed of selling it in the capital city.
+        text: `Joanna Paresi was the last one left – the last living person in a family who had been market traders for hundreds of years. She was born at the foot of the mountains that stood over her home like giants, and she had lived there all her life. On the highest of those mountains, the stone fruit grew. Late in the year, the fruit fell. Most of it rolled and fell down the mountains and was never seen again. But some rolled down into a small valley, hidden deep in the mountains. Joanna's family were the only people who knew about the valley.
+When the stone fruit dropped from the trees, they were black and hard. Over four long months, they slowly turned from black to grey and, at last, to silver. Then their skin would break open easily to show the sweet, sun-coloured fruit inside. 
+When they were ripe, the stone fruit were the most popular food in the whole region. On market day, people got up really early and queued for hours to buy them. Joanna's family always had more to sell than anyone else. The fruit had made her family plenty of money over the years, but they were not as wealthy as the market sellers in the distant capital city. Joanna had always wondered why her family never sold the stone fruit there, at the most important market in the country. Her mother said that someone foolish had tried once, and failed.
+Nevertheless, as the years passed, Joanna dreamed about trying. The spring after her mother died, she finally prepared for the long, long journey. It would take almost four months to reach the capital city, which left no time to spare … but it could be done.
+When the people of the city tasted stone fruit for the first time, ripe just in time for market, she would make her fortune. 
 
-The journey took four months. When she arrived, she had to pay taxes and fees. She spent all her money on tests and was forced to sell her beautiful family stall. Finally, she was allowed to sell, but the fruit had turned white and lost its taste. No one bought it. She sold it to a pig farmer for almost nothing. She had lost everything.
+Joanna walked all the way to the capital, pushing a wooden cart full of stone fruit. She carried with her a beautiful wooden market stall that had been in her family for generations. On this stall, she would sell her fruit. When she finally arrived at the city, she was exhausted after months on the road. But her timing could not have been better. The stone fruit were almost ripe. So far, her plan was a success.
+Of course, there was a tax to pay to enter the city gates. And there were market fees to pay. Plus, strange, new foods like hers needed to be officially tested and declared safe before they could be sold. The tests were not cheap and they took days to complete.
+Joanna spent all her money on the tests and a place to sleep while she waited. To raise more money, she was forced to sell her beautiful family stall. She felt both guilty and sad, but it had to be done. Besides, after she sold the fruit, she could always buy the stall back before she returned home.
+Finally, the tests were finished and she was allowed to sell her fruit. She used the last of her cash to rent a cheap ordinary stall. However, while she had been waiting, the perfect, silver stone fruit had turned white. The skin became tough, and their sweet flavour was lost. 
+With her boring stall and, worst of all, her overripe fruit, no customers wanted to buy. In the end, she sold all the half-rotten stone fruit to a farmer to feed his pigs. He bought her cart too, and paid her much less than its value. 
+She had lost everything.
+Joanna left the market in defeat and wandered through the unfamiliar city. Its streets were filled with shops of every kind. In one she saw the beautiful, handmade market stall that her mother had given her. It was for sale at a price she could never afford.
+Tears ran down her face, and she ran until she was lost in the backstreets. At last, she lay down in a corner and fell into a sleep of exhaustion and sadness.
 
-Wandering the streets, she saw her family stall for sale at a price she couldn't afford. She fell asleep in a corner. When she woke, there was a hole in the wall. She threw her old, holey boot into it. A penny flew back out. She threw the other boot, and got three pennies. She threw her belt and got ten.
+When Joanna woke again, it was dark. But there was something even darker on the wall opposite where she was lying: a hole in the wall.
+It wasn't a door, because it didn't reach the ground. It wasn't a window either. This was just a hole in the wall. It had … nothing. Just like her.
+Joanna was filled with anger, at the market and at herself. She pulled off one of her boots. It was full of holes from her long journey to disaster. She threw it across the street at the hole.
+It disappeared into the hole, but there was no sound as it landed. The boot was gone. It was just one more thing she had lost in her foolishness. She laughed hopelessly and closed her eyes on the world. But then she heard a familiar sound.
+She opened her eyes again.
+Something shiny lay on the ground. It was a single penny. It was enough to buy a meal. It was definitely worth more than her old boot had been.
+It must be a joke, she thought. She waited for whoever it was to come out and start laughing at her. But nothing happened. She pulled off her other boot and threw it after the first. She saw it fly through the hole into nothing. But this time, she saw another coin fly back out, then a second and a third.
+Joanna leaned forward to pick up the nearest coin. She held it close to her face … It was real!
+She picked up the other coins: three pennies. She could buy new boots now. 
+She took off her belt and threw it at the hole. In it went – and more coins flew back out. She picked those up too and counted her fortune: ten pennies. Enough for new boots and a simple belt!
+Excited, she quickly took off her travelling coat, her jacket and both socks. She threw each one into the hole. 
+When the sound of metal falling on stone ended, she was holding a small pile of coins. She counted them, over and over, through the rest of the night.
+When dawn came, the hole in the wall had disappeared. Perhaps she had lost her mind along with her fruit, her cart and her mother's stall. 
+Fine. She didn't care. She had thirty-eight pennies.
+And if you're a good trader, all you need is somewhere to start.
 
-She bought useless things from traders and threw them into the hole at night. Soon she had enough for new clothes and her family stall back. She bought fine things to throw in: silk, wool, spices. Gold and silver coins poured out. She had more money than she ever needed. 
+There had probably never been a more unusual trader in the capital than Joanna. She went from shop to shop in her bare feet and undershirt, holding her pile of pennies. From only the cheapest shops, she bought:
+a large bag;
+a long shirt and a piece of old rope to use as a belt;
+a pair of broken wooden shoes;
+and, last but not least, all the old, broken or useless things the traders would sell her. 
+When she had spent all her money, Joanna returned to the street where she had spent the night. All day she sat there, looking at the empty wall opposite. People walked past her, shaking their heads. Some felt sorry for her. Others wondered what she was doing. But most people didn't pay her any attention.
 
-She wondered what the hole would give if she threw all the money in. She swung the bag of coins into the hole. Five coins bounced back; the rest were gone. Nothing else came back. She used the last five coins for the tax to leave the city. She walked home happy, with empty pockets but a full heart. She sold her story to travelers, asking for only a coin or food. She learned that wisdom is the greatest reward.`,
+In the middle of the night, the hole in the wall appeared again. Joanna was happy to learn she hadn't imagined it.
+She opened the empty bag in front of the hole. Then, one by one, she threw things into the hole. Even the wooden shoes went in. Only the bag remained. And when the sun rose, the bag was so full she could hardly close it or lift it from the ground.
+
+Joanna bought new clothes – nothing special, just a good hat, shirt and trousers, boots to take her home, a thick coat for winter in the mountains, and a new, bigger bag. She had enough money left to do some shopping at the market that had tried to ruin her. None of the traders recognised the woman who had been selling rotten fruit two days earlier.
+After a busy day of trade, she returned to a particular shop. There, with great pleasure, she bought back her mother's stall. And then she went back to her lucky street with all the fine things she had bought at the market: silk carpets, fine wool, bags of spices and more. 
+She sat down for one last night, waiting for the hole.
+She started with the spices, throwing them into the hole. Then she threw the wool and silk and the other things. A fountain of silver and gold coins poured out of the hole into the bag. When, at last, the coins stopped coming, her bag was filled with more money than she had ever known. She would never need to trade again! 
+For a moment, she considered throwing her family stall into the hole as well. She wondered what the hole might pay her. Would the hole reward her for its personal value as well as its price? 
+She shook her head. No amount of money would be worth it, not now nor ever again. But then she looked at the little shining mountain of coins and she had a new idea.
+The hole had always given back more value than it took. So what about the gold and silver coins? What would the hole give her if she threw all the money in?
+What reward could be greater than all the money she had?
+Joanna lifted the heavy bag of coins. With shaking arms and legs, she began to swing the bag backwards and forwards, faster and faster … and then she threw it.
+The bag opened and the coins flew through the air. Five coins struck the wall and bounced onto the ground by her feet. All the rest fell into the hole and were gone. 
+She waited, watching the hole. But this time, nothing came back. 
+
+There was a tax on traders departing the city. Joanna's last five coins were just enough to pay it.
+She strode out in her good boots and new clothes. On her back, she carried her mother's stall. She walked all day and slept well at night, happy to be heading for home. As she got further and further away from the capital, the familiar mountains of home slowly rose ahead. 
+Her pockets were empty, but her heart was full.
+From time to time she met other travellers on the road. When she saw them coming, she put up her stall and sold her story to anyone who wanted to buy it.
+She never asked for much in return – just a coin or two if her customer had money, some food or drink if not. And although no one believed her story was true, they believed the lessons it contained. For some the lesson was 'appreciate what you have' or 'greed will mean you lose everything.' For others, it was 'wisdom comes at a price.' 
+For Joanna, the last trader in her family, it was the answer to her question: What reward could be greater than all the money she had? Now she knew the answer was wisdom, priceless wisdom.`,
         questions: [
-          { q: 'Why did Joanna go to the capital?', options: ['Escape home', 'Earn more money', 'Forced', 'Sell stall'], answer: 1 },
-          { q: 'What characterizes stone fruit?', options: ['Always silver', 'Black to silver when ripe', 'Only for pigs', 'Grow in winter'], answer: 1 },
-          { q: 'Why did she sell her stall?', options: ['Hated it', 'Pay for tests and survival', 'Too heavy', 'It was broken'], answer: 1 },
-          { q: 'What happened to the first fruits?', options: ['Stolen', 'Turned white/lost taste', 'Sold for gold', 'Eaten by birds'], answer: 1 },
-          { q: 'What does the hole represent?', options: ['Treasure', 'Opportunity/temptation', 'Danger', 'Punishment'], answer: 1 },
-          { q: 'What did the hole give for a boot?', options: ['Gold', 'Penny', 'New boot', 'Nothing'], answer: 1 },
-          { q: 'Why did she lose her money at the end?', options: ['Stolen', 'Miscounted', 'Greed/Risked all', 'Taxi cost'], answer: 2 },
-          { q: 'What was the greatest reward?', options: ['Gold', 'Stall', 'Wisdom', 'Boots'], answer: 2 },
-          { q: 'What did she do on the way home?', options: ['Cried', 'Sold her story', 'Found more gold', 'Ran'], answer: 1 },
-          { q: 'How many coins bounced back?', options: ['None', 'Five', 'Ten', 'All'], answer: 1 },
+          { q: "Why did Joanna decide to go to the capital city despite the risks?", options: ["She wanted to escape her hometown", "She believed she could earn more money there", "She was forced by other traders", "She wanted to sell her family stall"], answer: 1 },
+          { q: "What does Joanna’s failure in the capital mainly suggest about trade and planning?", options: ["Luck is more important than effort", "Experience guarantees success", "External factors can affect even good plans", "Wealth always leads to failure"], answer: 2 },
+          { q: "Why did Joanna sell her family stall before selling her fruit?", options: ["She no longer needed it", "She wanted to change her business", "She needed money to survive and complete requirements", "She thought it had no value"], answer: 2 },
+          { q: "What is the significance of the hole in the wall?", options: ["It represents a hidden treasure", "It symbolizes opportunity and temptation", "It shows the dangers of the city", "It is a punishment for Joanna"], answer: 1 },
+          { q: "How does Joanna’s behavior change after discovering the hole?", options: ["She becomes more cautious", "She avoids taking risks", "She becomes more strategic but also greedy", "She stops trading completely"], answer: 2 },
+          { q: "Why does Joanna decide not to throw her family stall into the hole?", options: ["It is too heavy to carry", "She thinks it has no financial value", "She realizes its emotional and personal importance", "She is afraid the hole will disappear"], answer: 2 },
+          { q: "What is the main reason Joanna loses all her money in the end?", options: ["The hole stops working", "She miscalculates the value of coins", "Her greed leads her to risk everything", "Someone steals her money"], answer: 2 },
+          { q: "What lesson does Joanna personally learn from her experience?", options: ["Money is the most important goal in life", "Wisdom is more valuable than wealth", "Trade is not a reliable profession", "The city is dangerous and unfair"], answer: 1 },
+          { q: "Why do people still listen to Joanna’s story even if they don’t believe it is true?", options: ["They feel sorry for her", "They enjoy fictional stories", "They recognize meaningful lessons in it", "They want to give her money"], answer: 2 },
+          { q: "What does Joanna’s final situation suggest about her character development?", options: ["She remains unsuccessful and regretful", "She becomes wealthy and powerful", "She gains understanding and inner contentment", "She avoids people and lives alone"], answer: 2 }
         ],
-        answerKey: [1, 1, 1, 1, 1, 1, 2, 2, 1, 1],
+        answerKey: [1, 2, 2, 1, 2, 2, 2, 1, 2, 2],
       },
       {
         title: 'The Green Wars',
-        text: `Plan 1: Guerrilla gardening. At 3am, Janey and the narrator "borrow" a truck and cover the high street with grass. They are caught. Narrator gets 150 hours service; Janey 300. Janey starts planning more.
+        text: `Plan 1: Guerrilla gardening
+The time is what the military call 'oh-three-hundred-hours' - three o'clock in the morning. We're in the car park of the sports centre. It's totally empty except for me, my best friend, Janey and an old truck that belongs to the company that put grass on the town football pitch last week.
+'What are we doing here?' I ask.
+'Here's the plan,' says Janey. 'First, we borrow that truck ...'
+'I'm going home,' I say. 'Good night.'
+'Then, we drive to the Town Hall. And then we use the grass in the truck to cover the high street from top to bottom, like one great big garden. Ready?'
+I think about it for a minute. Then I smile.
+'OK,' I say. 'Let's go.'
+...
+Our new green high street is beautiful. But we don't have long to admire it. The judge says we're guilty of a crime. Several crimes in fact, including theft, vandalism and disturbing the peace. I get sentenced to 150 hours of community service and Janey gets 300 hours because it was her idea.
+I stay out of trouble, do 150 hours cleaning graffiti and get back to my studies. Janey is planning how we're going to do our guerrilla gardening better in future. Our mission is to make the whole town green again. Janey's ideas will probably put us both in prison eventually. But someone needs to take urgent action to help the planet. 
 
-Plan 2: The bamboo forest. During the town festival, they cover the high street with soil and fast-growing bamboo seeds. It grows taller than the mayor before being cut down. Janey gets 6 months in prison. Narrator goes to university to study Agriculture and Wildlife.
+Plan 2: The bamboo forest
+Every September, our town has a festival. There's a big parade through the city, with crowds of happy people eating junk food and waving little flags. Then everyone goes to the park on the edge of town, where the mayor gives a speech and everyone has fun. 
+I'm supposed to be packing my bags to go and study engineering at university, but as soon as everyone has gone to the park, Janey picks me up in another 'borrowed' truck. This one is loaded with soil and, judging by the smell, manure.
+'Get in,' she says. 'There's enough soil here to cover the high street from Baker's Lane to Humber Road, right past the new shopping centre.'
+When Janey gets an idea, she doesn't let it go easily.
+'You're crazy,' I tell her.
+'Crazy genius,' she says. 'I've mixed soil, manure and the fastest-growing variety of bamboo seeds you can order online. By the time the festival is over, there'll be a mini forest blocking the road to the supermarket. It really does grow that fast. What do you think?'
+Well … why not? I'll be at university next week anyway. 'Let's do it.'
+...
+Janey was right, bamboo does grow fast. It was knee-high before anyone discovered what we had done. By the time the council found someone to come and cut it down, our bamboo forest had grown taller than the mayor.
+It was great, but they took it away. After what we did last year, no one had any doubt about who was responsible. Janey had taken the truck back, but the police traced the seed purchase to her bank account. This time she got six months in prison.
+She didn't tell them I'd helped her, so I still went to university. By the time she got out, I'd changed my degree to Agriculture and Wildlife. I figured I should really devote some time to learning about gardening and stuff if Janey and I were going to succeed.
 
-Plan 3: The vertical farm. Narrator presents a professional plan for a vertical farm in an old car park. Council rejects it to build luxury apartments. Janey is out of prison and thinks the narrator is an idiot for abandoning the "message."
+Plan 3: The vertical farm
+I'm wearing my smartest business suit. My presentation is ready, and there's a scale model of my idea on the table. On the other side of the table, my three heads of department are ready to evaluate my final-year university project - the vertical farm.
+I've seen what happens when we follow Janey's plans to make our town green. Now it's my turn.
+'Good morning,' I say. 'During my studies I have specialised in theories of urban farming. After graduating, I want to do something practical with what I've learned.'
+I point at the model in front of them. 'This is the high street of my home town. This is the Town Hall, this is our shopping centre and this is an old, multi-level car park which no one has used for the last two years and that is now for sale.'
+I start the presentation so that they can see my designs on the big screen while I talk.
+'I've designed a vertical farm based on the existing carpark structure. There will be eight floors of fruit and vegetable production. On the roof there will be rain collectors to water the soil, and solar panels to help power the special growing lights.'
+The presentation changes to show charts of statistics and financial budgets.
+'I will rent the space to small local farmers, and everything will be sold locally for a minimal carbon footprint. Also, the ninth floor will be allotments for any local people who want to grow their own food.'
+My audience looks impressed, but I'm not finished yet.
+'To prove the project can work, I've talked to local people and farmers, and I've received letters of support and interest from all sides. I also gave this presentation to my bank manager. We have agreed a business loan to cover all costs, as long as I can convince the council to sell me the site.'
+I turn off the presentation. 'Are there any questions?'
+...
+I graduate from university with top marks.
+But in the real world that doesn't count for anything.
+Instead of accepting my plan, the council decided to sell the site to a property developer who will knock it down and build a load of luxury apartments. The mayor says they will bring new energy to the town. So much for the vertical farm.
+Janey kept causing trouble while I was away. Fortunately, she was out of prison when I came back, so I met her for a drink and she showed me her new prison tattoos. 
+'You're an idiot for abandoning my strategy,' she tells me. 'Nothing sends our message better than blocking streets with earth and plants.' 
+Her latest trip to prison was for doing exactly that, again, whereas I'm a new university graduate with a bright future. 
+You'd think I'd have the sense to ignore her, wouldn't you?
 
-Plan 4: Guerrilla gardening 2.0. They target a poor, neglected neighborhood. They plant vegetable gardens in front of every house and put grass over broken pavements for kids. Residents form a human chain to protect the gardens from the council. It’s on the national news.
+Plan 4: Guerrilla gardening 2.0
+This time, I agreed to do part of what Janey wanted.
+We drive around town, searching for the ideal location. Not in front of the Town Hall or the shopping centre, none of the places Janey thinks will make the biggest statement. I think she's been choosing the wrong targets.
+I'm looking for something different. Somewhere on the edge of town would be good. Not the best neighbourhood, but a deprived one, one that the council never invests in. One where the road surface is full of holes, and the pavement looks as if someone smashed it with hammers. I'm looking for somewhere the people don't have cars outside their houses, because no one has the money to own a car.
+We find just the place.
+One night, we arrive in another 'borrowed' truck and carefully fill the whole street with earth from one pavement to the other - classic Janey, just like all her plans. But this time, we plant vegetable gardens in front of every house. We post leaflets through people's doors with gardening instructions, so the lucky new owners will know what to do. The leaflets also explain how much money you can save if you grow your own food - you'd be surprised.
+As a finishing touch, we put grass over those broken old pavements for the kids to play on, complete with a sign reading, 'Please Walk on the Grass'.
+When we've finished, we're both covered in soil and completely exhausted. But Janey puts an arm around my shoulders. 
+'Not a bad plan, for you!' she says, smiling.
+...
+The town council is furious, of course. But would you believe that when they finally send people in to take the gardens away, the residents lock arms to form a human chain and refuse to let them through? 
+Just as I hoped, the people in this neighbourhood like what we've done to their street!
+Later that day, the mayor himself goes to explain to them how what we did is a misuse of public property, and it's a crime. He isn't very pleased when a local TV reporter arrives to record the event. 
+The reporter asks him, 'This street hasn't been renovated for 20 years! Why don't you want it to be a place for growing food? Why can't it be a place for children to play and learn?'
+It was the lead story on the national evening news and the whole town was thrilled. Well, everyone apart from the mayor, of course.
+The night after that, Janey and I strike again - but this time we go in fast and hard. We just leave huge piles of earth at the top of 13 streets, along with spades, seeds and instructions piled on top of them.
+People get the idea now, and we can't do all the work ourselves.
+We manage three more nights of that before we get caught.
 
-Plan 5: The right place to fight. Narrator is in prison. They work on the prison farm. Narrator realizes half the streets now have gardens because politicians don't want to upset happy voters. Narrator plans to run for Mayor next year.`,
+Plan 5: The right place to fight
+So here I am, in prison.
+It could be worse. It's my first crime, at least as an adult, so even though the plan was mostly my idea, my sentence wasn't too harsh. But Janey has quite a long criminal record now. When I get out of prison, she'll still have a couple of years left. She doesn't blame me though. As far as she's concerned, 'Guerrilla Gardening 2.0' was our most successful operation by far.
+We're in separate buildings in prison, but we both work on the prison farm. We want to really make something of it. I start teaching Janey what I learned at university, and soon enough she's learned everything I can teach her. 
+When it's time for me to get out of prison, I know I'm leaving the farm in capable hands. 
+Janey says, 'Don't you worry. I'll keep things running here until you get yourself sent back in for your next green crime.'
+That's not really part of my plan, though.
+...
+Do you remember those mountains of earth we left blocking streets all over town? Half of them are vegetable gardens now. The council doesn't like it, but we picked our targets well, and if there's one thing all politicians know, it's that they don't want to upset happy voters. 
+One thing I've learned is this: 
+If you want to win the battle, choose the right battleground.
+The old mayor is retiring this year, you see. So the next time I try to re-green my town, I'll be running for election as mayor.
+Last year I was a guerrilla gardener. 
+Next year I'll be the mayor. And our town will be the greenest place in the country.`,
         questions: [
-          { q: 'What was Janey’s first plan?', options: ['Bamboo', 'Cover high street with grass', 'Roof farm', 'Vegetables'], answer: 1 },
-          { q: 'Why were they punished?', options: ['Theft', 'Damaging public property/vandalism', 'Pollution', 'Noise'], answer: 1 },
-          { q: 'What did they plant in Plan 2?', options: ['Flowers', 'Corn', 'Bamboo', 'Trees'], answer: 2 },
-          { q: 'Where did they plant in Plan 4?', options: ['Town Hall', 'Shopping center', 'Poor neighborhood', 'School'], answer: 2 },
-          { q: 'How did residents react in Plan 4?', options: ['Angry', 'Joined council', 'Protected gardens (human chain)', 'Left'], answer: 2 },
-          { q: 'What did narrator study?', options: ['Law', 'Engineers then Agriculture', 'Arts', 'Music'], answer: 1 },
-          { q: 'Why reject the vertical farm?', options: ['Expensive', 'Luxury apartments preferred', 'No profit', 'Fear of plants'], answer: 1 },
-          { q: 'What was the finishing touch in Plan 4?', options: ['Statue', 'Sign "Please Walk on the Grass"', 'Fence', 'Lights'], answer: 1 },
-          { q: 'What is the final plan?', options: ['More bamboo', 'Move', 'Run for Mayor', 'Prison farm forever'], answer: 2 },
-          { q: 'How many streets did they "strike" in Plan 4-5?', options: ['One', 'Five', 'Thirteen', 'All'], answer: 2 },
+          { q: "What was Janey’s first plan in Plan 1: Guerrilla Gardening?", options: ["To plant bamboo in the park", "To cover the high street with grass", "To build a farm on the roof", "To grow vegetables in prison"], answer: 1 },
+          { q: "Why were the narrator and Janey punished after their first plan?", options: ["They refused to leave the town", "They damaged public property", "They planted too many trees", "They refused to pay taxes"], answer: 1 },
+          { q: "What did Janey plant during the town festival in Plan 2?", options: ["Flowers", "Corn", "Bamboo", "Trees"], answer: 2 },
+          { q: "What happened to Janey after Plan 2?", options: ["She received a reward", "She moved to another town", "She was sent to prison", "She started a business"], answer: 2 },
+          { q: "What was the narrator studying at university after Plan 2?", options: ["Medicine", "Engineering", "Agriculture and Wildlife", "Business"], answer: 2 },
+          { q: "What was the narrator’s idea in Plan 3?", options: ["A bamboo forest", "A vertical farm", "A flower garden", "A city park"], answer: 1 },
+          { q: "Why did the council reject the narrator’s vertical farm plan?", options: ["It was too expensive", "They preferred luxury apartments", "It was illegal", "It lacked support"], answer: 1 },
+          { q: "In Plan 4, where did they create vegetable gardens?", options: ["In front of the Town Hall", "Near the shopping centre", "In a poor neighbourhood", "In the school yard"], answer: 2 },
+          { q: "How did the residents react when the council tried to remove the gardens?", options: ["They helped remove them", "They ignored the situation", "They protected the gardens", "They moved away"], answer: 2 },
+          { q: "What final plan did the narrator decide on in Plan 5?", options: ["To plant more bamboo", "To move to another city", "To run for mayor", "To build another farm"], answer: 2 }
         ],
-        answerKey: [1, 1, 2, 2, 2, 1, 1, 1, 2, 2],
+        answerKey: [1, 1, 2, 2, 2, 1, 1, 2, 2, 2],
+      },
+      {
+        title: 'I Wandered Lonely as a Cloud',
+        text: `I wandered lonely as a cloud
+That floats on high o'er vales and hills,
+When all at once I saw a crowd,
+A host, of golden daffodils;
+Beside the lake, beneath the trees,
+Fluttering and dancing in the breeze.
+
+Continuous as the stars that shine
+And twinkle on the milky way,
+They stretched in never-ending line
+Along the margin of a bay:
+Ten thousand saw I at a glance,
+Tossing their heads in sprightly dance.
+
+The waves beside them danced; but they
+Out-did the sparkling waves in glee:
+A poet could not but be gay,
+In such a jocund company:
+I gazed — and gazed — but little thought
+What wealth the show to me had brought:
+
+For oft, when on my couch I lie
+In vacant or in pensive mood,
+They flash upon that inward eye
+Which is the bliss of solitude;
+And then my heart with pleasure fills,
+And dances with the daffodils.`,
+        questions: [
+          { q: "What does the simile “lonely as a cloud” suggest about the speaker at the beginning?", options: ["He feels excited about nature", "He feels isolated but observant", "He is afraid of being alone", "He feels powerful and free"], answer: 1 },
+          { q: "How does the image of the daffodils change the speaker’s mood?", options: ["From excitement to boredom", "From loneliness to happiness", "From confusion to anger", "From joy to sadness"], answer: 1 },
+          { q: "What is the effect of describing the daffodils as a “crowd” and “host”?", options: ["It reduces their importance", "It shows they are controlled", "It emphasizes their number and unity", "It makes them seem threatening"], answer: 2 },
+          { q: "Why does the poet compare the daffodils to stars in the Milky Way?", options: ["To suggest they are unreachable", "To show they appear at night", "To describe their scientific nature", "To highlight their brightness and endless arrangement"], answer: 3 },
+          { q: "What does the phrase “out-did the sparkling waves in glee” imply?", options: ["The waves are more beautiful than the flowers", "The waves are calmer than the flowers", "The flowers appear more joyful than the waves", "The waves and flowers are equal"], answer: 2 },
+          { q: "Why is the speaker described as gazing “but little thought”?", options: ["He did not understand the long-term emotional value of the moment", "He was distracted by something else", "He was too tired to think", "He did not like the view"], answer: 0 },
+          { q: "What role does memory play in the final stanza?", options: ["It replaces the need for nature", "It causes regret", "It distorts reality", "It recreates the joy of the original experience"], answer: 3 },
+          { q: "How does the phrase “bliss of solitude” contribute to the poem’s meaning?", options: ["It shows solitude is always negative", "It describes loneliness as painful", "It suggests being alone allows reflection and happiness", "It shows the speaker avoids people"], answer: 2 },
+          { q: "Which literary device is most dominant throughout the poem?", options: ["Hyperbole", "Irony", "Personification", "Allusion"], answer: 2 },
+          { q: "What is the central insight the speaker gains from the experience?", options: ["Beauty is temporary and meaningless", "Emotional richness can come from simple natural experiences", "Nature is more powerful than humans", "Loneliness cannot be avoided"], answer: 1 }
+        ],
+        answerKey: [1, 1, 2, 3, 2, 0, 3, 2, 2, 1],
+      },
+      {
+        title: 'Table for 3',
+        text: `The chef placed the plates on the counter. The steak was perfect. The vegetables were fresh and tender. The smell of the sauce was mouth-watering. Henry picked the plates up and carried them gracefully into the dining room.
+There was only one table in the lavishly decorated room. In the corner, a woman was playing soft piano music. The walls were made of glass, and the view of the sea was magnificent.
+Henry placed one plate in front of each of the three men, and began to pour the wine.
+“So, she’s been elected,” said one man with brown hair. “But without my support, she’s nothing.”
+A bald man spoke. “That’s seventeen governments you control now, isn’t it? You sneaky devil!”
+“I beg your pardon!” the man replied, offended. “It’s eighteen.”
+“You’re catching up with me.”
+The men clinked their glasses.
+Henry bowed, left the room and returned to the kitchen. He washed his hands, and went to the bathroom. Inside a cubicle, he checked his hidden camera. The device was still working correctly.
+Henry was an undercover reporter. For over five years, he had pretended to be a waiter. He’d worked at ten different catering companies. It was all so he could serve dinner to the three men this evening.
+Everyone who worked for the company had a strict contract. If they revealed anything they heard, the penalty was extremely harsh. But Henry didn’t care: it was more important to show the world the truth.
+He washed his hands again, returned to the kitchen, and helped to prepare the dessert. It was a luxurious tart, made with rare dark chocolate and decorated with gold.
+When Henry brought the dessert into the dining room, the three men were laughing.
+“I don’t care whether the President believes in climate change,” said a man with curly hair. “I have secret underground homes on every continent. She can burn with everyone else.”
+“Underground?” laughed the man with brown hair. “Enjoy your life as a mole. I’ll wave to you from orbit.”
+The third man scoffed. “Space? I’m staying right here on Earth. If it’s hot, I’ve got air conditioning. If it’s cold, I’ve got heating. If there’s something I need, I’ve got an army of robots.”
+Henry looked at the chocolate tarts. He felt sick. He placed one in front of each man, and poured more wine.
+“You know, I feel bad for them sometimes,” said the bald man. “Billions of people, working so hard, for so little. Like our waiter.”
+Henry froze.
+“Look at this man. Do you realise he’s worked for five years just to be here tonight?”`,
+        questions: [
+          { q: "What is Henry’s role in the story?", options: ["A chef preparing food for clients", "An undercover reporter observing powerful men", "A security guard for the dining room", "A waiter with a secret mission"], answer: 1 },
+          { q: "Why had Henry worked for ten different catering companies over five years?", options: ["To gain cooking experience", "To save money for a personal project", "To gather evidence for his investigation", "To meet influential people"], answer: 2 },
+          { q: "What can be inferred about the three men from their conversation?", options: ["They are concerned about environmental issues", "They have immense power and wealth", "They are new to politics", "They dislike technology"], answer: 1 },
+          { q: "Why does Henry check the hidden camera in the bathroom?", options: ["To make sure it captures evidence of the men’s conversation", "To record the dessert preparation", "To test its battery", "To spy on other staff members"], answer: 0 },
+          { q: "What does the description of the dessert suggest about the setting?", options: ["It is a casual family restaurant", "It is a luxurious and exclusive dining experience", "It is a small café", "It is a government cafeteria"], answer: 1 },
+          { q: "How do the men view ordinary people, according to their dialogue?", options: ["With empathy and respect", "With amusement and superiority", "With indifference", "With concern for fairness"], answer: 1 },
+          { q: "Which statement best describes Henry’s emotional reaction to the men?", options: ["He is impressed by their wealth", "He is indifferent to their conversation", "He feels disgusted and conflicted", "He wants to join their lifestyle"], answer: 2 },
+          { q: "What is the primary purpose of the hidden camera?", options: ["To entertain Henry", "To secretly gather evidence of the men’s attitudes and plans", "To help Henry improve his cooking skills", "To record the dessert presentation"], answer: 1 },
+          { q: "How does the dialogue between the men reveal their personality?", options: ["They are modest and humble", "They are arrogant and detached from reality", "They are confused about climate change", "They are worried about their public image"], answer: 1 },
+          { q: "Why does the bald man mention Henry at the end?", options: ["To compliment his service skills", "To highlight the irony of Henry’s effort compared to their wealth", "To question his loyalty", "To encourage him to leave"], answer: 1 }
+        ],
+        answerKey: [1, 2, 1, 0, 1, 1, 2, 1, 1, 1],
+      },
+      {
+        title: 'Sonnet 18',
+        text: `Shall I compare thee to a summer’s day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer’s lease hath all too short a date;
+Sometime too hot the eye of heaven shines,
+And often is his gold complexion dimm'd;
+And every fair from fair sometime declines,
+By chance or nature’s changing course untrimm'd;
+But thy eternal summer shall not fade,
+Nor lose possession of that fair thou ow’st;
+Nor shall death brag thou wander’st in his shade,
+When in eternal lines to time thou grow’st:
+   So long as men can breathe or eyes can see,
+   So long lives this, and this gives life to thee.`,
+        questions: [
+          { q: "In the opening line, “Shall I compare thee to a summer’s day?” the speaker is:", options: ["Asking if summer is better than the person.", "Considering whether the person is as beautiful as summer.", "Criticizing summer for being too short.", "Telling the person they are part of summer."], answer: 1 },
+          { q: "According to the sonnet, summer is sometimes not perfect because:", options: ["It has storms and very hot days.", "It lasts too long and becomes boring.", "People don’t enjoy it enough.", "It is always the same every year."], answer: 0 },
+          { q: "The phrase “Rough winds do shake the darling buds of May” suggests that:", options: ["May is the most beautiful month of summer.", "Summer can damage delicate things.", "The speaker dislikes spring.", "Flowers are unimportant in the poem."], answer: 1 },
+          { q: "What does “thy eternal summer shall not fade” mean?", options: ["The person will always enjoy the summer season.", "The person’s beauty will last forever in the poem.", "Summer will never end.", "The person will never grow old physically."], answer: 1 },
+          { q: "How does the sonnet suggest poetry can grant immortality?", options: ["By recording events in history books.", "By giving eternal life to those who read it.", "By preserving beauty through written lines.", "By controlling the passage of time."], answer: 2 },
+          { q: "“Nor shall death brag thou wander’st in his shade” implies that:", options: ["Death will take the person eventually.", "The poem protects the person from being forgotten.", "The person is afraid of dying.", "Death is less powerful in summer"], answer: 1 },
+          { q: "“So long as men can breathe or eyes can see” means:", options: ["Only people alive now will remember the poem.", "The poem will last as long as humans exist.", "People need to see summer to enjoy it.", "Human life is too short to appreciate poetry."], answer: 1 },
+          { q: "The sonnet compares beauty to summer mainly to show:", options: ["That beauty is temporary and fades quickly.", "That summer is more powerful than humans.", "That the person is stronger than natural forces.", "That nature can replace human beauty."], answer: 0 },
+          { q: "Why does the poet say “every fair from fair sometime declines”?", options: ["To remind readers that summer is unpredictable.", "To highlight that all beauty eventually fades naturally.", "To criticize the changing seasons.", "To show that humans are stronger than nature."], answer: 1 },
+          { q: "Overall, the tone of the poem is:", options: ["Critical and disappointed.", "Romantic and admiring.", "Neutral and descriptive.", "Sad and mournful."], answer: 1 }
+        ],
+        answerKey: [1, 0, 1, 1, 2, 1, 1, 0, 1, 1],
+      },
+      {
+        title: 'How flood control projects fail the poor in the Philippines',
+        text: `BULACAN - Living in the riverside village of Sipat in the Philippines, Josephine Dela Cruz watches the soil erode with every storm, haunted by the fear that one day the ground will wash away completely and take her family with it.
+One night this summer, heavy rains toppled trees and knocked down a bamboo stilt house in their settlement in Bulacan, a densely populated province north of Manila, she said.
+Bulacan, among the country's most flood-prone provinces, has had the most flood control projects built in the past three years.
+The government has spent more than 500 billion Philippine pesos ($8.5 billion) nationwide to build infrastructure such as dykes, seawalls and layers of large stones known as riprap to control stormwater .
+But state investigations have revealed overpriced contracts, unfinished structures and projects mismatched to flood risks, leaving many residents in flood-prone areas still unprotected.
+Ferdinand Marcos Jr. formed a commission in September to investigate possible corruption in flood control projects, after thousands of angry Filipinos marched in the streets of Manila on Sept. 21 to demand accountability and transparency from the government.
+“We were really disappointed when we heard how big the funds were for flood control, and we were left behind,” said Dela Cruz, who has lived by the Angat River for more than 40 years.
+When heavy rains fall, a concrete dam releases water from the Angat reservoir to prevent its overflow, exposing downstream communities like Dela Cruz’s to riverbank erosion.
+“A state engineer kept telling us they will build a wall to protect us from disasters… but I hope the government will do something about this soon and not wait for another major storm to hit us,” said Dela Cruz.
+
+Mismatch and corruption
+In another settlement along the Angat River in Sipat, residents said they were pleased when construction began in August of this year on a riverbank protection structure to help prevent flooding.  
+A month later, they learned the 96-million-peso ($1.650 million) project had been marked completed in 2024 under a different contractor, although they had not seen any work done.
+The structure is one of several “ghost” or nonexistent flood control projects in Bulacan under the Department of Public Works and Highways (DPWH) that have been marked completed based on a database made public by the president.
+Lawmakers are investigating contractors and government officials who may have been involved in stealing funds meant for flood control projects that failed to materialise.
+“I was shocked when I recently learned about this ghost project, and I felt pity for my community," said Oscar Gabriel, chief of Sipat village in Plaridel.
+"We were happy that a project like this came to us, but we were tricked and lied to.”
+The project remained unfinished as of earlier this month.
+
+Also in Bulacan, some flood control projects were found to be misaligned with actual flood hazard areas, according to an analysis by the Pro-People Engineers and Leaders (Propel), a local NGO that advocates for equitable engineering.
+“There’s a sense of misalignment and lack of prioritisation of the DPWH and other agencies of flood hazard areas for flood control projects,” said Jose Antonio Montalban, an engineer and public information officer of Propel.
+Propel found flood-prone areas in several towns in Bulacan lacked flood control infrastructure, based on data from Project NOAH (Nationwide Operational Assessment of Hazards), the Philippines' disaster risk reduction and management programme.
+According to the group, 411 out of the 668 flood control projects in Bulacan are not located in any identified flood hazard areas.
+
+Failure of infrastructure
+With the Philippines’ reliance on hard infrastructure for flood control, Montalban said scientific assessments of water resources and hazards such as consideration of an area's hydrogeographical conditions are necessary.
+He said he has seen infrastructure that may have been built without feasibility reports or other needed studies.
+Flaws in design and engineering, which can be linked to corruption and lack of proper planning, have led to disastrous scenarios such as collapsing seawalls or dykes, he said.
+“The burden is heavy on communities that experienced these disasters. When a flood control structure collapses, the impact on people’s safety is extreme and instantaneous,” the engineer said.
+
+A 2022 study by architecture scholars noted that failure to finish or maintain costly structural flood control projects in the Philippines “renders them ineffective.”
+“Therefore, the most effective solutions in mitigating the effects of flooding are mostly non-structural in nature,” the study said.
+It suggested a combination of structural and non-structural solutions, such as improving flood forecasting and warning systems and assessing land use and water resources. 
+
+Community-based solutions
+Greenpeace Philippines said corruption in flood infrastructure is “crippling the ability of millions of Filipinos to survive in the face of an escalating climate crisis.”
+“Every year, millions of Filipinos lose lives, homes, and livelihoods due to more frequent and more intense flooding. Floods have also caused massive economic losses for local governments as well as the national government,” Greenpeace said in a statement on Sept. 8.
+Propel is calling for holistic flood risk management that includes community consultations and nature-based solutions.
+These solutions include restoring wetlands to absorb excess water, creating water-retention areas and reviving old river channels, as noted in a 2022 case study brief by the Asian Development Bank.
+Propel is also proposing a comprehensive drainage master plan to replace the Philippines’ “fragmented” framework on flood risk management.
+
+In Sipat, Gabriel said transparency in public works is critical.
+“Flood control infrastructure is nice to have, especially in areas prone to erosion," he said.
+"But I hope the national government will inform us of any planned infrastructure in the community and not leave us in the dark,” he said.`,
+        questions: [
+          { q: "Where does Josephine Dela Cruz live?", options: ["Plaridel", "Manila", "Cebu", "Sipat, Bulacan"], answer: 3 },
+          { q: "How much has the Philippine government spent nationwide on flood control in the past three years?", options: ["25 billion pesos", "96 million pesos", "500 billion pesos", "1.47 trillion pesos"], answer: 2 },
+          { q: "What type of flood control infrastructure was mentioned in the article?", options: ["Bridges and highways", "Wind turbines and solar panels", "Dykes, seawalls, and riprap", "Canals and aqueducts"], answer: 2 },
+          { q: "Why are communities like Sipat still at risk despite these projects?", options: ["Heavy rainfall has decreased", "People refuse to evacuate", "Projects are mostly non-existent, overpriced, or misaligned", "There are no rivers nearby"], answer: 2 },
+          { q: "What did the “ghost” projects in Bulacan refer to?", options: ["Projects that used recycled materials", "Projects completed on time", "Community-led initiatives", "Flood control projects that were never built"], answer: 3 },
+          { q: "According to Propel, how many flood control projects in Bulacan are not in identified flood hazard areas?", options: ["257 out of 668", "411 out of 668", "668 out of 668", "96 out of 500"], answer: 1 },
+          { q: "What is one reason infrastructure fails in the Philippines, according to experts?", options: ["Lack of rainfall", "Excessive use of nature-based solutions", "Flaws in design, engineering, and planning", "Communities do not maintain the infrastructure"], answer: 2 },
+          { q: "Which of the following is suggested as an effective non-structural solution?", options: ["Constructing high-rise buildings", "Improving flood forecasting and warning systems", "Building more dykes", "Installing solar panels"], answer: 1 },
+          { q: "What community-based solutions are proposed by Propel?", options: ["Restoring wetlands and old river channels", "Expanding highways", "Building luxury resorts", "Constructing shopping malls"], answer: 0 },
+          { q: "What is emphasized as critical for successful flood control in communities like Sipat?", options: ["Increasing taxes", "Transparency in public works", "Hiring more contractors", "Avoiding riverbank settlements"], answer: 1 }
+        ],
+        answerKey: [3, 2, 2, 2, 3, 1, 2, 1, 0, 1],
+      },
+      {
+        title: 'Filipino concern over online disinformation hits record high, report finds',
+        text: `MANILA, Philippines — Concern over online mis- and disinformation in the Philippines climbed to a record 67% in early 2025 amid a politically charged midterm election season that saw Vice President Sara Duterte impeached on corruption charges and former president Rodrigo Duterte arrested by the International Criminal Court for crimes against humanity tied to his brutal drug war.
+This was the highest level recorded since the country was included in the Reuters Institute Digital News Report (DNR) in 2020. The latest edition, which polled 97,055 respondents across 48 markets in six continents online from mid-January to late February, including 2,014 adult Filipinos, was released on June 17.
+This year’s report also highlights how Filipinos have been increasingly turning to podcasts and AI chatbots for news while remaining cautious about fully automated journalism. It also documents rising verification habits, shifting platform preferences, and evolving trust dynamics
+
+Who spreads disinformation?
+The four-point rise in concern about mis- and disinformation from 2024 (63%) and 10-point leap from 2020 (57%) place the Philippines nine points above this year’s global average of 58% and seven points above the average for the Asia Pacific region (60%). The steady climb in these concerns over six years underscores a growing sense of public anxiety about the spread of false or misleading content online
+Concern was notably higher among Filipino women (70%), those aged 55 and above (76%) followed by 18- to 24-year-olds (70%), as well as among those with higher income (78%), higher education (74%), and those residing in the Visayas (73%).
+Unlike the global sample, which identified both politicians and online influencers as playing the biggest role (47% each) in the spread of false or misleading information, Filipinos viewed political actors (55%) as a greater threat than online influencers (48%), activists (38%), journalists (37%), foreign governments (34%), celebrities (33%), and ordinary people (29%). Concern about journalists as a source of false information was five points higher than the global average of 32%.
+Filipinos most commonly encountered disinformation on social media, more than on messaging apps, search engines, or through face-to-face conversations. Facebook topped the list at 68%, well above the global average of 49%, followed by TikTok (48%), YouTube (39%), X (27%), and news websites (22%). Across all markets, however, X and Instagram were perceived as bigger disinformation threats than YouTube, a contrast to the Philippine experience.
+Concerns about content moderation on social media and video-sharing platforms also persisted. While a third of Filipinos considered current moderation levels sufficient, more than one in four (27%) believed platforms did too little to remove misleading or harmful content, reflecting a public preference for stronger accountability from digital platforms.`,
+        questions: [
+          { q: "What percentage of Filipinos were concerned about online disinformation in early 2025?", options: ["57%", "63%", "67%", "60%"], answer: 2 },
+          { q: "How many adult Filipinos were surveyed for the Reuters Institute Digital News Report?", options: ["2,014", "48", "97,055", "6,000"], answer: 0 },
+          { q: "Which groups did Filipinos see as the biggest sources of disinformation?", options: ["Activists and celebrities", "Political actors and online influencers", "Journalists and foreign governments", "Ordinary people and AI chatbots"], answer: 1 },
+          { q: "On which platform did Filipinos most commonly encounter disinformation?", options: ["TikTok", "Facebook", "YouTube", "X"], answer: 1 },
+          { q: "Which demographic in the Philippines showed the highest concern over online disinformation?", options: ["Women and people aged 55+", "Men aged 18–24", "Residents of Luzon only", "Children under 18"], answer: 0 },
+          { q: "How did Filipino concern compare with the global average?", options: ["7 points below global average", "9 points above global average", "Equal to global average", "10 points below global average"], answer: 1 },
+          { q: "How did Filipinos perceive journalists in the context of disinformation?", options: ["Less concerning than online influencers", "More concerning than the global average", "The biggest source of disinformation", "Not a source of disinformation"], answer: 1 },
+          { q: "What percentage of Filipinos believed social media platforms did too little to remove misleading content?", options: ["33%", "27%", "68%", "48%"], answer: 1 },
+          { q: "What new sources of news are Filipinos increasingly using according to the report?", options: ["Television and newspapers", "Podcasts and AI chatbots", "Radio and print media", "Face-to-face interviews"], answer: 1 },
+          { q: "How does disinformation on X and Instagram in the Philippines compare to global perception?", options: ["Considered bigger threats than YouTube in the Philippines", "Considered smaller threats than YouTube in the Philippines", "Equally concerning as Facebook", "Not encountered by most Filipinos"], answer: 1 }
+        ],
+        answerKey: [2, 0, 1, 1, 0, 1, 1, 1, 1, 1],
+      },
+      {
+        title: '“If” by Rudyard Kipling (1895)',
+        text: `If you can keep your head when all about you   
+    Are losing theirs and blaming it on you,   
+If you can trust yourself when all men doubt you,
+    But make allowance for their doubting too;   
+If you can wait and not be tired by waiting,
+    Or being lied about, don’t deal in lies,
+Or being hated, don’t give way to hating,
+	And yet don’t look too good, nor talk too wise:
+
+If you can dream—and not make dreams your master;   
+    If you can think—and not make thoughts your aim;   
+If you can meet with Triumph and Disaster
+    And treat those two impostors just the same;   
+If you can bear to hear the truth you’ve spoken
+    Twisted by knaves to make a trap for fools,
+Or watch the things you gave your life to, broken,
+    And stoop and build ’em up with worn-out tools:
+
+If you can make one heap of all your winnings
+    And risk it on one turn of pitch-and-toss,
+And lose, and start again at your beginnings
+    And never breathe a word about your loss;
+If you can force your heart and nerve and sinew
+    To serve your turn long after they are gone,   
+And so hold on when there is nothing in you
+    Except the Will which says to them: ‘Hold on!’
+
+If you can talk with crowds and keep your virtue,   
+    Or walk with Kings — nor lose the common touch,
+If neither foes nor loving friends can hurt you,
+    If all men count with you, but none too much;
+If you can fill the unforgiving minute
+    With sixty seconds’ worth of distance run,   
+Yours is the Earth and everything that’s in it,   
+	And—which is more — you’ll be a Man, my son!`,
+        questions: [
+          { q: "What is the main purpose of Kipling’s poem “If”?", options: ["To tell a fictional story", "To give advice to the poet’s son on how to live well", "To describe natural disasters", "To criticize society"], answer: 1 },
+          { q: "What literary form does the poem take?", options: ["Letter", "Narrative essay", "Advice in a paternal tone", "Play script"], answer: 2 },
+          { q: "Which phrase shows that the poem teaches about patience?", options: ["If you can dream—and not make dreams your master", "If you can wait and not be tired by waiting", "If you can talk with crowds and keep your virtue", "And risk it on one turn of pitch-and-toss"], answer: 1 },
+          { q: "How are Triumph and Disaster described in the poem?", options: ["As enemies", "As impostors", "As friends", "As natural events"], answer: 1 },
+          { q: "What quality is emphasized in the lines: “And so hold on when there is nothing in you / Except the Will which says to them: ‘Hold on!’”?", options: ["Luck", "Determination", "Happiness", "Curiosity"], answer: 1 },
+          { q: "According to the poem, what should one do when lied about?", options: ["Lie back", "Give way to anger", "Not deal in lies", "Ignore everyone"], answer: 2 },
+          { q: "What does the poem suggest about dealing with loss?", options: ["Avoid taking risks", "Complain about your losses", "Start again without complaining", "Focus only on past failures"], answer: 2 },
+          { q: "What is meant by “fill the unforgiving minute / With sixty seconds’ worth of distance run”?", options: ["Waste time for reflection", "Make the most of every moment", "Avoid challenges", "Sleep as much as possible"], answer: 1 },
+          { q: "Which line indicates the importance of humility?", options: ["And yet don’t look too good, nor talk too wise", "If you can bear to hear the truth you’ve spoken", "If you can dream—and not make dreams your master", "Or walk with Kings — nor lose the common touch"], answer: 0 },
+          { q: "What is the ultimate reward mentioned in the poem if one follows the advice?", options: ["Fame and wealth", "The Earth and everything in it, and personal growth into a mature man", "Recognition from politicians", "Avoiding all risks"], answer: 1 }
+        ],
+        answerKey: [1, 2, 1, 1, 1, 2, 2, 1, 0, 1],
       },
     ],
   },
