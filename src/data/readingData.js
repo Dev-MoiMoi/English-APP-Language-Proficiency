@@ -559,63 +559,268 @@ Maria took a deep breath. She took her phone out of her bag and opened up the me
 
   B1: {
     levelLabel: 'B1 – Intermediate',
-    intro: 'Short stories and guides for intermediate learners. These texts cover everyday topics and focus on checking understanding of main ideas, details, and vocabulary.',
+    intro: 'Read stories, blogs, and guides for intermediate learners. These texts cover everyday topics, social science, and literature with a focus on main ideas and key details.',
     stories: [
       {
         title: 'Alien Languages',
-        text: `“It’s definitely an alien language,” Alison confirmed. The General nodded silently. Alison was standing inside a secret military base. There was computer equipment everywhere. Two soldiers with guns were by the door.
-
-Alison was an expert linguist. As soon as the satellites had received the strange signal, the military had brought her to the base. “This is a matter of extreme importance to the whole planet,” said the General. “It’s the President’s top priority. We need to understand what that message says.”
-
-Alison and her team worked day and night. At first, progress was slow. Then, they began to make breakthroughs. They learned the unusual grammar. One by one, the words began to make sense.
-
-A few weeks later, Alison reported to the General. “We’ve finished the translation,” she said timidly. “It says —”
+        text: `“It’s definitely an alien language,” Alison confirmed.
+The General nodded silently. Alison was standing inside a secret military base. There was computer equipment everywhere. There were two soldiers with guns standing by the door.
+Alison was an expert linguist. As soon as the satellites had received the strange signal, the military had brought her to the base.
+“This is a matter of extreme importance to the whole planet,” said the General. “It’s the President’s top priority. Name anyone you need, and I’ll get them on your team. We need to understand what that message says.”
+Alison gave him a list of researchers she’d worked with in the past. The General left. The soldiers saluted.
+Alison and her team worked day and night to decode the alien message. At first, progress was slow. Then, they began to make breakthroughs. They learned to understand the alien language’s unusual grammar. One by one, the words began to make sense.
+A few weeks later, Alison reported to the General.
+“We’ve finished the translation,” said Alison timidly, looking at her feet. “It says —”
 “Stop right there,” the General interrupted. “You should tell the President, not me.”
-
-The next day, the President arrived with advisors and journalists. “Is it a message of war?” she asked.
-“No,” said Alison. The journalists cheered. “Then it is a message of peace!”
-“No,” said Alison. The applause died down.
-“Well, what does it say?”
-Alison took a deep breath. “The local services will not collect rubbish bins that are too full.”`,
+The next day, the President arrived with an army of advisors, ministers and journalists. She shook hands with everyone, then she sat down behind a large table.
+“That’s your cue,” said the General. He pushed Alison forward.
+Alison sat down opposite the President. The cameras flashed.
+“Alison, the whole world thanks you and your team for your diligent work to determine the meaning of this alien signal,” said the President.
+“Thank you,” Alison whispered into the microphone.
+“Tell us straight away: is it a message of war?”
+“No,” said Alison, without looking up.
+The journalists cheered and clapped. “Then it is a message of peace!” she said, smiling.
+“No,” said Alison.
+The applause died down. The journalists began to murmur.
+“Well, what does it say?” said the President at last.
+Alison gulped, and took a deep breath.
+“The local services will not collect rubbish bins that are too full.”`,
         questions: [
-          { q: 'Where is Alison?', options: ['Lab', 'Military base', 'Press conference', 'Spaceship'], answer: 1 },
-          { q: 'What is her job?', options: ['General', 'Engineer', 'Linguist', 'Journalist'], answer: 2 },
-          { q: 'Why was she brought there?', options: ['Lecture', 'Fix computers', 'Decode signal', 'Interview'], answer: 2 },
-          { q: 'How important was the message?', options: ['Small task', 'Extreme importance/top priority', 'Slow work', 'Didn\'t care'], answer: 1 },
-          { q: 'What did she ask for?', options: ['Equipment', 'Big office', 'Past researchers', 'Time'], answer: 2 },
-          { q: 'How did they translate it?', options: ['Dictionary', 'Understanding grammar and words', 'Aliens helped', 'Computer'], answer: 1 },
-          { q: 'Why did General stop her?', options: ['He knew', 'President should hear first', 'Didn\'t believe', 'He wanted to do it'], answer: 1 },
-          { q: 'Who came the next day?', options: ['General only', 'President and journalists', 'Linguists', 'Family'], answer: 1 },
-          { q: 'What was the first question?', options: ['Peace?', 'War?', 'How long?', 'What says?'], answer: 1 },
-          { q: 'What did it say?', options: ['Greetings', 'Peace', 'Rubbish bins too full', 'Invasion'], answer: 2 },
+          { q: "Where is Alison when the story begins?", options: ["In a university laboratory", "Inside a secret military base", "At a public press conference", "On a spaceship"], answer: 1 },
+          { q: "What is Alison's profession?", options: ["A military general", "A computer engineer", "An expert linguist", "A journalist"], answer: 2 },
+          { q: "Why did the military bring Alison to the base?", options: ["To give a lecture", "To help solve computer problems", "To decode a strange signal received by satellites", "To interview the General"], answer: 2 },
+          { q: "How important was understanding the alien message to the General?", options: ["It was a small, unimportant task", "It was a matter of extreme importance and the President's top priority", "It was something they could work on slowly", "He didn't care about it"], answer: 1 },
+          { q: "What did Alison ask the General for to help with the translation?", options: ["More advanced computer equipment", "A bigger office", "A list of researchers she'd worked with before", "More time"], answer: 2 },
+          { q: "How did Alison and her team manage to translate the message?", options: ["They found an alien dictionary", "They made breakthroughs by understanding its grammar and words", "The aliens sent them the translation", "A computer translated it instantly"], answer: 1 },
+          { q: "Why did the General tell Alison to stop before she revealed the translation to him?", options: ["He already knew what it said", "He wanted the President to hear it first", "He didn't believe her", "He wanted to translate it himself"], answer: 1 },
+          { q: "Who arrived the next day to hear the translation?", options: ["Only the General", "The President with advisors, ministers, and journalists", "Alison's team only", "Other linguists"], answer: 1 },
+          { q: "What was the first question the President asked Alison?", options: ["Is it a message of peace?", "Is it a message of war?", "How long did it take?", "What does it say?"], answer: 1 },
+          { q: "What did the alien message actually say?", options: ["Greetings from another planet!", "We come in peace.", "The local services will not collect rubbish bins that are too full.", "Prepare for invasion."], answer: 2 }
         ],
         answerKey: [1, 2, 2, 1, 2, 1, 1, 1, 1, 2],
       },
       {
         title: 'A Cosmic Understanding',
-        text: `Clare was a dedicated astronomer. One night, she spotted a huge meteor getting closer to Earth. “It’s coming right at us!” she exclaimed. She emailed her colleagues, but no response. She phoned fifty times until one picked up. “You’re always saying things like this,” said the colleague. “And you’re always wrong. We don’t believe you.”
-
-Clare decided to build a rocket. “I’ll save everyone!” During the day she worked on her rocket. At night, she planned. Finally, launch day. She soared into space and flew towards the meteor.
-
-“Wait a minute,” she said, looking through the window. She felt foolish. It wasn’t a meteor. It was the Space Guard, a famous satellite that stopped working years ago. “At least I can do something useful.” She went out in her suit and fixed the satellite.
-
-Feeling embarrassed, she returned to Earth. When she landed, her colleagues were there. “I’m sorry,” she began. “I thought there was a meteor, but —”
-
-“We’re sorry for not listening,” said her colleague. “We’re lucky you fixed the Space Guard. It immediately identified the real meteor you told us about. It was only one hour away! Its automatic systems destroyed it. You saved everyone!”
-Clare crossed her arms. “Next time, pick up the phone!”`,
+        text: `Clare was a dedicated astronomer, but she was never the first to discover something. Then, one night, she spotted a huge meteor that seemed to be getting closer to the Earth.
+“It’s coming right at us!” she exclaimed.
+She emailed her colleagues about it, but none of them responded. So she started phoning them, but the calls all went to voicemail, and no one called back. Eventually, after calling fifty times, one of her colleagues picked up the phone.
+“You’re always saying things like this,” said the other astronomer. “And you’re always wrong. We don’t believe you.”
+But Clare knew she was right. And if no one believed her, the Earth would be destroyed.
+Clare decided to build a rocket. “I’ll save everyone!” she declared. “Even if they don’t believe me!”
+During the day she worked on her rocket. At night, she planned her mission. She would fly to the meteor and destroy it.
+Finally, it was the day of the launch. Trembling, Clare climbed into her rocket and soared into space.
+She flew towards the meteor. It was exactly where she had predicted.
+“Wait a minute,” she said, looking closely through her window.
+She felt very foolish. It wasn’t a meteor. It was the Space Guard, a famous satellite that had stopped working years ago.
+“Well, now that I’m here, at least I can do something useful,” she said.
+Clare put on her suit and went into space with her tools. She flew over to the satellite, and began to work. Eventually, she managed to fix the satellite.
+Feeling embarrassed, she started flying back to Earth. She had pestered all her colleagues, and flown to space, but she was wrong. She didn’t look forward to admitting it.
+When she landed, all her colleagues were there.
+“I’m back,” she said with a sigh. “I have to apologise. I thought there was a meteor, but —”
+“We’re sorry for not listening to you,” said the astronomer she’d spoken to on the phone. “We’re lucky that you didn’t give up, and you fixed the Space Guard. The satellite immediately identified the meteor you told us about. It was only one hour away!”
+“Fixing the satellite was an excellent plan,” said another astronomer. “Its automatic systems destroyed the meteor quickly. You saved everyone!”
+Clare had crossed her arms. “Next time, pick up the phone!” she snapped.`,
         questions: [
-          { q: 'What was Clare’s job?', options: ['Rocket scientist', 'General', 'Astronomer', 'Operator'], answer: 2 },
-          { q: 'What did she spot?', options: ['Planet', 'Huge meteor', 'UFO', 'Satellite'], answer: 1 },
-          { q: 'How did colleagues react?', options: ['Believed her', 'Promised to call', 'Didn’t believe her', 'Helped build rocket'], answer: 2 },
-          { q: 'What did she decide to do?', options: ['Give up', 'Ask others', 'Build rocket herself', 'Call President'], answer: 2 },
-          { q: 'What was the plan?', options: ['Warn world', 'Destroy meteor', 'Build shield', 'Convince others'], answer: 1 },
-          { q: 'What was the "meteor" actually?', options: ['Asteroid', 'Alien ship', 'Broken satellite', 'Star'], answer: 2 },
-          { q: 'What did she do then?', options: ['Returned to Earth', 'Fixed satellite', 'Hid mistake', 'Called home'], answer: 1 },
-          { q: 'How did she feel returning?', options: ['Proud', 'Embarrassed', 'Excited', 'Angry'], answer: 1 },
-          { q: 'What did the satellite do?', options: ['Fell', 'Identified real meteor', 'Took photos', 'Broke again'], answer: 1 },
-          { q: 'How was meteor destroyed?', options: ['Clare hitting it', 'Automatic systems', 'Another rocket', 'It missed'], answer: 1 },
+          { q: "What was Clare's job?", options: ["A rocket scientist", "A military general", "An astronomer", "A telephone operator"], answer: 2 },
+          { q: "What did Clare spot one night that seemed to be getting closer to Earth?", options: ["A new planet", "A huge meteor", "A UFO", "The Space Guard satellite"], answer: 1 },
+          { q: "How did Clare's colleagues react when she tried to tell them about the meteor?", options: ["They immediately believed her", "They were busy but promised to call back", "They didn't believe her, saying she was always wrong", "They helped her build a rocket"], answer: 2 },
+          { q: "What did Clare decide to do when no one believed her?", options: ["Give up and go home", "Ask a different group of scientists for help", "Build a rocket to destroy the meteor herself", "Call the President directly"], answer: 2 },
+          { q: "What was Clare's plan for saving everyone?", options: ["To warn the world about the meteor", "To fly to the meteor and destroy it", "To build a shield around Earth", "To convince her colleagues"], answer: 1 },
+          { q: "What did Clare discover the \"meteor\" actually was when she got closer?", options: ["A smaller asteroid", "A new type of alien spacecraft", "The Space Guard, a famous broken satellite", "Just a bright star"], answer: 2 },
+          { q: "What did Clare do when she realized her mistake?", options: ["She immediately returned to Earth", "She fixed the broken satellite", "She tried to hide her mistake", "She called her colleagues to tell them"], answer: 1 },
+          { q: "How did Clare feel on her way back to Earth?", options: ["Proud and happy", "Excited to tell everyone she saved them", "Embarrassed and not looking forward to admitting her mistake", "Confident that she had done the right thing"], answer: 2 },
+          { q: "What surprising information did Clare's colleagues give her when she landed?", options: ["The meteor had indeed been only an hour away", "They were angry she wasted her time", "The Space Guard was still broken", "The meteor was a peace message"], answer: 0 },
+          { q: "How was the meteor eventually destroyed?", options: ["Clare destroyed it with her rocket", "Its automatic systems, fixed by Clare, destroyed it", "It missed Earth completely", "Another astronomer's rocket destroyed it"], answer: 1 }
         ],
-        answerKey: [2, 1, 2, 2, 1, 2, 1, 1, 1, 1],
+        answerKey: [2, 1, 2, 2, 1, 2, 1, 1, 0, 1],
+      },
+      {
+        title: 'Strange Gardeners',
+        text: `Mr Thomas lived alone in a quiet town. He was a retired spy, so he kept watch over the neighbourhood. He was always looking for anything suspicious.
+One day, new neighbours moved in next door. Mr Thomas watched them carefully. At first, they seemed like a normal couple. But soon, he saw them doing something strange.
+Every evening, they went into their garden. They were gardening. Even stranger, they were whispering at the same time.
+“That’s suspicious,” Mr Thomas thought, watching them from his window. “What are they whispering about? They’re hiding something.”
+Mr Thomas decided to investigate. That night, he went into their garden. But he knocked over a spade, and it made a loud noise.
+His neighbour opened his bedroom window. “Who’s there?” he said.
+“Err… just a cat!” Mr Thomas said, in a moment of confusion.
+The next night, he tried to listen through his fence, but he only heard discussions about roses and daisies.
+“Code words, surely,” he thought. “I need more information.”
+So, the next night, he sent his robotic vacuum cleaner under the fence. He had attached a small camera on top.
+The next morning, he turned on his computer to watch the video. But, the camera had fallen off on the other side of the fence. The video showed eight hours of the same rose.
+Mr Thomas was losing hope. But then it was all revealed.
+That afternoon, he saw lots of vans arrive. Lots of people came out and ran into the neighbours’ house. Then, the neighbours came out with them again, and waited in their garden.
+“Finally, the truth!” Mr Thomas exclaimed, watching closely.
+The people took a large sign out of the van, and put it in front of the house. It said: “Welcome to the Gardening Show”. They brought out big cameras, and turned them on.
+Everyone clapped, and the couple smiled at the cameras.
+“They’ve been getting ready to appear on television!” Mr Thomas said to himself, laughing.
+When the show came on television, Mr Thomas watched it.
+“We like to do gardening in the evening,” said his neighbour, “when it isn’t so hot. But if we need to talk, we always whisper, so that we don’t wake up our neighbour, Mr Thomas. He is very strange!”`,
+        questions: [
+          { q: "What was Mr. Thomas's previous job?", options: ["A gardener", "A detective", "A retired spy", "A computer programmer"], answer: 2 },
+          { q: "Why did Mr. Thomas watch his new neighbors carefully?", options: ["He was lonely", "He was always looking for anything suspicious", "He wanted to make new friends", "He admired their garden"], answer: 1 },
+          { q: "What \"strange\" activity did Mr. Thomas observe his neighbors doing every evening?", options: ["They were singing loudly", "They were doing exercises", "They were gardening and whispering", "They were watching television"], answer: 2 },
+          { q: "What happened when Mr. Thomas tried to investigate in their garden one night?", options: ["He found a secret tunnel", "He was caught by the neighbors", "He knocked over a spade and his neighbor heard him", "He found hidden treasure"], answer: 2 },
+          { q: "What did Mr. Thomas hear when he tried to listen through the fence?", options: ["Secret codes", "Discussions about roses and daisies", "Nothing at all", "The neighbors arguing"], answer: 1 },
+          { q: "How did Mr. Thomas try to use his robotic vacuum cleaner?", options: ["To clean his neighbors' garden", "To spy on them with a camera attached", "To deliver a message", "To record their conversations"], answer: 1 },
+          { q: "What was the result of Mr. Thomas's robotic vacuum cleaner plan?", options: ["He got a clear video of their secret", "The camera fell off, and the video only showed a rose", "The vacuum cleaner got stuck", "He was discovered by his neighbors"], answer: 1 },
+          { q: "What did the vans and people arriving at the neighbors' house signal?", options: ["They were moving out", "They were having a big party", "It was for the \"Gardening Show\"", "They were having a family reunion"], answer: 2 },
+          { q: "What was the \"secret\" activity the neighbors were involved in?", options: ["They were spies like Mr. Thomas", "They were preparing to appear on a television gardening show", "They were building a new shed", "They were planning a surprise for Mr. Thomas"], answer: 1 },
+          { q: "Why did the neighbors whisper in the garden, according to what they said on television?", options: ["They were hiding a big secret", "They didn't want to wake up Mr. Thomas", "They were practicing lines for the show", "They were shy"], answer: 1 }
+        ],
+        answerKey: [2, 1, 2, 2, 1, 1, 1, 2, 1, 1],
+      },
+      {
+        title: 'An Olympic blog',
+        text: `What an Olympics!
+Posted by Helen Nolan on 10 September, 2012 at 21:25
+It’s all over! I’ve been writing my blog from London every day during the Olympics and the Paralympics and this is my final post to look back on a wonderful couple of months. Here are some of the things that were the most memorable for me:
+The Opening Ceremony
+This set the scene for the Games with an amazing show featuring music, dancing, historical figures, fireworks and British humour. A huge number of volunteers practised for months to make everything perfect. The best moment was when the old lady in Buckingham Palace turned round and showed that she was neither a lookalike nor an actor but Her Majesty the Queen. The next best bit was when she jumped out of a helicopter with James Bond (although I think that actually was an actor!).
+Team GB
+I was very proud of our team as we kept on winning medals and finished in third position in the medal table, which is truly a great result for Great Britain. There were so many incredible sportsmen and women. The ones that stand out for me are Mo Farah, the Somalian-born Londoner who won the 10,000 and 5,000 metres with the whole stadium going crazy, Jessica Ennis, the popular super-athlete from Sheffield who won the heptathlon, and Nicola Adams who won the first female boxing medal in Olympic history for Britain.
+The Olympic Stadium crowd
+Although the crowd cheered on the British, there was lots of support for athletes of other nationalities too like the wonderful Usain Bolt, from Jamaica, who won the 100 and 200 metres sprint to become the fastest man alive. There was also Oscar Pistorius of South Africa who was the first disabled person to compete in the Olympics. He went on to win two gold medals and a silver in the Paralympics.
+New sports
+I have really enjoyed being able to watch sports which are not normally shown on television. Before the Olympics I didn’t expect to love watching judo or find myself screaming at the television during a game of wheelchair tennis, but I really got into them. I didn’t know anything about goalball before the Paralympics but it became one of my favourite sports.
+The organisation and the atmosphere
+It took seven years of planning and 70,000 volunteers to make everything go well. Many people have said that the organisation was not as perfect as that of the Beijing Games, but there was a much better atmosphere which spread out through the whole city. The volunteers were always friendly and helpful and Londoners even began talking to each other, and visitors, on the underground trains!`,
+        questions: [
+          { q: "What is the main purpose of Helen Nolan's blog post?", options: ["To report on the technical details of the Olympic Games", "To share her personal reflections and most memorable moments from the Olympics and Paralympics", "To criticize the organization of the London Games", "To encourage people to become volunteers for future Olympics"], answer: 1 },
+          { q: "What made the Opening Ceremony memorable for Helen?", options: ["Only the music and dancing", "The appearance of historical figures and the Queen's unexpected role with James Bond", "The focus on technology and modern displays", "The large number of foreign visitors"], answer: 1 },
+          { q: "How did Team GB perform in the medal table?", options: ["They finished in first position", "They finished in second position", "They finished in third position, which Helen saw as a great result", "They did not win many medals"], answer: 2 },
+          { q: "Which of these athletes is highlighted for winning the first female boxing medal for Britain?", options: ["Mo Farah", "Jessica Ennis", "Nicola Adams", "Usain Bolt"], answer: 2 },
+          { q: "What was special about Oscar Pistorius's participation in the Olympics?", options: ["He was the fastest runner in the world", "He was the first disabled person to compete in the Olympics", "He won many gold medals in the main Olympics", "He was from Jamaica"], answer: 1 },
+          { q: "How did Helen feel about watching \"new sports\" like judo and wheelchair tennis?", options: ["She found them boring and difficult to understand", "She didn't expect to enjoy them but became very engaged", "She only watched them because she had to", "She preferred the traditional Olympic sports"], answer: 1 },
+          { q: "What did Helen learn about during the Paralympics?", options: ["A sport called goalball, which became a favorite", "The history of disabled athletes", "How to play wheelchair tennis", "The training of judo athletes"], answer: 0 },
+          { q: "How long did it take to plan the London Olympics and Paralympics?", options: ["One year", "Five years", "Seven years", "Ten years"], answer: 2 },
+          { q: "What did many people say about the organization compared to the Beijing Games?", options: ["It was much better in London", "It was not as perfect, but the atmosphere in London was better", "It was exactly the same as Beijing", "They did not comment on the organization"], answer: 1 },
+          { q: "What positive effect did the Olympics have on Londoners, according to Helen?", options: ["They stopped using the underground trains", "They started talking more to each other and visitors", "They became less friendly", "They only focused on the sports"], answer: 1 }
+        ],
+        answerKey: [1, 1, 2, 2, 1, 1, 0, 2, 1, 1],
+      },
+      {
+        title: 'Food and Restaurants',
+        text: `Are you looking for somewhere special to go this weekend? Do you want to try something new? Check out one of these hot new restaurants.
+Last Days of the Raj
+A centrally located Indian restaurant, perfect for eating before or after the cinema or a show. In summer enjoy your meal in the beautiful garden. The most popular dishes are lamb and chicken cooked with mild, medium or hot spices. For brave customers there is extra hot!
+A Taste of Tuscany
+Whether you’d like a great value-for-money lunch or a relaxed evening meal in stylish surroundings, this is the place for you. The chefs have all been trained in Italy and they make both traditional and contemporary dishes. We recommend the pasta and seafood.
+Your Local Caff
+Remember when cafés served full English breakfasts – sausages, beans, fried bread, bacon and eggs – with a strong cup of tea? Well, this place still does and you can have your breakfast at any time you like during the day while you listen to your favourite tunes from the 1980s.
+The Lemon Tree
+This pretty restaurant serves healthy food that’s tasty too. Come in for a vegetarian snack at lunchtime or a great fruit smoothie or a cappuccino and a delicious piece of cake in the afternoon. Food is bought from local producers whenever possible.
+Cheesy Bites
+A restaurant that only serves cheese, but hundreds of cheeses from many countries and in lots of different forms. They serve reasonably priced lunches but dinner can be expensive. Lovely food and a very elegant dining room, looking onto an amazing flower garden.
+Fast Best
+Fast food doesn’t have to be junk food, as this café proves. Do you fancy a really good hamburger made with the best ingredients, or old-fashioned fish and chips fried to perfection, all on the table in super-quick time? Speed and quality are important here, and the prices aren’t bad either.
+The Chocolate Box
+The owner of this small café used to cook all kinds of food, but then she realised she preferred desserts to anything else. If you want meat or fish, don’t come here. They only do desserts! Lots of different kinds of sweets. Chocolate lovers will be excited by the range of chocolate cakes.
+Musical Chairs
+Have you noticed how music improves the taste of your food? This new restaurant has different types of live music every night except Sundays, and excellent food to go with it. Great fish dishes, steak and pizza. Monday is classic rock night, so see you there!`,
+        questions: [
+          { q: "Which restaurant offers an outdoor eating area during the summer?", options: ["A Taste of Tuscany", "Last Days of the Raj", "Your Local Caff", "The Lemon Tree"], answer: 1 },
+          { q: "If you are looking for a restaurant where all the chefs have received their training in Italy, which place should you choose?", options: ["Cheesy Bites", "Musical Chairs", "A Taste of Tuscany", "Fast Best"], answer: 2 },
+          { q: "At which restaurant can you enjoy a traditional English breakfast at any time of the day?", options: ["The Chocolate Box", "Your Local Caff", "The Lemon Tree", "Fast Best"], answer: 1 },
+          { q: "Which restaurant is described as serving healthy and tasty food, often bought from local producers?", options: ["The Lemon Tree", "Cheesy Bites", "Last Days of the Raj", "Musical Chairs"], answer: 0 },
+          { q: "You are a vegetarian looking for a snack during lunchtime. Which restaurant would be a good option?", options: ["Fast Best", "The Chocolate Box", "The Lemon Tree", "Last Days of the Raj"], answer: 2 },
+          { q: "Which restaurant specializes in a single type of food, offering hundreds of varieties from different countries?", options: ["A Taste of Tuscany", "Cheesy Bites", "Musical Chairs", "Your Local Caff"], answer: 1 },
+          { q: "If you want a quick meal like a hamburger or fish and chips, and value both speed and quality, which restaurant is recommended?", options: ["The Chocolate Box", "Fast Best", "Your Local Caff", "Last Days of the Raj"], answer: 1 },
+          { q: "Where would you go if you only wanted to eat desserts, especially if you love chocolate?", options: ["The Lemon Tree", "Cheesy Bites", "The Chocolate Box", "A Taste of Tuscany"], answer: 2 },
+          { q: "Which restaurant prides itself on having different types of live music every night except Sundays?", options: ["Your Local Caff", "Last Days of the Raj", "Musical Chairs", "Fast Best"], answer: 2 },
+          { q: "You want to try a very spicy Indian dish. Which restaurant should you consider?", options: ["A Taste of Tuscany", "The Lemon Tree", "Last Days of the Raj", "Cheesy Bites"], answer: 2 }
+        ],
+        answerKey: [1, 2, 1, 0, 2, 1, 1, 2, 2, 2],
+      },
+      {
+        title: 'How to be a safe and smart searcher',
+        text: `Several keywords will help to find better results. Use more than one keyword when you are doing a search. If you want to find out about seagulls, for example, search for 'bird seagull' and not just 'seagull' – because seagull might also be the name of just about anything else, from a hotel to a documentary film.
+Exact references can help you find what you're looking for. If you are looking for an exact phrase or sentence, e.g. "seagulls are very clever", type it between inverted commas ("") and only exact matches will be shown. This is useful when you want to find something you've already seen but lost.
+Avoid common words like 'a' or 'the' in a search. These aren't always helpful and are usually unnecessary.
+Remove unwanted results by adding a minus symbol (-). For example, 'seagull -hotel -film' would leave out all references to hotels and films.
+Check your spelling. Make sure that you spell every word in the search box correctly. The smallest typing mistakes can bring unwanted results – especially when the mistyped word exists.
+Have a filter. It's a good idea to filter your online searches, especially when you are searching for pictures. Ask an adult to help you add a filtering system. There are lots of filtering software options available.
+Experiment with different search engines until you find the one that's best for you. Some search engines personalise the results, so check out the option of using a search engine that doesn't do this and you will get different results.
+Reliability is very important when you are searching on the internet. Always ask yourself, 'Is this reliable?' Don't make the mistake of believing everything you see. Some websites are unreliable and some information is false. Check your information on other websites before accepting it.`,
+        questions: [
+          { q: "What is the main advice for using keywords to find better search results?", options: ["Use only one keyword for simplicity", "Use more than one keyword to be more specific", "Always use very long keywords", "Avoid using any keywords"], answer: 1 },
+          { q: "Why is it better to search for 'bird seagull' instead of just 'seagull' if you want information about the animal?", options: ["'Seagull' is a common word", "'Seagull' might also be the name of other things like a hotel or a film", "'Bird' is a more important word", "Search engines prefer more words"], answer: 1 },
+          { q: "When should you use inverted commas (\" \") in your search?", options: ["To make your search faster", "When you are looking for an exact phrase or sentence", "To remove unwanted results", "To search for common words"], answer: 1 },
+          { q: "What does the article say about common words like 'a' or 'the' in a search?", options: ["They are always very helpful", "You should always include them", "They are often unnecessary and not helpful", "They make your search more exact"], answer: 2 },
+          { q: "How can you remove unwanted results from your search?", options: ["By typing the word \"remove\" before them", "By adding a plus symbol (+) before them", "By adding a minus symbol (-) before them", "By putting them in inverted commas"], answer: 2 },
+          { q: "What is the importance of checking your spelling when searching?", options: ["Correct spelling helps you type faster", "Small typing mistakes can lead to unwanted results", "It makes your search look more professional", "Search engines automatically correct all mistakes"], answer: 1 },
+          { q: "What is suggested for filtering online searches, especially for pictures?", options: ["To ask a friend for help", "To avoid using any filter", "To ask an adult to help add a filtering system", "To only use one search engine"], answer: 2 },
+          { q: "Why should you \"experiment with different search engines\"?", options: ["Because all search engines give the same results", "To find the one that works best for you", "To learn how to use many different websites", "Some search engines are always broken"], answer: 1 },
+          { q: "What is a key question to ask yourself about information found on the internet?", options: ["\"Is this interesting?\"", "\"Is this reliable?\"", "\"Is this new?\"", "\"Is this difficult to read?\""], answer: 1 },
+          { q: "What is recommended if you find information on one website?", options: ["Believe it immediately", "Share it with everyone", "Check the information on other websites before accepting it", "Close the internet and stop searching"], answer: 2 }
+        ],
+        answerKey: [1, 1, 1, 2, 2, 1, 2, 1, 1, 2],
+      },
+      {
+        title: 'Tips for being a super-organised student',
+        text: `posted 2 hours ago by Amy
+I have always admired students who hand their homework in on time and never forget to do it. Me, on the other hand, … OK, I admit. I’m terrible at getting myself organised!
+But lately I’ve started keeping a small study diary. I write down everything I need to do and when it needs to be done by. Then I write a reminder a few days before the date just in case. It’s helping.
+So I was wondering, what are your tips for getting organised? Post a comment below. I’m hoping we can all share some tips to teach us all better study skills.
+Comments
+Hana
+Good question, Amy. I always spend about five minutes at the end of the day tidying up the desktop on my computer. I make a backup of important documents. I delete things I don’t need any more and put everything into the correct folder.
+Amy
+Nice tip, Hana. I think it’s a good idea to do a little bit of tidying up every day. Then it becomes a habit and your desktop is always organised.
+Gloria
+The most important thing is to start studying a few weeks before the exams and not leave it until the night before! That’s just common sense, I think.
+Amy
+Thanks, Gloria! I agree.
+Lou
+Hi, Amy. My tip is to have a big noticeboard in your bedroom, divided into different sections. I’ve got one. It’s a whiteboard. I’ve got a section for each school subject and another one for other stuff. I use board pens to write reminders and I make sure I look at it every day. The best part is when I remove something from the board!
+Amy
+Great tip, Lou. I’ve got a cork board with pins. I use it in the same way.`,
+        questions: [
+          { q: "What does Amy admit about herself at the beginning of the post?", options: ["She is excellent at organizing", "She struggles with getting organized", "She always finishes her homework early", "She never forgets to do things"], answer: 1 },
+          { q: "What new strategy has Amy started using to help her get organized?", options: ["Using a large wall calendar", "Keeping a small study diary", "Asking friends for help with homework", "Setting alarms on her phone"], answer: 1 },
+          { q: "What does Amy write in her study diary?", options: ["Only her class schedule", "Everything she needs to do and when it's due, plus reminders", "Her thoughts and feelings", "Jokes and funny stories"], answer: 1 },
+          { q: "What is Hana's main tip for staying organized?", options: ["Cleaning her desk once a week", "Tidying her computer desktop daily and backing up documents", "Buying new software", "Avoiding computers"], answer: 1 },
+          { q: "Why does Hana \"delete things I don't need any more\"?", options: ["To make space for new games", "To keep her desktop organized", "Because she doesn't like old documents", "To help her computer run faster"], answer: 1 },
+          { q: "What is Gloria's advice for studying?", options: ["To study only the night before exams", "To start studying a few weeks before the exams", "To avoid studying for exams", "To study with friends every day"], answer: 1 },
+          { q: "What kind of board does Lou use in her bedroom?", options: ["A chalkboard", "A cork board", "A whiteboard", "A magnetic board"], answer: 2 },
+          { q: "How does Lou organize her noticeboard?", options: ["By writing all reminders in one big list", "By dividing it into sections for school subjects and other things", "By only putting pictures on it", "By changing it every day"], answer: 1 },
+          { q: "What does Lou find to be \"the best part\" of using her noticeboard?", options: ["Writing new things on it", "Removing something from the board after it's done", "Looking at it every day", "Buying new board pens"], answer: 1 },
+          { q: "What does Amy hope to achieve by asking for tips in her blog?", options: ["To find new friends", "To make her blog popular", "To help everyone improve their study skills by sharing advice", "To get help with her own homework"], answer: 2 }
+        ],
+        answerKey: [1, 1, 1, 1, 1, 1, 2, 1, 1, 2],
+      },
+      {
+        title: 'Travel Guide',
+        text: `Learn about the beautiful attractions in San Francisco, Santa Cruz, and Los Angeles. From the Golden Gate Bridge to Disneyland, explore the best of California.`,
+        questions: [
+          { q: "Which city is described as having a historic marketplace with trendy restaurants, shops, and street performers?", options: ["San Francisco", "Santa Cruz", "Los Angeles", "Hollywood"], answer: 0 },
+          { q: "What can you do at Pier 39 in San Francisco?", options: ["Visit a prison", "See a marketplace with shops and restaurants", "Ride a rollercoaster", "Go skateboarding"], answer: 1 },
+          { q: "What kind of structure is the Golden Gate Bridge?", options: ["A famous shopping mall", "The largest suspension bridge in the world", "A historic monument", "A theme park"], answer: 1 },
+          { q: "Where can visitors see the dark cell blocks that were home to America's most wanted criminals?", options: ["Venice Beach", "Alcatraz Island", "San Francisco", "Hollywood"], answer: 1 },
+          { q: "If you enjoy skateboarding, which place is specifically mentioned for you to visit?", options: ["Santa Cruz", "Hollywood", "Venice Beach", "Disneyland"], answer: 2 },
+          { q: "In which city can you visit the Santa Cruz Surfing Museum and ride a rollercoaster at the Beach Boardwalk?", options: ["San Francisco", "Santa Cruz", "Los Angeles", "Anaheim"], answer: 1 },
+          { q: "What can you do at Madame Tussauds Hollywood?", options: ["Watch a movie", "Meet wax models of famous people", "Ride a rollercoaster", "See live concerts"], answer: 1 },
+          { q: "Where can you visit the Grammy Museum and learn about music?", options: ["Hollywood", "Los Angeles", "San Francisco", "Santa Cruz"], answer: 1 },
+          { q: "Which location is described as one of the most magical places in the world with hundreds of rides?", options: ["Alcatraz Island", "Hollywood", "Disneyland", "Venice Beach"], answer: 2 },
+          { q: "Which two attractions are specifically mentioned as places to ride a rollercoaster?", options: ["San Francisco and Hollywood", "Golden Gate Bridge and Alcatraz Island", "Santa Cruz and Disneyland", "Venice Beach and Los Angeles"], answer: 2 }
+        ],
+        answerKey: [0, 1, 1, 1, 2, 1, 1, 1, 2, 2],
+      },
+      {
+        title: 'Advertisement',
+        text: `Practise understanding real-life announcements. Check out these notices for services, job opportunities, classes, and rentals.`,
+        questions: [
+          { q: "What kind of service is offered in notice A?", options: ["Guitar lessons", "Computer repair", "Drummer for a band", "Babysitting"], answer: 1 },
+          { q: "For whom is the \"DRUMMER WANTED\" notice (B) looking for a musician?", options: ["A classical orchestra", "A recently-formed indie rock band", "A jazz ensemble", "A folk music group"], answer: 1 },
+          { q: "What kind of experience is preferred for the babysitter position (C)?", options: ["Someone who lives in a different town", "A student with some experience", "Someone who only works during the day", "Someone who drives"], answer: 1 },
+          { q: "How much is the babysitter paid per hour (C)?", options: ["£2.50", "£4.50", "£6.50", "£10.00"], answer: 1 },
+          { q: "What details about the lost cat (D) are provided?", options: ["Its name and favorite food", "Its size, color, and temperament (frightened of dogs and teenage boys)", "Its age and breed", "Where it was last seen eating"], answer: 1 },
+          { q: "When do the Beginners Zumba classes (E) take place?", options: ["Tuesday and Thursday", "Monday and Wednesday", "Every day", "Only on weekends"], answer: 1 },
+          { q: "What is the deadline to book a place for the Zumba classes (E)?", options: ["September 25", "October 1", "The end of the month", "No deadline mentioned"], answer: 0 },
+          { q: "What is the monthly rent for the \"Room to let\" (F)?", options: ["£250 including Wi-Fi and bills", "£250 plus bills, including Wi-Fi", "£250 for non-smokers only", "£250 for a single bed"], answer: 1 },
+          { q: "Who is the \"Room to let\" (F) suitable for?", options: ["Families with children", "Non-smoking students", "Anyone looking for a house", "People with pets"], answer: 1 },
+          { q: "What kind of work is available at EPRESCO supermarkets (G)?", options: ["Full-time management", "Evening and weekend hours, part-time supermarket work", "Office administration", "Delivery driving"], answer: 1 }
+        ],
+        answerKey: [1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
       },
     ],
   },
