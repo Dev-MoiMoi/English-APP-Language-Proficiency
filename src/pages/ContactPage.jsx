@@ -22,14 +22,14 @@ export default function ContactPage() {
             <div style={{ maxWidth: '700px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '32px' }}>
               
               {/* Copyright Notice Box */}
-              <div style={{ background: '#e0f2f1', border: '1px solid #b2dfdb', borderRadius: 'var(--radius-lg)', padding: '32px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
+              <div className="card" style={{ background: '#e0f2f1', border: '1px solid #b2dfdb', padding: '24px 20px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
                   <div style={{ background: 'white', padding: '12px', borderRadius: '50%', color: 'var(--primary)', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
                     <Shield size={28} />
                   </div>
                 </div>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '12px' }}>Copyright Notice</h3>
-                <p style={{ color: 'var(--text-secondary)', lineHeight: '1.65', fontSize: '0.95rem' }}>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: '1.65', fontSize: '15px' }}>
                   This website strictly adheres to copyright regulations and does not share any copyrighted content.
                   All posts shared on this platform are intended for educational purposes only.
                   If you believe that your content is being shared without proper authorization, please contact us at the email address below.
@@ -37,20 +37,20 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Information Card */}
-              <div style={{ background: 'white', border: '1px solid var(--border)', borderLeft: '6px solid var(--primary)', borderRadius: 'var(--radius-lg)', padding: '32px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
-                <div style={{ background: 'var(--primary-light)', padding: '16px', borderRadius: '50%', color: 'var(--primary)' }}>
+              <div className="card" style={{ borderLeft: '6px solid var(--primary)', padding: '24px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', textAlign: 'center' }}>
+                <div style={{ background: 'var(--primary-light)', padding: '16px', borderRadius: '50%', color: 'var(--primary)', display: 'inline-flex' }}>
                   <Mail size={32} />
                 </div>
-                <div>
-                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>Email Address</div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px' }}>
-                    <a href="mailto:info@digilingph.edu" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>info@digilingph.edu</a>
-                    <a href="mailto:jeffersoncaparas231@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>jeffersoncaparas231@gmail.com</a>
-                    <a href="mailto:jhonpaulyangyang@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>jhonpaulyangyang@gmail.com</a>
-                    <a href="mailto:alexisssssdelacruz@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>alexisssssdelacruz@gmail.com</a>
-                    <a href="mailto:rafjasonm03@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>rafjasonm03@gmail.com</a>
+                <div style={{ width: '100%' }}>
+                  <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '12px' }}>Email Address</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px', width: '100%', wordBreak: 'break-all' }}>
+                    <a href="mailto:info@digilingph.edu" style={{ fontSize: '16px', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>info@digilingph.edu</a>
+                    <a href="mailto:jeffersoncaparas231@gmail.com" style={{ fontSize: '16px', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>jeffersoncaparas231@gmail.com</a>
+                    <a href="mailto:jhonpaulyangyang@gmail.com" style={{ fontSize: '16px', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>jhonpaulyangyang@gmail.com</a>
+                    <a href="mailto:alexisssssdelacruz@gmail.com" style={{ fontSize: '16px', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>alexisssssdelacruz@gmail.com</a>
+                    <a href="mailto:rafjasonm03@gmail.com" style={{ fontSize: '16px', fontWeight: '600', color: 'var(--primary)', textDecoration: 'none' }}>rafjasonm03@gmail.com</a>
                   </div>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  <div style={{ fontSize: '14px', color: 'var(--text-muted)' }}>
                     We typically respond within 1–2 business days.
                   </div>
                 </div>

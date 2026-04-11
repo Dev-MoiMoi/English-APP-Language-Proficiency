@@ -66,7 +66,7 @@ export default function AIFeedbackCard({
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
             <Sparkles size={16} color={accentColor} style={{ animation: 'aifPulse 1.5s ease-in-out infinite' }} />
-            <span style={{ fontWeight: 700, color: accentColor, fontSize: '0.95rem' }}>AI Feedback</span>
+            <span style={{ fontWeight: 700, color: accentColor, fontSize: '0.95rem' }}>Feedback</span>
           </div>
 
           {/* Shimmer skeleton */}
@@ -154,7 +154,7 @@ export default function AIFeedbackCard({
           </div>
 
           {/* Typewriter feedback body */}
-          <div style={{ fontSize: '0.9rem', color: '#333', lineHeight: 1.9, whiteSpace: 'pre-wrap' }}>
+          <div style={{ fontSize: '15px', color: '#333', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>
             {displayed.split('\n').map((line, i) => {
               if (!line.trim()) return <div key={i} style={{ height: 6 }} />;
               const isHeader = /^(SCORE|RESULT|GRAMMAR|VOCABULARY|STRENGTHS|IMPROVEMENTS|OVERALL FEEDBACK|CORRECT ANSWERS REVIEW|READING TIPS|LISTENING TIPS|REVIEW|FLUENCY SCORE|CLARITY SCORE|GRAMMAR CHECK|PRONUNCIATION TIPS):/i.test(line.trim());
@@ -163,7 +163,7 @@ export default function AIFeedbackCard({
                   <p key={i} style={{
                     fontWeight: 700, color: accentColor,
                     marginTop: 14, marginBottom: 2,
-                    fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.04em',
+                    fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.04em',
                   }}>
                     {line}
                   </p>

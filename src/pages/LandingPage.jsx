@@ -105,12 +105,12 @@ export default function LandingPage() {
             <GraduationCap size={16} /> Designed for Filipino Students &nbsp;·&nbsp; CEFR A1–C2
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '32px', gap: '20px' }}>
-            <img src={logoImg} alt="DigiLing Logo" style={{ width: '120px', height: 'auto' }} />
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '32px', gap: '20px', flexWrap: 'wrap' }}>
+            <img src={logoImg} alt="DigiLing Logo" style={{ width: 'clamp(80px, 15vw, 120px)', height: 'auto' }} />
             <h1 className="hero-logo" style={{ marginBottom: 0 }}>DigiLing</h1>
           </div>
 
-          <p className="hero-tagline">Improve Your English, One Skill at a Time</p>
+          <p className="hero-tagline">Improve Your English,<br className="mobile-only" /> One Skill at a Time</p>
 
           <p className="hero-body">
             Improve your English through the four essential communication skills: Listening, Speaking,
@@ -148,44 +148,42 @@ export default function LandingPage() {
                 key={skill.id} 
                 className={`skill-card ${skill.id}`}
                 onClick={() => setModalSkill(skill)}
+                style={{ padding: '20px' }} /* Required 20px card padding */
               >
                 <div style={{ textAlign: 'center', marginBottom: '20px' }}>
                   <div
                     className="skill-icon-wrap-large"
-                    style={{ background: skill.colorLight, color: skill.color }}
+                    style={{ background: skill.colorLight, color: skill.color, width: 'clamp(40px, 10vw, 90px)', height: 'clamp(40px, 10vw, 90px)' }}
                   >
-                    <span style={{ fontSize: '2.5rem' }}>{skill.icon}</span>
+                    <span style={{ fontSize: '1.75rem' }}>{skill.icon}</span>
                   </div>
                 </div>
 
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--text-primary)', textAlign: 'center', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--text-primary)', textAlign: 'center', marginBottom: '12px' }}>
                   {skill.label}
                 </h3>
 
-                {/* Description */}
-                <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.6', textAlign: 'center', marginBottom: '24px' }}>
+                <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6', textAlign: 'center', marginBottom: '24px' }}>
                   {skill.desc}
                 </p>
 
-                {/* Flow Steps (Pill tags) */}
-                <div className="skill-flow-steps">
+                <div className="skill-flow-steps" style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', justifyContent: 'center' }}>
                   {skill.steps.map((step, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
                       <span className="flow-pill" style={{ background: skill.colorLight, color: skill.color }}>
                         {step}
                       </span>
                       {i < skill.steps.length - 1 && (
-                        <span style={{ color: 'var(--border)', margin: '0 4px', fontSize: '0.8rem' }}>→</span>
+                        <span style={{ color: 'var(--border)', margin: '0 4px', fontSize: '12px' }}>→</span>
                       )}
                     </div>
                   ))}
                 </div>
 
-                {/* CTA */}
                 <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
                   <button
                     className="btn-skill"
-                    style={{ background: skill.color, width: '100%', padding: '12px', fontSize: '1rem', fontWeight: 'bold' }}
+                    style={{ background: skill.color, width: '100%', minHeight: '48px', fontSize: '16px', fontWeight: 'bold' }}
                     onClick={(e) => {
                       e.stopPropagation();
                       setModalSkill(skill);
@@ -213,19 +211,19 @@ export default function LandingPage() {
 
           <div className="steps-container">
             <div className="steps-connecting-line"></div>
-            <div className="steps-grid horizontal-steps">
+            <div className="horizontal-steps">
               {HOW_TO_STEPS.map((step) => (
                 <div key={step.num} className="step-card-modern">
-                  <div className="step-background-number">{step.num}</div>
+                  <div className="step-background-number" style={{ fontSize: 'clamp(4rem, 10vw, 8rem)' }}>{step.num}</div>
                   <div className="step-content-inner">
-                    <div className="step-icon-circle">
+                    <div className="step-icon-circle" style={{ width: '40px', height: '40px' }}>
                       {step.icon}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', zIndex: 2, position: 'relative' }}>
-                      <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-primary)', marginTop: '16px' }}>
+                      <h3 style={{ fontSize: '18px', fontWeight: '800', color: 'var(--text-primary)', marginTop: '8px' }}>
                         Step {step.num} &mdash; {step.title}
                       </h3>
-                      <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                      <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                         {step.desc}
                       </p>
                     </div>

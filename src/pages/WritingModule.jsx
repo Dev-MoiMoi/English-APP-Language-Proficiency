@@ -95,48 +95,49 @@ export default function WritingModule() {
             <p style={{ color:'var(--text-secondary)', fontSize:'0.95rem', lineHeight:1.7 }}>{data.intro}</p>
           </div>
 
-          {/* Task Prompt */}
-          <div className="card" style={{ marginBottom:24, padding:28 }}>
-            <h2 style={{ fontSize:'1.2rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{task.title}</h2>
-            <p style={{ color:'var(--text-secondary)', marginBottom:16, lineHeight:1.7 }}>{task.prompt}</p>
-            <div style={{ background:'#f9fbe7', borderRadius:10, padding:'14px 18px' }}>
-              <p style={{ fontWeight:600, color:'var(--writing)', marginBottom:8, fontSize:'0.9rem' }}>Include in your writing:</p>
-              <ul style={{ paddingLeft:20, margin:0 }}>
+          <div className="card passage-card" style={{ marginBottom: 20 }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--primary-dark)', marginBottom: 8 }}>{task.title}</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: 16, lineHeight: 1.6, fontSize: '15px' }}>{task.prompt}</p>
+            <div style={{ background: '#f9fbe7', borderRadius: 10, padding: '14px 18px' }}>
+              <p style={{ fontWeight: 600, color: 'var(--writing)', marginBottom: 8, fontSize: '14px' }}>Include in your writing:</p>
+              <ul style={{ paddingLeft: 20, margin: 0 }}>
                 {task.bullets.map((b, i) => (
-                  <li key={i} style={{ color:'var(--text-secondary)', fontSize:'0.9rem', lineHeight:1.8 }}>{b}</li>
+                  <li key={i} style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.7 }}>{b}</li>
                 ))}
               </ul>
             </div>
-            <div style={{ marginTop:12, fontSize:'0.85rem', color:'var(--text-muted)' }}>
+            <div style={{ marginTop: 12, fontSize: '12px', color: 'var(--text-muted)' }}>
               Word count: {minW}–{maxW} words
             </div>
           </div>
 
-          {/* Text Area */}
           {!submitted ? (
-            <div className="card" style={{ padding:28, marginBottom:24 }}>
+            <div className="card" style={{ padding: '20px', marginBottom: 24 }}>
               <textarea
                 value={text}
                 onChange={e => setText(e.target.value)}
                 placeholder="Start writing your response here..."
-                rows={12}
-                style={{ width:'100%', border:`2px solid ${isOver ? '#d32f2f' : 'var(--border)'}`, borderRadius:12, padding:16,
-                  fontSize:'0.95rem', lineHeight:1.8, resize:'vertical', outline:'none', fontFamily:'inherit',
-                  color:'var(--text-primary)', boxSizing:'border-box', transition:'border-color 0.2s' }}
+                rows={10}
+                className="writing-textarea"
+                style={{
+                  border: `2px solid ${isOver ? '#d32f2f' : 'var(--border)'}`,
+                  outline: 'none',
+                  minHeight: '200px'
+                }}
               />
               {/* Progress bar */}
-              <div style={{ marginTop:12 }}>
-                <div style={{ display:'flex', justifyContent:'space-between', marginBottom:6 }}>
-                  <span style={{ fontSize:'0.85rem', color: isOver?'#d32f2f': isReady?'#388e3c':'var(--text-muted)' }}>
-                    {wordCount} words {isOver ? `(${wordCount-maxW} over limit)` : isReady ? '✓ Ready to submit' : `(${minW-wordCount} more needed)`}
+              <div style={{ marginTop: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                  <span style={{ fontSize: '12px', color: isOver ? '#d32f2f' : isReady ? '#388e3c' : 'var(--text-muted)' }}>
+                    {wordCount} words {isOver ? `(${wordCount - maxW} over limit)` : isReady ? '✓ Ready' : `(${minW - wordCount} more)`}
                   </span>
-                  <span style={{ fontSize:'0.85rem', color:'var(--text-muted)' }}>{minW}–{maxW} words</span>
+                  <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{minW}–{maxW}</span>
                 </div>
-                <div style={{ height:6, background:'#e0e0e0', borderRadius:999, overflow:'hidden' }}>
-                  <div style={{ height:'100%', width:`${progress}%`, background: isOver?'#d32f2f':isReady?'#388e3c':'var(--writing)', borderRadius:999, transition:'width 0.3s' }} />
+                <div style={{ height: 6, background: '#e0e0e0', borderRadius: 999, overflow: 'hidden' }}>
+                  <div style={{ height: '100%', width: `${progress}%`, background: isOver ? '#d32f2f' : isReady ? '#388e3c' : 'var(--writing)', borderRadius: 999, transition: 'width 0.3s' }} />
                 </div>
               </div>
-              <div style={{ marginTop:20 }}>
+              <div style={{ marginTop: 20 }}>
                 <PushButton
                   variant="primary"
                   text="Submit Writing"

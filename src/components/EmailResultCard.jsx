@@ -235,7 +235,8 @@ export default function EmailResultCard({
                 padding: '13px 44px 13px 16px',
                 borderRadius: 30,
                 border: `2px solid ${email ? (valid ? '#43a047' : '#e0e0e0') : '#e0e0e0'}`,
-                fontSize: '0.9rem',
+                fontSize: '16px', /* Prevent iOS zoom */
+                minHeight: '48px',
                 outline: 'none',
                 fontFamily: 'Poppins, Inter, sans-serif',
                 color: '#1a1a2e',
@@ -263,7 +264,6 @@ export default function EmailResultCard({
             )}
           </div>
 
-          {/* Send button */}
           <div style={{ width: '100%', marginBottom: 14 }}>
             <PushButton
               variant="email"
@@ -272,7 +272,7 @@ export default function EmailResultCard({
               type="submit"
               disabled={!valid}
               isLoading={status === 'loading'}
-              style={{ width: '100%' }}
+              style={{ width: '100%', minHeight: '52px' }}
             />
           </div>
         </form>

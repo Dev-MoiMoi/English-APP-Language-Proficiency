@@ -108,35 +108,33 @@ export default function ListeningModule() {
             <p style={{ color:'var(--text-secondary)', fontSize:'0.95rem', lineHeight:1.7 }}>{data.intro}</p>
           </div>
 
-          {/* Lesson card */}
-          <div className="card" style={{ marginBottom:28, padding:32 }}>
-            <h2 style={{ fontSize:'1.3rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{lesson.title}</h2>
-            <p style={{ color:'var(--text-secondary)', marginBottom:20, lineHeight:1.7 }}>{lesson.description}</p>
+          <div className="card passage-card" style={{ marginBottom: 20 }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--primary-dark)', marginBottom: 8 }}>{lesson.title}</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: 16, fontSize: '15px', lineHeight: 1.6 }}>{lesson.description}</p>
 
             {lesson.imageFile && (
               <img 
                 src={lesson.imageFile} 
                 alt={lesson.title} 
-                style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '12px', display: 'block', margin: '0 auto 24px auto', objectFit: 'cover' }} 
+                style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block', margin: '0 auto 20px auto', objectFit: 'cover' }} 
               />
             )}
 
-            {/* Audio Player */}
-            <div style={{ background:'#f3e5f5', borderRadius:12, padding:'20px', display:'flex', flexDirection:'column', gap:16 }}>
-              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ width:48, height:48, borderRadius:'50%', background:'var(--listening)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink: 0 }}>
-                  <Headphones size={22} color="white" />
+            <div style={{ background: '#f3e5f5', borderRadius: 12, padding: '16px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--listening)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <Headphones size={20} color="white" />
                 </div>
                 <div>
-                  <div style={{ fontWeight:700, color:'var(--text-primary)' }}>Audio Recording</div>
-                  <div style={{ fontSize:'0.85rem', color:'var(--text-secondary)' }}>{data.audioNote}</div>
+                  <div style={{ fontWeight: 700, color: 'var(--text-primary)', fontSize: '15px' }}>Audio Recording</div>
+                  <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{data.audioNote}</div>
                 </div>
               </div>
               
               <audio 
                 controls 
                 src={lesson.audioFile} 
-                style={{ width: '100%', height: '40px', outline: 'none' }} 
+                style={{ width: '100%', height: '44px', outline: 'none' }} 
               >
                 Your browser does not support the audio element.
               </audio>
@@ -148,38 +146,30 @@ export default function ListeningModule() {
             <h3 style={{ fontSize:'1.1rem', fontWeight:700, color:'var(--text-primary)', marginBottom:24 }}>
               Listening Comprehension Questions
             </h3>
-            {lesson.questions.map((item, qi) => {
-              const selected = answers[qi];
-              const correct = lesson.answerKey[qi];
-              return (
-                <div key={qi} style={{ marginBottom:28, paddingBottom:24, borderBottom: qi < lesson.questions.length-1 ? '1px solid var(--border)' : 'none' }}>
-                  <p style={{ fontWeight:600, color:'var(--text-primary)', marginBottom:12, fontSize:'0.95rem' }}>
-                    {qi+1}. {item.q}
+                <div key={qi} className="question-card" style={{ marginBottom: 20 }}>
+                  <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: 16, fontSize: '16px' }}>
+                    <span style={{ color: 'var(--primary)', marginRight: '8px' }}>{qi + 1}.</span> {item.q}
                   </p>
-                  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                  <div className="options-list">
                     {item.options.map((opt, ai) => {
-                      let bg='white', border='var(--border)', color='var(--text-secondary)';
-                      if (selected===ai && !submitted) { bg='#f3e5f5'; border='var(--listening)'; color='var(--listening)'; }
+                      let bg = 'white', border = 'var(--border)', color = 'var(--text-secondary)';
+                      if (selected === ai && !submitted) { bg = '#f3e5f5'; border = 'var(--listening)'; color = 'var(--listening)'; }
                       if (submitted) {
-                        if (ai===correct) { bg='#e8f5e9'; border='#388e3c'; color='#388e3c'; }
-                        else if (selected===ai) { bg='#ffebee'; border='#d32f2f'; color='#d32f2f'; }
+                        if (ai === correct) { bg = '#e8f5e9'; border = '#388e3c'; color = '#388e3c'; }
+                        else if (selected === ai) { bg = '#ffebee'; border = '#d32f2f'; color = '#d32f2f'; }
                       }
                       return (
-                        <button key={ai} onClick={() => handleAnswer(qi, ai)}
-                          style={{ padding:'12px 16px', borderRadius:10, border:`2px solid ${border}`, background:bg, color,
-                            textAlign:'left', cursor:submitted?'default':'pointer', fontWeight:500, fontSize:'0.88rem',
-                            display:'flex', alignItems:'center', gap:8, transition:'all 0.2s' }}>
-                          <span style={{ fontWeight:700, minWidth:20 }}>{String.fromCharCode(65+ai)}.</span>
+                        <button key={ai} className="option-btn" onClick={() => handleAnswer(qi, ai)}
+                          style={{ background: bg, border: `2px solid ${border}`, color, minHeight: '48px' }}>
+                          <span style={{ fontWeight: 700, minWidth: 20 }}>{String.fromCharCode(65 + ai)}.</span>
                           {opt}
-                          {submitted && ai===correct && <CheckCircle size={16} color="#388e3c" style={{ marginLeft:'auto' }} />}
-                          {submitted && selected===ai && ai!==correct && <XCircle size={16} color="#d32f2f" style={{ marginLeft:'auto' }} />}
+                          {submitted && ai === correct && <CheckCircle size={16} color="#388e3c" style={{ marginLeft: 'auto' }} />}
+                          {submitted && selected === ai && ai !== correct && <XCircle size={16} color="#d32f2f" style={{ marginLeft: 'auto' }} />}
                         </button>
                       );
                     })}
                   </div>
                 </div>
-              );
-            })}
 
             {!submitted ? (
               <PushButton

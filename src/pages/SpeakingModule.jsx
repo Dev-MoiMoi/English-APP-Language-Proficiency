@@ -181,33 +181,41 @@ export default function SpeakingModule() {
             <p style={{ color:'var(--text-secondary)', fontSize:'0.95rem', lineHeight:1.7 }}>{data.intro}</p>
           </div>
 
-          {/* Task Prompt */}
-          <div className="card" style={{ marginBottom:24, padding:28 }}>
-            <h2 style={{ fontSize:'1.2rem', fontWeight:700, color:'var(--text-primary)', marginBottom:8 }}>{task.title}</h2>
-            <p style={{ color:'var(--text-secondary)', marginBottom:16, lineHeight:1.7, fontStyle:'italic' }}>{task.prompt}</p>
-            <div style={{ background:'#fff3e0', borderRadius:10, padding:'14px 18px', marginBottom:12 }}>
-              <p style={{ fontWeight:600, color:'var(--speaking)', marginBottom:8, fontSize:'0.9rem' }}>Cover these points:</p>
-              <ul style={{ paddingLeft:20, margin:0 }}>
+          <div className="card passage-card" style={{ marginBottom: 20 }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--primary-dark)', marginBottom: 8 }}>{task.title}</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: 16, lineHeight: 1.6, fontStyle: 'italic', fontSize: '15px' }}>{task.prompt}</p>
+            <div style={{ background: '#fff3e0', borderRadius: 10, padding: '14px 18px', marginBottom: 12 }}>
+              <p style={{ fontWeight: 600, color: 'var(--speaking)', marginBottom: 8, fontSize: '14px' }}>Cover these points:</p>
+              <ul style={{ paddingLeft: 20, margin: 0 }}>
                 {task.bullets.map((b, i) => (
-                  <li key={i} style={{ color:'var(--text-secondary)', fontSize:'0.9rem', lineHeight:1.9 }}>{b}</li>
+                  <li key={i} style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.7 }}>{b}</li>
                 ))}
               </ul>
             </div>
-            <div style={{ fontSize:'0.85rem', color:'var(--text-muted)' }}>⏱ Suggested duration: {task.duration}</div>
+            <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>⏱ Suggested duration: {task.duration}</div>
           </div>
 
           {/* Recorder */}
           {!submitted && (
-            <div className="card" style={{ padding:32, marginBottom:24, textAlign:'center' }}>
-              <p style={{ color:'var(--text-secondary)', marginBottom:24, fontSize:'0.95rem' }}>
+            <div className="card" style={{ padding: '24px 20px', marginBottom: 24, textAlign: 'center' }}>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: 20, fontSize: '15px' }}>
                 {!recorded 
                   ? (recording ? 'Recording... Tap to stop' : 'Tap the mic to start recording') 
-                  : 'Recording saved! You can listen, re-record, or submit your response.'}
+                  : 'Recording saved!'}
               </p>
+
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+                {!recording && !recorded && (
+                  <MicButton isRecording={false} onClick={startRecording} />
+                )}
+                {recording && (
+                  <MicButton isRecording={true} onClick={stopRecording} />
+                )}
+              </div>
 
               {/* Timer display */}
               {(!recorded || recording) && (
-                <div style={{ fontSize:'3rem', fontWeight:800, color: recording ? '#d32f2f' : 'var(--text-primary)', marginBottom:24, fontFamily:'monospace', letterSpacing:4 }}>
+                <div style={{ fontSize: '18px', fontWeight: 800, color: recording ? '#d32f2f' : 'var(--text-primary)', marginBottom: 20, fontFamily: 'monospace', letterSpacing: 2 }}>
                   {formatTime(seconds)}
                 </div>
               )}
@@ -242,13 +250,7 @@ export default function SpeakingModule() {
                 </div>
               )}
 
-              <div style={{ display:'flex', gap:16, justifyContent:'center', flexWrap:'wrap' }}>
-                {!recording && !recorded && (
-                  <MicButton isRecording={false} onClick={startRecording} />
-                )}
-                {recording && (
-                  <MicButton isRecording={true} onClick={stopRecording} />
-                )}
+              <div className="module-footer-btns" style={{ display: 'flex', gap: 16, justifyContent: 'center' }}>
                 {recorded && !recording && (
                   <>
                     <PushButton

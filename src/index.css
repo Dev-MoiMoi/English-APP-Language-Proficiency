@@ -71,15 +71,17 @@ body {
   font-family: 'Poppins', system-ui, sans-serif;
   background-color: var(--bg);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5; /* Default for mobile accessibility */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   line-height: 1.25;
   color: var(--text-main);
+  word-wrap: break-word; /* Prevent long headers from breaking layout */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -646,7 +648,15 @@ img { max-width: 100%; }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .mobile-menu-toggle { display: flex; }
 }
 
 /* Mobile Menu Dropdown */
@@ -679,8 +689,8 @@ img { max-width: 100%; }
 }
 .mobile-menu-links a {
   display: block;
-  padding: 16px 32px;
-  font-size: 1rem;
+  padding: 16px 32px; /* 16px top/bottom as requested */
+  font-size: 16px;
   font-weight: 500;
   color: #1A237E;
   text-decoration: none;
@@ -1379,24 +1389,195 @@ img { max-width: 100%; }
 /* ━━━━━━━━━━━━━━━━━━━━━━━━
    RESPONSIVE
 ━━━━━━━━━━━━━━━━━━━━━━━━ */
-@media (max-width: 1024px) {
-  .horizontal-steps { grid-template-columns: repeat(2, 1fr); }
-  .steps-connecting-line { display: none; }
-}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Global Mobile Rules (Up to Tablet) */
 @media (max-width: 768px) {
-  .navbar-links { display: none; }
-  .mobile-menu-toggle { display: block; }
-  .hero { padding: 60px 20px 80px; }
-  .section { padding: 56px 20px; }
-  .module-content { padding: 16px; }
-  .passage-card { padding: 20px; }
-  .modal-box { padding: 28px 20px; }
-  .cefr-grid-modern  { grid-template-columns: repeat(2, 1fr); }
-  .skills-grid { grid-template-columns: 1fr; }
-  .horizontal-steps { grid-template-columns: 1fr; }
+  :root {
+    --radius-xl: 16px; /* Slightly tighter radius for smaller screens */
+  }
+
+  .container {
+    padding: 0 20px; /* Required 20px side padding */
+  }
+
+  .section {
+    padding: 40px 20px; /* Section gap 40px */
+  }
+
+  /* Typography Scaling */
+  h1 { font-size: 28px !important; } /* Minimum 28px as requested */
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  body, p, .btn, .option-btn { font-size: 15px !important; }
+  .text-sm, .flow-pill, .ai-badge, .level-card-desc { font-size: 12px !important; }
+
+  /* Navbar */
+  .navbar-links { display: none !important; }
+  .mobile-menu-toggle { display: flex !important; }
+
+  /* Tap Targets */
+  .btn, .push-btn-front, .option-btn, .email-input {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .email-input {
+    font-size: 16px !important; /* Prevent iOS zoom */
+  }
+
+  /* Fixed Navbar Adjustment */
+  .navbar {
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  /* Footer stacking */
+  .footer-links {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  /* Layout Stacking */
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr !important; /* Stacked layout for tablet/mobile */
+    gap: 16px;
+  }
+  
+  .cefr-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important; /* Always 2 columns on mobile/tablet */
+  }
+
+  .horizontal-steps {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* Modules */
+  .passage-card, .question-card {
+    padding: 16px !important;
+    width: 100%;
+  }
+
+  .writing-textarea {
+    min-height: 200px;
+    font-size: 16px !important;
+  }
+
+  .audio-player {
+    padding: 16px;
+  }
 }
-@media (max-width: 480px) {
-  .cefr-grid-modern  { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .horizontal-steps { grid-template-columns: 1fr; }
+
+/* Small Phones: iPhone SE (375px), Galaxy A03 (360px), Redmi 9 (360px) */
+@media (max-width: 375px) {
+  .hero-logo {
+    font-size: 28px !important;
+  }
+
+  .hero-tagline {
+    font-size: 16px !important;
+    max-width: 280px;
+    margin: 0 auto 16px;
+  }
+
+  .cefr-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .cefr-card-modern {
+    min-height: 80px;
+    padding: 16px 12px !important;
+  }
+
+  .cefr-badge-modern {
+    font-size: 18px !important;
+  }
+
+  .cefr-card-modern h3, .cefr-card-modern div {
+    font-size: 12px !important;
+  }
+
+
+  /* Module Action Buttons */
+  .module-footer-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .module-footer-btns .btn {
+    width: 100%;
+  }
+}
+
+/* Medium Phones: iPhone 14 (390px), S21 (360px but treated as medium-ish)
+   Actually Galaxy S21 is 360px, so we split at 375px. */
+@media (min-width: 376px) and (max-width: 430px) {
+  .hero-logo {
+    font-size: 32px !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .cefr-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Large Phones: iPhone 14 Pro Max (430px), Pixel 7 Pro (412px)
+   The breakpoints in the prompt overlap slightly (Pixel 7 Pro 412 fits in medium).
+   I will follow the prompt's specific media query request. */
+@media (min-width: 431px) and (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .cefr-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .cefr-grid-modern {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Safe Area Utility */
+.safe-p-top { padding-top: env(safe-area-inset-top); }
+.safe-p-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Animation optimizations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

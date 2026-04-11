@@ -118,13 +118,12 @@ export default function ReadingModule() {
             <p style={{ color:'var(--text-secondary)', fontSize:'0.95rem', lineHeight:1.7 }}>{data.intro}</p>
           </div>
 
-          {/* Story Text */}
-          <div className="card" style={{ marginBottom:28, padding:32 }}>
-            <h2 style={{ fontSize:'1.4rem', fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{story.title}</h2>
+          <div className="card passage-card" style={{ marginBottom: 20 }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--primary-dark)', marginBottom: 16 }}>{story.title}</h2>
             {story.image && (
-              <img src={story.image} alt={story.title} style={{ width:'100%', height:'auto', borderRadius:12, marginBottom:24 }} />
+              <img src={story.image} alt={story.title} style={{ width: '100%', height: 'auto', borderRadius: 12, marginBottom: 20 }} />
             )}
-            <div style={{ lineHeight:1.9, color:'var(--text-secondary)', fontSize:'0.95rem', whiteSpace:'pre-line' }}>
+            <div style={{ lineHeight: 1.7, color: 'var(--text-secondary)', fontSize: '16px', whiteSpace: 'pre-line' }}>
               {story.text}
             </div>
           </div>
@@ -138,27 +137,25 @@ export default function ReadingModule() {
               const selected = answers[qi];
               const correct = story.answerKey[qi];
               return (
-                <div key={qi} style={{ marginBottom:28, paddingBottom:24, borderBottom: qi < story.questions.length-1 ? '1px solid var(--border)' : 'none' }}>
-                  <p style={{ fontWeight:600, color:'var(--text-primary)', marginBottom:12, fontSize:'0.95rem' }}>
-                    {qi+1}. {item.q}
+                <div key={qi} className="question-card" style={{ marginBottom: 20 }}>
+                  <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: 16, fontSize: '16px' }}>
+                    <span style={{ color: 'var(--primary)', marginRight: '8px' }}>{qi + 1}.</span> {item.q}
                   </p>
-                  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                  <div className="options-list">
                     {item.options.map((opt, ai) => {
                       let bg = 'white', border = 'var(--border)', color = 'var(--text-secondary)';
-                      if (selected === ai && !submitted) { bg='var(--reading-light,#e3f2fd)'; border='var(--reading)'; color='var(--reading)'; }
+                      if (selected === ai && !submitted) { bg = 'var(--reading-light,#e3f2fd)'; border = 'var(--reading)'; color = 'var(--reading)'; }
                       if (submitted) {
-                        if (ai === correct) { bg='#e8f5e9'; border='#388e3c'; color='#388e3c'; }
-                        else if (selected === ai) { bg='#ffebee'; border='#d32f2f'; color='#d32f2f'; }
+                        if (ai === correct) { bg = '#e8f5e9'; border = '#388e3c'; color = '#388e3c'; }
+                        else if (selected === ai) { bg = '#ffebee'; border = '#d32f2f'; color = '#d32f2f'; }
                       }
                       return (
-                        <button key={ai} onClick={() => handleAnswer(qi, ai)}
-                          style={{ padding:'12px 16px', borderRadius:10, border:`2px solid ${border}`, background:bg,
-                            color, textAlign:'left', cursor: submitted?'default':'pointer', fontWeight:500, fontSize:'0.88rem',
-                            display:'flex', alignItems:'center', gap:8, transition:'all 0.2s' }}>
-                          <span style={{ fontWeight:700, minWidth:20 }}>{String.fromCharCode(65+ai)}.</span>
+                        <button key={ai} className="option-btn" onClick={() => handleAnswer(qi, ai)}
+                          style={{ background: bg, border: `2px solid ${border}`, color, minHeight: '48px' }}>
+                          <span style={{ fontWeight: 700, minWidth: 20 }}>{String.fromCharCode(65 + ai)}.</span>
                           {opt}
-                          {submitted && ai===correct && <CheckCircle size={16} color="#388e3c" style={{ marginLeft:'auto' }} />}
-                          {submitted && selected===ai && ai!==correct && <XCircle size={16} color="#d32f2f" style={{ marginLeft:'auto' }} />}
+                          {submitted && ai === correct && <CheckCircle size={16} color="#388e3c" style={{ marginLeft: 'auto' }} />}
+                          {submitted && selected === ai && ai !== correct && <XCircle size={16} color="#d32f2f" style={{ marginLeft: 'auto' }} />}
                         </button>
                       );
                     })}
