@@ -316,6 +316,7 @@ export default function SpeakingModule() {
                 levelLabel={data.levelLabel}
                 activityName={task.title}
                 aiFeedback={aiFeedback}
+                aiLoading={aiLoading}
                 onTryAgain={handleReset}
               />
             </div>

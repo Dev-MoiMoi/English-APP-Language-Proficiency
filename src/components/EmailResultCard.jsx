@@ -33,6 +33,7 @@ function isValidEmail(v) {
  * score          number   correct answers (quiz) or undefined (writing/speaking)
  * totalQuestions number   total items  (quiz) or undefined
  * aiFeedback     string   raw AI feedback text
+ * aiLoading      boolean  true while AI feedback is still generating
  * onTryAgain     fn       reset the quiz / task
  */
 export default function EmailResultCard({
@@ -44,6 +45,7 @@ export default function EmailResultCard({
   score,
   totalQuestions,
   aiFeedback = '',
+  aiLoading = false,
   onTryAgain,
 }) {
   const navigate = useNavigate();
@@ -53,39 +55,64 @@ export default function EmailResultCard({
   const [errorMsg, setErrorMsg] = useState('');
 
   const valid = isValidEmail(email);
+  const canSend = valid && !aiLoading;
 
   const handleSend = async (e) => {
     e.preventDefault();
-    if (!valid) return;
+    if (!canSend) return;
     setStatus('loading');
     setErrorMsg('');
 
+    // Extract a tips section from the AI feedback if available
+    const extractTips = (fb) => {
+      if (!fb) return 'Keep practicing regularly and review any mistakes to improve!';
+      // Try to find a tips/suggestions/recommendations section in the feedback
+      const tipsMatch = fb.match(/(?:tips?|suggestions?|recommendations?|to improve|try this|practice)[:\s]*([\s\S]*)/i);
+      if (tipsMatch && tipsMatch[1] && tipsMatch[1].trim().length > 20) {
+        return tipsMatch[1].trim().substring(0, 500);
+      }
+      // If no explicit tips section, use the last portion of feedback
+      const lines = fb.split('\n').filter(l => l.trim());
+      if (lines.length > 2) {
+        return lines.slice(-3).join('\n');
+      }
+      return 'Keep practicing regularly and review any mistakes to improve!';
+    };
+
+    const userName = email.split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
     const templateParams = {
-      // Core fields we expect the user to use in the template
-      to_email: email,
-      to_name: email.split('@')[0], // Guess a name for "Hello, {{to_name}}!"
-      
+      // ── Recipient fields (must match EmailJS "To Email" = {{to_email}}) ──
+      to_email: email,             // The user's input email — where the email is SENT TO
+      email: email,                // Template Reply-To: {{email}}
+      name: userName,              // Template From Name: {{name}}
+      user_name: userName,         // Template greeting: Hello, {{user_name}}!
+
+      // ── Activity summary fields ──
+      skill: skillName,            // Template: {{skill}}
+      level: levelLabel || level,  // Template: {{level}}
+      activity_name: activityName, // Template: {{activity_name}}
+      date: new Date().toLocaleDateString('en-PH', {
+        year: 'numeric', month: 'long', day: 'numeric',
+      }),                          // Template: {{date}}
+
+      // ── Score fields ──
+      SCORE: score !== undefined ? score : 'N/A',     // Template: {{SCORE}}
+      TOTAL: totalQuestions !== undefined ? totalQuestions : 'N/A', // Template: {{TOTAL}}
+
+      // ── Feedback fields ──
+      feedback: aiFeedback || 'No feedback available. Complete the activity to receive personalized feedback.',
+      tips: extractTips(aiFeedback),
+
+      // ── Fallback / extra fields for compatibility ──
+      to_name: userName,
       skill_name: skillName,
-      Skill: skillName, // Fallback for uppercase template
-      
       cefr_level: levelLabel || level,
-      CEFR_Level: levelLabel || level, // Fallback
-      
-      activity_name: activityName,
-      Activity: activityName, // Fallback
-      
+      score_display: score !== undefined ? `${score} / ${totalQuestions}` : 'N/A',
+      ai_feedback: aiFeedback || 'No feedback available.',
       date_completed: new Date().toLocaleDateString('en-PH', {
         year: 'numeric', month: 'long', day: 'numeric',
       }),
-      Date_Completed: new Date().toLocaleDateString('en-PH'), // Fallback
-      
-      score_display: score !== undefined ? `${score} / ${totalQuestions}` : 'N/A',
-      score: score !== undefined ? score : 'N/A',
-      total_points: totalQuestions !== undefined ? totalQuestions : 'N/A',
-      YOUR_SCORE: score !== undefined ? score : 'N/A', // Fallback
-      
-      ai_feedback: aiFeedback || 'No feedback available.',
-      AI_Feedback: aiFeedback || 'No feedback available.', // Fallback
     };
 
     try {
@@ -264,13 +291,31 @@ export default function EmailResultCard({
             )}
           </div>
 
+          {/* Waiting for AI feedback notice */}
+          {aiLoading && (
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: 10,
+              background: '#fff8e1', border: '1px solid #ffe082',
+              borderRadius: 12, padding: '10px 16px', marginBottom: 12,
+            }}>
+              <div style={{
+                width: 18, height: 18, border: '2.5px solid #f9a825',
+                borderTopColor: 'transparent', borderRadius: '50%',
+                animation: 'spin 0.8s linear infinite', flexShrink: 0,
+              }} />
+              <p style={{ fontSize: '0.82rem', color: '#e65100', fontWeight: 600, margin: 0 }}>
+                Please wait — AI feedback is still generating...
+              </p>
+            </div>
+          )}
+
           <div style={{ width: '100%', marginBottom: 14 }}>
             <PushButton
               variant="email"
-              text="Send My Results"
+              text={aiLoading ? 'Waiting for AI Feedback...' : 'Send My Results'}
               icon={<Send size={16} />}
               type="submit"
-              disabled={!valid}
+              disabled={!canSend}
               isLoading={status === 'loading'}
               style={{ width: '100%', minHeight: '52px' }}
             />

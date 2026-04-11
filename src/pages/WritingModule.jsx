@@ -180,6 +180,7 @@ export default function WritingModule() {
                 levelLabel={data.levelLabel}
                 activityName={task.title}
                 aiFeedback={aiFeedback}
+                aiLoading={aiLoading}
                 onTryAgain={handleReset}
               />
             </div>

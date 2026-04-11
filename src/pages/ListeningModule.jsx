@@ -146,6 +146,10 @@ export default function ListeningModule() {
             <h3 style={{ fontSize:'1.1rem', fontWeight:700, color:'var(--text-primary)', marginBottom:24 }}>
               Listening Comprehension Questions
             </h3>
+            {lesson.questions.map((item, qi) => {
+              const selected = answers[qi];
+              const correct = lesson.answerKey[qi];
+              return (
                 <div key={qi} className="question-card" style={{ marginBottom: 20 }}>
                   <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: 16, fontSize: '16px' }}>
                     <span style={{ color: 'var(--primary)', marginRight: '8px' }}>{qi + 1}.</span> {item.q}
@@ -170,6 +174,8 @@ export default function ListeningModule() {
                     })}
                   </div>
                 </div>
+              );
+            })}
 
             {!submitted ? (
               <PushButton
@@ -216,6 +222,7 @@ export default function ListeningModule() {
                     score={score}
                     totalQuestions={lesson.questions.length}
                     aiFeedback={aiFeedback}
+                    aiLoading={aiLoading}
                     onTryAgain={handleReset}
                   />
                 </div>

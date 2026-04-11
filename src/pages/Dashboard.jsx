@@ -24,7 +24,7 @@ export default function Dashboard() {
   return (
     <div style={{ padding: '40px 24px', backgroundColor: 'var(--bg)', minHeight: 'calc(100vh - 140px)' }}>
       {showLevelModal && <LevelSelectorModal onSelect={handleSelectLevel} onSkip={() => setShowLevelModal(false)} />}
-      
+
       <div className="container">
         <div style={{ marginBottom: '32px' }}>
           <h1 style={{ fontSize: '2rem', marginBottom: '8px' }}>Welcome back, Student!</h1>
