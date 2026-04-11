@@ -14,6 +14,110 @@ export const READING_DATA = {
     intro: 'Read short and simple stories, dialogues, and texts specially written for beginner learners. These texts use basic words and short sentences to help you understand everyday situations.',
     stories: [
       {
+        title: 'The Death of Charlie Huff',
+        text: `The night before, we drove down in my brother’s old Toyota. The heater was broken, so in November, the windscreen fogged up. My brother watched for cars. I watched for signposts.
+The funeral was on Thursday. I wore a navy jumper and my good coat. My mother said the Huff men bought new black suits, though they looked shiny and cheap. She had brought them ham sandwiches and a basket of fruit. They ate the sandwiches.
+
+Charlie Huff, who had died aged seventy, did not eat sandwiches. He ate two big dinners a day: meat, potatoes, and onion gravy, along with whole packets of biscuits. He drank Lucozade and Guinness. He ate fruit once a year at the Strawberry Fair in Stradbally. When my brother and I were kids, we sometimes stayed over in the Huff house, and we ate mini pizzas and chips. At home, we asked our mother why we couldn’t have chips for tea. She said we had home‑cut chips on Saturdays. I said it was unfair, and that we should eat like the Huffs.
+
+I sat in the back, my mother in front and my brother drove. The river had burst its banks and flooded Charlie’s fields. I remembered the welcome sign we had once made for our townland; a bridge, rushing water and a trout. Charlie Huff pulled it up and threw it in the river. I was twelve at the time; my brother ten. My brother told him we were joking. Charlie stared at us.
+
+“We were messing,” I said.
+He kept staring. “There’ll be no messing around here.”
+
+Charlie had a crest on his lorry; a hound on a red field. In school, Gemma Huff said it was the Huff crest. The teacher showed her a different one in a book; three lions on amber. She said it was the crest of the O’Heachach family, the Gaelic name for Huff. The next wet morning, Charlie parked his lorry across the school gates. The teachers had to park on the road.
+
+We arrived at the house as the men carried the coffin to the hearse.
+I said, “Sorry for your troubles,” to the family. I felt embarrassed. I no longer knew them.
+We followed the cars to the church.
+
+At the end, Charlie lay in a bed by the range, yellow‑skinned, staring at the ceiling. Before he passed, his sister, Margaret, visited him from Boston.
+“Cha,” she said, holding his hand. “Cha.”
+This was all she could say. He said nothing.
+As we followed the hearse over the bumpy roads, my mother began to cry.
+
+“What’s wrong?” I asked.
+“He was such a handsome man,” she said.
+“So?”
+“So, he got old... I remember when they built the house. We were the only two houses on the lane. You and the Huff girls picked berries. You were so small.”
+She covered her face.
+“Your grandfather came home this way,” she said.
+She meant after he died in the nursing home, twenty years ago. There was a flood then too.
+“Sorry,” I said.
+I had not expected this. I felt sad for her, for everyone.
+
+We parked beside the village technical school. My brother and I had attended there. Our uncles too. The school was open seventy‑five years. Charlie had attended for three. A row of boys sat on the wall in front. Maroon jumpers stretched at their broad shoulders. It surprised me that the school was open. The bank was open too. But the world did not stop for the death of Charlie Huff.
+
+In church, our neighbours sat at the front. My father sang with the choir. Father Conor said Charlie was known as “Cha”. He said Cha was loved and respected. That he liked tractors and cattle. That he enjoyed a few pints and fun. I could not remember the fun. There was a crowd because the family was big and kind. Charlie was a hard man. But here he sounded like a rogue. Maybe he was. I don’t know.
+
+The Huff women followed the hearse in the undertaker’s car. The men walked behind, down the road then up the long hill to the graveyard. Mist turned to drizzle. The family had no umbrellas.
+At the graveyard, Father Conor rushed the blessing. Suit trousers got wet. Rainwater filled shoes and socks. Trucks rattled past and it was difficult to hear. People were unsure if they should go to the hotel for sandwiches. In the car park, my brother swerved to avoid a dog and broke the headlight of a white Range Rover.
+
+As the last of the mourners left the graveside, the dog got in. He jumped up on a woman in heels. The woman slipped in the mud and hurt her foot. Shocked, she was silent for a moment, then cried. The sky opened and I looked to the heavens. For the last time, maybe the first, I felt Charlie Huff smile.`,
+        questions: [
+          // Task 1: Recall
+          { q: "What vehicle did the narrator’s brother drive to the funeral?", options: ["Ford truck", "Old Toyota", "White Range Rover", "School bus"], answer: 1 },
+          { q: "What problem did the car have during the trip?", options: ["Broken radio", "Flat tire", "Broken heater", "Broken headlight"], answer: 2 },
+          { q: "How old was Charlie Huff when he died?", options: ["Sixty", "Sixty-five", "Seventy", "Seventy-five"], answer: 2 },
+          { q: "What kind of food did Charlie Huff usually eat?", options: ["Salads and fruits", "Meat, potatoes, and onion gravy", "Fish and rice", "Bread and soup"], answer: 1 },
+          { q: "What drink did Charlie Huff often consume?", options: ["Milk and water", "Juice and tea", "Lucozade and Guinness", "Coffee and soda"], answer: 2 },
+          { q: "What did Charlie Huff throw into the river when the boys were young?", options: ["A fishing rod", "A wooden sign", "A welcome sign", "A rope"], answer: 2 },
+          { q: "What animal appeared on Charlie Huff’s lorry crest?", options: ["Lion", "Dog (hound)", "Horse", "Bull"], answer: 1 },
+          { q: "Who visited Charlie before he passed away?", options: ["His daughter", "His sister Margaret", "His cousin", "His neighbor"], answer: 1 },
+          { q: "What nickname was Charlie known by?", options: ["Char", "Chaz", "Cha", "Chief"], answer: 2 },
+          { q: "What happened near the end of the story?", options: ["The hearse broke down", "A dog jumped on a woman", "A car ran out of fuel", "A coffin fell"], answer: 1 },
+          // Task 2: Comprehension
+          { q: "Why did the windscreen fog up during the trip?", options: ["Windows open", "Heater was broken", "Raining heavily", "Car was full"], answer: 1 },
+          { q: "How did the narrator feel when speaking to Charlie Huff’s family?", options: ["Angry", "Confident", "Embarrassed", "Excited"], answer: 2 },
+          { q: "Why did the narrator’s mother bring sandwiches to the Huff family?", options: ["To celebrate", "To feed mourners", "To show sympathy", "To sell food"], answer: 2 },
+          { q: "Why did Charlie Huff pull down the welcome sign made by the boys?", options: ["He liked it", "He thought it was funny", "He disliked messing around", "He wanted to repair it"], answer: 2 },
+          { q: "Why did the narrator feel surprised that the school and bank were open?", options: ["Thought they were closed forever", "Expected world to stop for Charlie", "Forgot it was a weekday", "Wanted skip school"], answer: 1 },
+          { q: "What made the burial uncomfortable for the mourners?", options: ["Loud music", "Bright sunshine", "Rain and wet clothes", "Strong winds only"], answer: 2 },
+          { q: "Why did the narrator’s mother cry during the trip?", options: ["Lost wallet", "Remembered Charlie young", "Disliked funerals", "Angry"], answer: 1 },
+          { q: "What accident happened in the car park?", options: ["Car hit tree", "Dog injured", "Range Rover headlight broken", "Hearse stopped"], answer: 2 },
+          { q: "What caused the woman in heels to fall?", options: ["Tripped on stone", "Ground cracked", "A dog jumped on her", "Someone pushed her"], answer: 2 },
+          { q: "What does the narrator likely mean by feeling Charlie Huff smile at the end?", options: ["Charlie still alive", "Charlie laughing loudly", "Imagined Charlie approving chaos", "Saw ghost"], answer: 2 }
+        ],
+        answerKey: [1, 2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 2, 2, 2, 1, 2, 1, 2, 2, 2],
+      },
+      {
+        title: 'A Good Catch',
+        text: `Ken firmly believed that to get ahead in life, one had to prioritise intelligence over morality. To him, the world was divided into two types of people: those who understood how it worked and those who didn’t. The latter were easy to manipulate. He never thought of them as victims—only as people who trusted too easily.
+
+Over the years, he had refined his method into something precise and efficient. Romance scams were not based on luck; they required patience, diligence, and control. He studied his targets carefully, learning their habits, their fears, and, most importantly, their needs. Then he became exactly what they were looking for.
+
+And it worked. Ken had acquired a considerable fortune over the years—more than he could ever need. But money was no longer the main attraction. The thing he relished most was the control: the gradual development of trust, the moment when someone became emotionally reliant on him, and the quiet satisfaction of suddenly vanishing without explanation.
+
+Until one day, something changed. Her name was Elena.
+
+She appeared like many others on a platform he knew well. Her profile was simple but carefully presented. Recently divorced. Independent. Not desperate, but clearly alone. Ken recognised the opportunity immediately. Within a week, she was confiding in him. Within two, she was waiting for his messages.
+
+But there was something different about her. She never rushed. Most people wanted quick emotional connection. Elena didn’t. She responded thoughtfully, listened carefully, but always held something back. One evening, she wrote: “You’re very good with words.” Ken smiled slightly. “Occupational habit,” he replied. “What do you do again?” she asked. “I design skyscrapers.” There was a short pause. Then she answered: “Of course.”
+
+Weeks passed, and he continued building the relationship. Then one evening, she asked: “Have you ever felt guilty?” Ken paused. “About what?” he replied. “About hurting someone,” she wrote. “Everyone hurts someone at some point,” Ken wrote. Then she replied: “Not like you do.” Ken frowned slightly. “You don’t know me that well,” he wrote. Then: “I know exactly who you are, Ken.”
+
+“I’ve spoken to three of them.” Ken’s body went still. “The women you disappeared from,” she replied. This wasn’t possible. He had always been careful.
+
+“I was one of them,” she replied. “They all blur together for you, don’t they?” she wrote. “This conversation is being recorded,” she added. “And sent to others.” “To people who understand consequences.”
+
+For the first time in years, Ken felt afraid. He typed quickly: “We can resolve this.” But there was no reply.
+
+A few days later, there was a knock at his door. Slow. Deliberate. Certain. For years, he had entered other people’s lives without warning. Now, someone had entered his. And this time, there was no escape.`,
+        questions: [
+          { q: "What belief guided Ken’s actions in life?", options: ["Kindness is more important", "Intelligence over morality", "Honesty leads to wealth", "Trust is key"], answer: 1 },
+          { q: "How did Ken usually gain the trust of his victims?", options: ["Threatening them", "Expensive gifts", "Becoming who they needed", "Meeting in person"], answer: 2 },
+          { q: "What did Ken enjoy most about his scams?", options: ["Expensive items", "Attention", "Control over others", "Traveling"], answer: 2 },
+          { q: "What made Elena different from previous targets?", options: ["Sent money quickly", "Trusted him immediately", "Responded slowly and cautiously", "Refused to talk"], answer: 2 },
+          { q: "Why did Ken become irritated with Elena?", options: ["Asked too many questions", "Never trusted him fully", "Stopped replying", "Insulted him"], answer: 1 },
+          { q: "What clue made Ken feel something was wrong?", options: ["Elena stopped messaging", "Elena forgot his name", "Elena’s strange response about his job", "Asked for money"], answer: 2 },
+          { q: "What shocking truth did Elena reveal?", options: ["Police officer", "Former victim", "Knew his family", "Worked with him"], answer: 1 },
+          { q: "What did Elena send Ken that caused fear?", options: ["Video", "Letter", "File with evidence", "Photo of apartment"], answer: 2 },
+          { q: "How did Ken feel when he realized he was exposed?", options: ["Happy", "Proud", "Calm", "Afraid"], answer: 3 },
+          { q: "What does the knock on Ken’s door symbolize?", options: ["Delivery", "New opportunity", "Arrival of consequences", "Friendly visit"], answer: 2 }
+        ],
+        answerKey: [1, 2, 2, 2, 1, 2, 1, 2, 3, 2],
+      },
+      {
         title: "A Reporter's Guide to West Africa",
         text: `I have always been interested in the life and history of West Africa. So I decided to take a tour around the three central countries of the region – Senegal, Mali and Cote d’Ivoire.
 
@@ -72,16 +176,16 @@ After work, people in London often go out with friends before they go home. They
 
 Many people go to the cinema in the evening – there are many cinemas to visit. Some people prefer to go to the theatre – there are a lot of theatres in the city. Some show dramas, some show comedies, some show musicals. The city has many, many restaurants and a lot of people like to meet their friends for dinner.`,
         questions: [
-          { q: 'What time do people usually start work in the UK?', options: ['7 o\'clock', '8 o\'clock', '9 o\'clock', '10 o\'clock'], answer: 2 },
-          { q: 'How do most people travel to work in London?', options: ['By car', 'By bus', 'By bicycle', 'By Tube'], answer: 3 },
-          { q: 'What do most people eat for breakfast?', options: ['Pizza', 'Cereals, fruit, or eggs', 'Indian food', 'Sandwiches'], answer: 1 },
-          { q: 'When is lunch usually eaten?', options: ['1 o\'clock', '6 o\'clock', '8 o\'clock', '9 o\'clock'], answer: 0 },
-          { q: 'What is a "takeaway" food?', options: ['Food cooked at home.', 'Food eaten in a restaurant.', 'Food from local restaurants by motorbike or car.', 'Food from a supermarket.'], answer: 2 },
-          { q: 'What is the most popular food in the UK mentioned in the article?', options: ['Chinese food', 'Italian food', 'Indian food (like curry)', 'Thai food'], answer: 2 },
-          { q: 'When do young children start school?', options: ['Age 3', 'Age 5', 'Age 11', 'Age 18'], answer: 1 },
-          { q: 'How long are university courses usually?', options: ['One year', 'Two years', 'Three years', 'Four years'], answer: 2 },
-          { q: 'What do people often do after work in London?', options: ['Go shopping', 'Go to the gym', 'Visit pubs for a drink and a snack', 'Go home to cook dinner'], answer: 2 },
-          { q: 'What can people do in the evening in London?', options: ['Go to the cinema or theatre', 'Go to bed early', 'Only stay at home', 'Only work more'], answer: 0 },
+          { q: "What time do people usually start work in the UK?", options: ["7 o'clock", "8 o'clock", "9 o'clock", "10 o'clock"], answer: 2 },
+          { q: "How do most people travel to work in London?", options: ["By car", "By bus", "By bicycle", "By Tube"], answer: 3 },
+          { q: "What do most people eat for breakfast?", options: ["Pizza", "Cereals, fruit, or eggs", "Indian food", "Sandwiches"], answer: 1 },
+          { q: "When is lunch usually eaten?", options: ["1 o'clock", "6 o'clock", "8 o'clock", "9 o'clock"], answer: 0 },
+          { q: "What is a \"takeaway\" food?", options: ["Food cooked at home.", "Food eaten in a restaurant.", "Food from local restaurants by motorbike or car.", "Food from a supermarket."], answer: 2 },
+          { q: "What is the most popular food in the UK mentioned in the article?", options: ["Chinese food", "Italian food", "Indian food (like curry)", "Thai food"], answer: 2 },
+          { q: "When do young children start school?", options: ["Age 3", "Age 5", "Age 11", "Age 18"], answer: 1 },
+          { q: "How long are university courses usually?", options: ["One year", "Two years", "Three years", "Four years"], answer: 2 },
+          { q: "What do people often do after work in London?", options: ["Go shopping", "Go to the gym", "Visit pubs for a drink and a snack", "Go home to cook dinner"], answer: 2 },
+          { q: "What can people do in the evening in London?", options: ["Go to the cinema or theatre", "Go to bed early", "Only stay at home", "Only work more"], answer: 0 }
         ],
         answerKey: [2, 3, 1, 0, 2, 2, 1, 2, 2, 0],
       },
@@ -99,16 +203,16 @@ People know the situation is difficult, but some see a good future in African mu
 
 The stories people tell in the music are also different now. In the past musicians wrote personal stories. Now people write more about problems in society.`,
         questions: [
-          { q: 'Where do young people in Dakar enjoy making music?', options: ['In Europe', 'In America', 'In Dakar', 'In Asia'], answer: 2 },
-          { q: 'Where do some African artists want to move?', options: ['To Australia or Canada', 'To Europe or America', 'To South America', 'To other parts of Africa'], answer: 1 },
-          { q: 'How long was Jah Moko a music producer in France?', options: ['5 years', '10 years', '15 years', '20 years'], answer: 1 },
-          { q: 'Where is Jah Moko\'s band based?', options: ['In Paris', 'In London', 'In Dakar', 'In New York'], answer: 2 },
-          { q: 'What kind of music does Jah Moko mix?', options: ['Pop and Rock', 'Jazz and Blues', 'West African Reggae and Afro-Beat', 'Classical and Folk'], answer: 2 },
-          { q: 'How many members are in Jah Moko Family?', options: ['Six', 'Seven', 'Eight', 'Nine'], answer: 3 },
-          { q: 'Is it easy for a young musician to earn money from music?', options: ['Yes, very easy', 'No, it is difficult', 'Only in Europe', 'Only if famous'], answer: 1 },
-          { q: 'How do musicians contact fans now?', options: ['Through record companies only', 'Using the internet and local radio', 'By writing letters', 'By calling them'], answer: 1 },
-          { q: 'What is the guitar player\'s other job?', options: ['Doctor', 'Teacher', 'Architect', 'Chef'], answer: 2 },
-          { q: 'What kind of stories do musicians write about now?', options: ['Personal stories only', 'More about problems in society', 'Only love', 'Only happiness'], answer: 1 },
+          { q: "Where do young people in Dakar enjoy making music?", options: ["In Europe", "In America", "In Dakar", "In Asia"], answer: 2 },
+          { q: "Where do some African artists want to move?", options: ["To Australia or Canada", "To Europe or America", "To South America", "To other parts of Africa"], answer: 1 },
+          { q: "How long was Jah Moko a music producer in France?", options: ["5 years", "10 years", "15 years", "20 years"], answer: 1 },
+          { q: "Where is Jah Moko's band based?", options: ["In Paris", "In London", "In Dakar", "In New York"], answer: 2 },
+          { q: "What kind of music does Jah Moko mix?", options: ["Pop and Rock", "Jazz and Blues", "West African Reggae and Afro-Beat", "Classical and Folk"], answer: 2 },
+          { q: "How many members are in Jah Moko Family?", options: ["Six", "Seven", "Eight", "Nine"], answer: 3 },
+          { q: "Is it easy for a young musician to earn money from music?", options: ["Yes, very easy", "No, it is difficult", "Only in Europe", "Only if famous"], answer: 1 },
+          { q: "How do musicians contact fans now?", options: ["Through record companies only", "Using the internet and local radio", "By writing letters", "By calling them"], answer: 1 },
+          { q: "What is the guitar player's other job?", options: ["Doctor", "Teacher", "Architect", "Chef"], answer: 2 },
+          { q: "What kind of stories do musicians write about now?", options: ["Personal stories only", "More about problems in society", "Only love", "Only happiness"], answer: 1 }
         ],
         answerKey: [2, 1, 1, 2, 2, 3, 1, 1, 2, 1],
       },
@@ -116,16 +220,16 @@ The stories people tell in the music are also different now. In the past musicia
         title: 'Weather Report',
         text: `Welcome to the weather forecast. Now, let's see what the weather is like today. In the north of the country it's very windy and cold. There is a chance of some rain too, so don't leave home without your umbrella! The temperature is around 10º centigrade. In the east it's rainy all day today, I'm afraid. There may be a thunderstorm in the afternoon. The temperature is a bit higher, at around 13º. In the west and middle of the country the weather is dry, but cloudy. So no rain for you, but it is quite windy and the temperature is just 10º. The south of the country has the best weather today. It's cloudy most of the time but sunny this afternoon. The temperature is around 15º.`,
         questions: [
-          { q: 'What is the weather like in the north?', options: ['Sunny and hot', 'Windy and cold, with rain chance', 'Rainy all day', 'Dry and cloudy'], answer: 1 },
-          { q: 'What should you take if you go north?', options: ['Sunglasses', 'An umbrella', 'A swimsuit', 'Shorts'], answer: 1 },
-          { q: 'What is the temperature in the north?', options: ['13º', '15º', '10º', '20º'], answer: 2 },
-          { q: 'What is the weather like in the east?', options: ['Sunny', 'Dry', 'Rainy all day', 'Windy'], answer: 2 },
-          { q: 'What might happen in the east in the afternoon?', options: ['Snowstorm', 'Thunderstorm', 'Rainbow', 'Strong winds'], answer: 1 },
-          { q: 'What is the temperature in the east?', options: ['10º', '13º', '15º', '5º'], answer: 1 },
-          { q: 'Is it raining in the west and middle?', options: ['Yes', 'No, it is dry', 'Only morning', 'Only afternoon'], answer: 1 },
-          { q: 'What is the temperature in the west and middle?', options: ['15º', '13º', '10º', '25º'], answer: 2 },
-          { q: 'Which part has the "best weather"?', options: ['North', 'East', 'West', 'South'], answer: 3 },
-          { q: 'What is the temperature in the south?', options: ['10º', '13º', '15º', '20º'], answer: 2 },
+          { q: "What is the weather like in the north?", options: ["Sunny and hot", "Windy and cold, with rain chance", "Rainy all day", "Dry and cloudy"], answer: 1 },
+          { q: "What should you take if you go north?", options: ["Sunglasses", "An umbrella", "A swimsuit", "Shorts"], answer: 1 },
+          { q: "What is the temperature in the north?", options: ["13º", "15º", "10º", "20º"], answer: 2 },
+          { q: "What is the weather like in the east?", options: ["Sunny", "Dry", "Rainy all day", "Windy"], answer: 2 },
+          { q: "What might happen in the east in the afternoon?", options: ["Snowstorm", "Thunderstorm", "Rainbow", "Strong winds"], answer: 1 },
+          { q: "What is the temperature in the east?", options: ["10º", "13º", "15º", "5º"], answer: 1 },
+          { q: "Is it raining in the west and middle?", options: ["Yes", "No, it is dry", "Only morning", "Only afternoon"], answer: 1 },
+          { q: "What is the temperature in the west and middle?", options: ["15º", "13º", "10º", "25º"], answer: 2 },
+          { q: "Which part has the \"best weather\"?", options: ["North", "East", "West", "South"], answer: 3 },
+          { q: "What is the temperature in the south?", options: ["10º", "13º", "15º", "20º"], answer: 2 }
         ],
         answerKey: [1, 1, 2, 2, 1, 1, 1, 2, 3, 2],
       },
@@ -141,16 +245,16 @@ For when dreams go
 Life is a barren field 
 Frozen with snow.`,
         questions: [
-          { q: 'What does the poem tell you to "Hold fast to"?', options: ['Birds', 'Snow', 'Dreams', 'Fields'], answer: 2 },
-          { q: 'What happens if dreams die?', options: ['Life is a strong bird', 'Life is a broken-winged bird', 'Life is a flying bird', 'Life is a happy bird'], answer: 1 },
-          { q: 'What cannot the broken-winged bird do?', options: ['Sing', 'Eat', 'Fly', 'Sleep'], answer: 2 },
-          { q: 'The poem repeats the line, "Hold fast to ______."', options: ['Money', 'Friends', 'Dreams', 'Toys'], answer: 2 },
-          { q: 'What happens when dreams go?', options: ['Life is a warm field', 'Life is a green field', 'Life is a barren field', 'Life is a big field'], answer: 2 },
-          { q: 'What is the barren field covered with?', options: ['Flowers', 'Water', 'Snow', 'Grass'], answer: 2 },
-          { q: 'What feeling does the poem mostly talk about?', options: ['Sadness', 'Hope', 'Anger', 'Fear'], answer: 1 },
-          { q: 'The poem uses a bird to describe life without ______.', options: ['Food', 'Water', 'Dreams', 'Home'], answer: 2 },
-          { q: 'What is a "barren field" in the poem?', options: ['A field full of plants', 'A field with no plants', 'A field of snow', 'A field with many birds'], answer: 1 },
-          { q: 'What is the main message?', options: ['Sleep a lot', 'Dreams are very important', 'Birds cannot fly in winter', 'Fields are cold in snow'], answer: 1 },
+          { q: "What does the poem tell you to \"Hold fast to\"?", options: ["Birds", "Snow", "Dreams", "Fields"], answer: 2 },
+          { q: "What happens if dreams die?", options: ["Life is a strong bird", "Life is a broken-winged bird", "Life is a flying bird", "Life is a happy bird"], answer: 1 },
+          { q: "What cannot the broken-winged bird do?", options: ["Sing", "Eat", "Fly", "Sleep"], answer: 2 },
+          { q: "The poem repeats the line, \"Hold fast to ______.\"", options: ["Money", "Friends", "Dreams", "Toys"], answer: 2 },
+          { q: "What happens when dreams go?", options: ["Life is a warm field", "Life is a green field", "Life is a barren field", "Life is a big field"], answer: 2 },
+          { q: "What is the barren field covered with?", options: ["Flowers", "Water", "Snow", "Grass"], answer: 2 },
+          { q: "What feeling does the poem mostly talk about?", options: ["Sadness", "Hope", "Anger", "Fear"], answer: 1 },
+          { q: "The poem uses a bird to describe life without ______.", options: ["Food", "Water", "Dreams", "Home"], answer: 2 },
+          { q: "What is a \"barren field\" in the poem?", options: ["A field full of plants", "A field with no plants", "A field of snow", "A field with many birds"], answer: 1 },
+          { q: "What is the main message?", options: ["Sleep a lot", "Dreams are very important", "Birds cannot fly in winter", "Fields are cold in snow"], answer: 1 }
         ],
         answerKey: [2, 1, 2, 2, 2, 2, 1, 2, 1, 1],
       },
