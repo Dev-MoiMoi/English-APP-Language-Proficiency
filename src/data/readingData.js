@@ -1297,4 +1297,265 @@ D. Genetics: FOXP2 mutation (200k-100k years ago) connected to speech control. M
       },
     ],
   },
+
+  C2: {
+    levelLabel: 'C2 – Mastery',
+    intro: 'Explore complex literature, academic articles, and professional reports. These materials challenge your analytical skills with deep themes, technical vocabulary, and intricate structures.',
+    stories: [
+      {
+        title: 'True Beauty',
+        text: `Steph scrolled through her Instagram feed. There were #blessed yoga photos and #SundayBrunch pictures. Freshly baked bread sat next to coffees with hearts drawn on the top of the milk.
+Matt was doing the same. His feed was filled with #buffed gym-selfies and #beachlife holiday shots.
+Steph took a photo of her carefully arranged breakfast and flowers. Her eggs and her coffee had gone cold, but the plate looked really cool. The flowers were ones she'd 'borrowed' from her neighbour's garden. Posting the picture on Instagram meant far more people would get to appreciate them.
+Steph adjusted the colours on her picture to make the orange juice and the pink roses brighter. As she scrolled through the Instagram filters, TrueBeauty caught her eye. The picture looked perfect with that filter. She posted the photo for her 15k followers to envy. Then she threw the food on her plate into the bin.
+Matt had worked out for an hour, and he'd drunk very little water to show off his muscles better. Fake tan hadn't helped, neither had spraying himself with cooking oil. He saw an ad for TrueBeauty: "Pictures as gorgeous as you are. See the real you with TrueBeauty. Available for £0. Because True Beauty comes for free."
+He downloaded the app and got the perfect selfie. He posted the photo for his 27k followers and then got in the shower. He washed off the oil, thinking about how it blocked up the sewers, but decided it was "someone else's problem."
+Neither Steph nor Matt were expecting the negative comments they got. "Remind me never to get breakfast at your place!" "Ewww, disgusting!"
+They looked again at the pictures. Steph's picture showed green-looking eggs with flies crawling on them. The flowers were dead, and the coffee had a horrible grey layer. Matt's picture showed his body covered in a layer of something that looked like dirty butter. It was in his hair and coming out of his nose. And his nails were filthy.
+They tried to delete the photos, but it was impossible. Then, they received a message from TrueBeauty:
+"I know that each of you really, truly cares about showing yourself as you really are – just as beautiful on the inside as you are on the outside. If you want your pictures to show the real you, it's time to be as beautiful in real life as you are on your social media. P.S. You can't remove the filter or delete the pictures. P.P.S. It automatically gets added to all your photos from now on."
+For the next 24 hours, not many people posted photos. Nothing Steph tried worked. Depressed, she wandered past Mrs Robinson's garden. She noticed the smell for the first time. "Heaven!"
+"Do you want some help?" Steph asked Mrs Robinson. They spent a couple of hours gardening. Steph enjoyed hearing Mrs Robinson's stories about being an actress.
+"Take a picture of us, dear," said Mrs Robinson as Steph was leaving. Steph took a quick selfie of them smiling and sweating. Later, she adjusted the colors, but realized the smiles were beautiful enough.
+She posted it with the text: "Me and my neighbour doing the gardening #TrueBeauty #BeautyIsOnTheInside". The picture went online exactly as she had taken it!
+Matt saw her photo. He had an idea. He gathered up all the recycling in his flat and offered to take his neighbor's rubbish to the bins. He posted a selfie of him smiling next to the recycling bin. His picture was nothing special, but it was a truly beautiful photo.`,
+        questions: [
+          { q: "The TrueBeauty app’s effect on Steph and Matt can be interpreted as a critique of:", options: ["The impossibility of maintaining perfect appearances online", "The benefits of technological advancement in photography", "Social media as a tool for building community", "Digital literacy and critical thinking skills"], answer: 0 },
+          { q: "How does the story use the juxtaposition of Steph’s and Matt’s online persona versus their real-life actions?", options: ["To show that both appearances and reality are equally valued", "To emphasize the contrast between superficiality and meaningful engagement", "To suggest that social media accurately reflects personality", "To demonstrate that public perception is irrelevant"], answer: 1 },
+          { q: "The narrative suggests that social media validation is:", options: ["A reliable indicator of personal worth", "Often misleading and disconnected from genuine human experience", "The ultimate form of personal achievement", "Easily controllable through apps and filters"], answer: 1 },
+          { q: "What ethical concern is raised by Matt’s behavior with the cooking oil and its environmental impact?", options: ["Individual negligence contributes to larger societal problems", "Technology solves all environmental issues", "Influencers should not exercise caution online", "Personal health is more important than environmental consequences"], answer: 0 },
+          { q: "The turning point in Steph’s attitude occurs when she:", options: ["Realizes her Instagram followers are fickle", "Engages in tangible, helpful activity in real life", "Posts another filtered image successfully", "Deletes her social media accounts permanently"], answer: 1 },
+          { q: "Which literary device is primarily used when the TrueBeauty filter ruins the users’ photos?", options: ["Hyperbole to exaggerate social media obsession", "Irony to reveal the gap between expectation and reality", "Metaphor for technological progress", "Allegory for personal identity"], answer: 1 },
+          { q: "The story’s depiction of ordinary acts, such as helping neighbors, suggests that:", options: ["Authenticity and kindness can provide greater satisfaction than digital recognition", "Social status is enhanced by public visibility", "Everyday activities are meaningless without social media documentation", "Happiness is independent of personal contribution"], answer: 0 },
+          { q: "The story critiques influencer culture by demonstrating that:", options: ["Followers always provide meaningful feedback", "Curated appearances often conceal ethical and practical negligence", "Social media is an inherently positive tool for self-expression", "Online reputation is permanent and flawless"], answer: 1 },
+          { q: "How does the author use Steph’s interaction with Mrs Robinson to convey a deeper theme?", options: ["To emphasize social hierarchy and age differences", "To highlight mentorship, connection, and the value of shared effort", "To show that gardening is more important than technology", "To demonstrate that social media can be used to track community work"], answer: 1 },
+          { q: "The story ultimately suggests that true beauty is:", options: ["Defined by social media metrics and visual perfection", "Rooted in outward appearance and material possessions", "Found in authentic human behavior, effort, and kindness", "Best maintained through advanced digital applications"], answer: 2 }
+        ],
+        answerKey: [0, 1, 1, 0, 1, 1, 0, 1, 1, 2],
+      },
+      {
+        title: "The Devil's in the Details",
+        text: `The knock at her front door came just as Victoria was about to open it. She was late to work for the third time this month. She opened the door and forced a smile.
+"And how are we today, Victoria?" the man at her door asked. "I bring you an eternity of warmth and best wishes from the wonderful director of my company."
+"Who are you? I'm late for work," Victoria said.
+"Time!" He clicked his tongue. "That's what they all want. Time or happiness, which one would you like more of?"
+"Listen, I'm not interested."
+"We've got a special offer on. Twenty-five years of extra life in exchange for eternity. Or, double your happiness for the same price."
+"Price?" she repeated.
+"Yes, it's a fixed price. We take everything you have – forever."
+Thinking about her sister Charlotte's "perfect" life – the award-winning company, the surgeon husband, the expensive house – Victoria often felt jealous. Charlotte's luck had started after a car accident.
+"But what if I get run over by a bus tomorrow?" Victoria asked.
+"Then you'll have been blissfully happy for that one day. Time or happiness, I can only offer one."
+He shook his head when she pressed the lift. "I've tried other companies. Be miserable now, happy for eternity. Much harder sell."
+Victoria ran down the stairs. "I don't have time to discuss this!" she called.
+He suddenly appeared in front of her, floating in the air. "Then it's happiness!" he said, scratching one of two little horns on his head.
+Victoria noticed his horns and panicked. "I'm happy enough, thanks!" she said, running down the stairs with bleeding fingers after catching them on the bricks.
+"Are you happy, Victoria? Your boss hates you, you're never on time, you'll find the rent somehow..."
+"Money doesn't buy happiness!" she shouted.
+"So wise. Twenty-five years extra, then. I won't tell you how long you've got left, people just ruin it for themselves."
+"I don't believe in this stuff!"
+He jumped off the banister and held out a card. "Neither did your sister. Not until she had her accident. My card if you change your mind."
+And he disappeared, leaving Victoria with the card in her hand and her mouth open in shock.`,
+        questions: [
+          { q: "The visitor at Victoria’s door can best be interpreted as:", options: ["A literal salesman offering impossible deals", "A symbolic figure representing temptation and moral choice", "A random intruder with sinister motives", "Victoria’s subconscious desire for wealth"], answer: 1 },
+          { q: "The story juxtaposes Victoria’s life with her sister Charlotte’s to emphasize:", options: ["Sibling rivalry in a literal sense", "How accidents can endanger familial relationships", "The arbitrariness of personal fortune and success", "The inevitability of career success for all"], answer: 2 },
+          { q: "What does the visitor’s dialogue about “time or happiness” suggest thematically?", options: ["People always make rational choices when offered bargains", "True happiness is separate from external circumstances", "Material wealth is the ultimate measure of life’s value", "Eternity is less desirable than a short, fulfilling life"], answer: 1 },
+          { q: "Victoria’s response to the visitor reflects which of the following traits?", options: ["Pragmatism, resilience, and independence", "Passive acceptance of external forces", "Greed masked as humor", "Naivety and dependence on others"], answer: 0 },
+          { q: "The story’s tone can best be described as:", options: ["Lighthearted and whimsical with underlying moral commentary", "Dark, horror-driven, and suspenseful throughout", "Strictly comedic with no serious undertones", "Tragic and fatalistic without any humor"], answer: 0 },
+          { q: "Which literary device is most prominent when the visitor slides down the banister?", options: ["Magical realism to highlight the surreal nature of choice", "Hyperbole to exaggerate mundane difficulties", "Foreshadowing of future events", "Allegory of workplace struggles"], answer: 0 },
+          { q: "The story critiques societal values by showing:", options: ["Material possessions define self-worth", "Success is guaranteed through effort alone", "Time management is the key to universal satisfaction", "External appearances and wealth are insufficient for happiness"], answer: 3 },
+          { q: "How does Victoria’s interaction with the visitor advance the story’s philosophical theme?", options: ["By illustrating the futility of human choice", "By forcing her to confront the difference between desire and fulfillment", "By showing that true happiness must be externally validated", "By emphasizing competition with her sister"], answer: 1 },
+          { q: "The narrative suggests that happiness:", options: ["Is entirely dependent on love and relationships", "Can be found through moral reflection and personal resilience", "Requires material security and professional success", "Is unpredictable and cannot be influenced"], answer: 1 },
+          { q: "The ending, where Victoria is left with the card, implies:", options: ["She will inevitably fail to find satisfaction", "She is trapped into making a future deal with the visitor", "She retains autonomy and may choose happiness on her own terms", "Her life is predetermined by external forces"], answer: 2 }
+        ],
+        answerKey: [1, 2, 1, 0, 0, 0, 3, 1, 1, 2],
+      },
+      {
+        title: "Journalism, Media, and Tech Trends 2025",
+        text: `News organisations are braced for multiple challenges in 2025 that will likely include further attacks from hostile politicians and economic headwinds. Changes to search will become a major grievance as AI interfaces start to generate ‘story like’ answers to news queries.
+Despite these difficulties, many publishers remain optimistic about business prospects. 'Trump unleashed' could lead to a surge in web traffic and subscriptions. However, re-engaging audiences that have fallen out of the habit of consuming news is a key challenge.
+Just 41% of editors and CEOs say they are confident about the prospects for journalism, though 56% are confident about their own business prospects. Around 74% are worried about a potential decline in referral traffic from search engines.
+In response, publishers are building relationships with AI platforms such as ChatGPT and Perplexity. With consumer attention switching to video, move publisher effort is planned for YouTube, TikTok, and Instagram.
+Subscription and membership remain the biggest revenue focus (77%), ahead of display (69%). Use of AI continues to increase, with 87% of newsrooms being fully or somewhat transformed by Gen AI. Publishers are exploring AI summaries, audio conversion, and translation features to increase engagement.`,
+        questions: [
+          { q: "According to the report, what is one major challenge news organizations face in 2025?", options: ["Declining influence of AI-generated content", "Loss of visibility due to AI-driven platforms and changes to search", "A reduction in political polarization", "Oversaturation of print media"], answer: 1 },
+          { q: "How do news organizations view their business prospects compared to journalism itself?", options: ["Less confident about business but optimistic about journalism", "Equally confident in both journalism and business", "More confident about business than the prospects for journalism", "Pessimistic about both business and journalism"], answer: 2 },
+          { q: "Which platform has seen a worsening perception among publishers due to politicization?", options: ["TikTok", "Instagram", "X/Twitter", "Bluesky"], answer: 2 },
+          { q: "What is the primary revenue focus for most publishers according to the survey?", options: ["Events and donations", "Subscription and membership", "Affiliate revenue", "Native advertising"], answer: 1 },
+          { q: "How are publishers planning to use AI in 2025?", options: ["Only for back-end automation and workflow management", "To transform newsrooms, personalise formats, and create AI-driven content", "To replace journalists entirely", "Only for chatbots and voice interfaces"], answer: 1 },
+          { q: "Which strategy is highlighted as a way to reduce churn among subscribers?", options: ["Increasing reliance on display advertising", "Bundling new products into ‘all-access’ subscriptions", "Limiting AI-generated content", "Outsourcing editorial work to freelance writers"], answer: 1 },
+          { q: "What is a key concern related to the influence of personalities and creators on journalism?", options: ["They increase engagement without affecting traditional news", "They might lead to the loss of editorial stars and overshadow institutional reporting", "They reduce the need for subscription models", "They have no measurable effect on journalism"], answer: 1 },
+          { q: "What percentage of respondents expect AI technologies to fully or somewhat transform newsrooms?", options: ["13%", "42%", "60%", "87%"], answer: 3 },
+          { q: "Which area is NOT explicitly mentioned as a focus for new product development in 2025?", options: ["Games", "Education", "Health and wellness", "Youth-focused content"], answer: 2 },
+          { q: "What is the main advice implied for publishers facing AI-driven and social media changes?", options: ["Maintain traditional methods and ignore new platforms", "Embrace technological change while staying true to core journalistic values", "Focus solely on influencer-driven content", "Rely exclusively on Google and TikTok for traffic"], answer: 1 }
+        ],
+        answerKey: [1, 2, 2, 1, 1, 1, 1, 3, 2, 1],
+      },
+      {
+        title: "Philippines tops outsourcing index",
+        text: `The Philippines ranked No. 1 globally as an outsourcing destination, edging out traditional leader India on the strength of cost competitiveness, English proficiency and workforce capability. On the latest Ataraxis Global Outsourcing Talent Index, the Philippines earned a score of 90.65.
+The report cited the country's "strong balance of cost, English, and talent" as key drivers. The Philippines outperformed India in English proficiency (90 vs 60) and ranked No. 28 globally.
+In digital infrastructure, the Philippines scored 70, higher than India’s 50, with strong connectivity in Manila, Cebu and Davao. India remains competitive in talent depth (100 vs 90). Both countries were matched in labor cost and business stability.
+The report noted a shift in the Philippines' outsourcing profile toward specialized roles such as bookkeepers, data analysts, and healthcare virtual assistants, moving beyond traditional voice-based services.`,
+        questions: [
+          { q: "Why did the Philippines surpass India as the top outsourcing destination according to the Ataraxis Index?", options: ["It offers the lowest labor cost globally.", "It balances cost, English proficiency, and workforce capability better than India.", "It has deeper talent depth in technical roles than India.", "It is ranked first in global infrastructure."], answer: 1 },
+          { q: "How does the Philippines’ English proficiency contribute to its outsourcing competitiveness?", options: ["It ensures seamless communication with international clients and aligns with global business expectations.", "It primarily attracts local clients who value English-speaking staff.", "It allows the Philippines to dominate technical software development.", "It reduces the need for additional training in specialized roles."], answer: 0 },
+          { q: "What inference can be made from the Philippines’ shift from voice-based services to specialized roles?", options: ["The country is struggling to maintain traditional call center services.", "There is a strategic move to capture higher-value, skill-intensive outsourcing opportunities.", "Specialized roles are easier to outsource than voice-based work.", "This shift will decrease overall competitiveness in the outsourcing market."], answer: 1 },
+          { q: "What does India’s perfect score in talent depth indicate about its outsourcing strengths?", options: ["It dominates cost-sensitive, low-skilled work.", "It is stronger in technical, knowledge-intensive roles than the Philippines.", "It leads in English proficiency globally.", "It has better digital infrastructure than the Philippines."], answer: 1 },
+          { q: "How might the Philippines’ higher infrastructure score than India affect outsourcing decisions?", options: ["It allows more reliable connectivity and supports scalable digital operations.", "It guarantees lower labor costs.", "It ensures dominance in technical software engineering roles.", "It offsets weaker English proficiency in global communications."], answer: 0 },
+          { q: "What can be concluded about the global outsourcing market from the Philippines overtaking India?", options: ["Cost is the sole determinant of outsourcing success.", "English proficiency, infrastructure, and workforce versatility are increasingly decisive factors.", "India is no longer competitive in any outsourcing sector.", "Outsourcing preferences remain unchanged, favoring traditional leaders."], answer: 1 },
+          { q: "Why might the report emphasize that the Philippines is on par with countries like Ireland and Switzerland for English proficiency?", options: ["To highlight its competitive edge in attracting clients seeking high communication standards.", "To show that labor costs are comparable to developed nations.", "To demonstrate superiority in technical digital skills.", "To suggest that outsourcing from the Philippines is risk-free."], answer: 0 },
+          { q: "What strategic implication does the evenly matched labor cost and business stability between India and the Philippines have for clients?", options: ["Clients may prioritize workforce skills and infrastructure over cost when choosing a destination.", "Clients will automatically prefer India due to tradition.", "Labor cost differences are irrelevant in global outsourcing decisions.", "Business stability is not a factor in outsourcing decisions."], answer: 0 },
+          { q: "How does the report suggest AI and digital tools may influence future outsourcing roles?", options: ["The Philippines will lose competitiveness due to automation.", "Both countries may need to invest in specialized skills to maintain relevance.", "AI will replace the need for English proficiency.", "Technical roles will become less important in outsourcing strategy."], answer: 1 },
+          { q: "Based on the report, which combination of factors is most likely to define successful outsourcing destinations in the next five years?", options: ["Cost efficiency and political stability only", "English proficiency, infrastructure, and high-value skill depth", "Tradition, labor abundance, and voice-based service capability", "Market size and government subsidies only"], answer: 1 }
+        ],
+        answerKey: [1, 0, 1, 1, 0, 1, 0, 0, 1, 1],
+      },
+      {
+        title: "“Ode to a Nightingale”",
+        text: `My heart aches, and a drowsy numbness pains
+My sense, as though of hemlock I had drunk,
+Or emptied some dull opiate to the drains
+One minute past, and Lethe-wards had sunk:
+'Tis not through envy of thy happy lot,
+ But being too happy in thine happiness,—
+That thou, light-winged Dryad of the trees
+ In some melodious plot
+Of beechen green, and shadows numberless,
+Singest of summer in full-throated ease.
+
+O, for a draught of vintage! that hath been
+Cool'd a long age in the deep-delved earth,
+Tasting of Flora and the country green,
+Dance, and Provençal song, and sunburnt mirth!
+O for a beaker full of the warm South,
+Full of the true, the blushful Hippocrene,
+With beaded bubbles winking at the brim,
+And purple-stained mouth;
+That I might drink, and leave the world unseen,
+ And with thee fade away into the forest dim:
+
+Fade far away, dissolve, and quite forget
+What thou among the leaves hast never known,
+The weariness, the fever, and the fret
+Here, where men sit and hear each other groan;
+Where palsy shakes a few, sad, last gray hairs,
+Where youth grows pale, and spectre-thin, and dies;
+Where but to think is to be full of sorrow
+And leaden-eyed despairs,
+Where Beauty cannot keep her lustrous eyes,
+Or new Love pine at them beyond to-morrow.`,
+        questions: [
+          { q: "What is the primary emotional state expressed by the speaker at the beginning of the poem?", options: ["Envy and resentment toward the nightingale", "Drowsy numbness and a sense of escape from reality", "Joy and exhilaration at the beauty of nature", "Anger at the limitations of human life"], answer: 1 },
+          { q: "The reference to “hemlock” and “Lethe” suggests that the speaker desires:", options: ["A physical adventure in nature", "A temporary death or oblivion to escape human suffering", "A deep connection with the divine", "To outshine the nightingale in song"], answer: 1 },
+          { q: "When Keats calls the nightingale a “light-winged Dryad of the trees,” he emphasizes:", options: ["The bird’s mythical qualities and ethereal beauty", "The nightingale’s ability to solve human problems", "The bird’s connection to mortal suffering", "Its role as a domestic symbol of comfort"], answer: 0 },
+          { q: "The speaker’s longing for a “draught of vintage” or “beaker full of the warm South” most likely symbolizes:", options: ["Desire for alcohol and intoxication", "Desire for sensory pleasure and imaginative transcendence", "A literal longing to travel to southern Europe", "Disappointment in the present season"], answer: 1 },
+          { q: "How does the poem contrast human experience with the nightingale’s existence?", options: ["Humans are immortal, while the bird’s life is fleeting.", "Humans are trapped in suffering and aging, while the nightingale sings in carefree, eternal beauty.", "Humans enjoy fleeting pleasures, while the bird suffers in silence.", "Humans are more attuned to nature than the nightingale."], answer: 1 },
+          { q: "Which theme is most strongly emphasized in these stanzas?", options: ["The inevitability of death and decay", "Human superiority over nature", "The nightingale’s hidden sorrows", "The political turmoil of society"], answer: 0 },
+          { q: "What does “leaden-eyed despairs” suggest about the speaker’s perception of human life?", options: ["It is vibrant and full of hope", "It is heavy, depressing, and filled with sorrow", "It is mysterious and unknowable", "It is playful and fleeting"], answer: 1 },
+          { q: "The speaker’s desire to “fade away into the forest dim” is best interpreted as:", options: ["Literal escape into the woods", "A wish for imaginative or emotional escape from human suffering", "A plan to abandon society permanently", "An urge to physically join the nightingale"], answer: 1 },
+          { q: "How does Keats use sensory imagery in this excerpt?", options: ["To emphasize the mechanical nature of modern life", "To create a vivid contrast between the pleasures of nature and human suffering", "To argue for the superiority of civilization", "To describe scientific processes in nature"], answer: 1 },
+          { q: "Which literary technique is most prominent in these stanzas?", options: ["Allegory of political events", "Apostrophe and vivid sensory imagery", "Satire of contemporary society", "Dramatic irony about the nightingale’s fate"], answer: 1 }
+        ],
+        answerKey: [1, 1, 0, 1, 1, 0, 1, 1, 1, 1],
+      },
+      {
+        title: "Jabberwocky",
+        text: `’Twas brillig, and the slithy toves
+      Did gyre and gimble in the wabe:
+All mimsy were the borogoves,
+      And the mome raths outgrabe.
+
+“Beware the Jabberwock, my son!
+      The jaws that bite, the claws that catch!
+Beware the Jubjub bird, and shun
+      The frumious Bandersnatch!”
+
+He took his vorpal sword in hand;
+      Long time the manxome foe he sought—
+So rested he by the Tumtum tree
+      And stood awhile in thought.
+
+And, as in uffish thought he stood,
+      The Jabberwock, with eyes of flame,
+Came whiffling through the tulgey wood,
+      And burbled as it came!
+
+One, two! One, two! And through and through
+      The vorpal blade went snicker-snack!
+He left it dead, and with its head
+      He went galumphing back.
+
+“And hast thou slain the Jabberwock?
+      Come to my arms, my beamish boy!
+O frabjous day! Callooh! Callay!”
+      He chortled in his joy.
+
+’Twas brillig, and the slithy toves
+      Did gyre and gimble in the wabe:
+All mimsy were the borogoves,
+      And the mome raths outgrabe.`,
+        questions: [
+          { q: "What type of poem is “Jabberwocky”?", options: ["Narrative with invented words", "Historical account", "Love poem", "Political satire"], answer: 0 },
+          { q: "Who warns the protagonist about the Jabberwock?", options: ["His father", "His friend", "A wizard", "A teacher"], answer: 0 },
+          { q: "What weapon does the protagonist use to fight the Jabberwock?", options: ["Bow and arrow", "Vorpal sword", "Magic wand", "Spear"], answer: 1 },
+          { q: "Which of the following best describes the Jabberwock?", options: ["Friendly and playful", "Dangerous with biting jaws and claws", "Small and harmless", "Invisible and quiet"], answer: 1 },
+          { q: "What does the protagonist do after killing the Jabberwock?", options: ["Hides from the enemy", "Galumphs back with the Jabberwock’s head", "Runs into the forest", "Gives it to the Jubjub bird"], answer: 1 },
+          { q: "What is the tone of the poem in the lines “O frabjous day! Callooh! Callay!”?", options: ["Sad and mournful", "Joyful and triumphant", "Angry and frustrated", "Calm and reflective"], answer: 1 },
+          { q: "What is repeated at the beginning and end of the poem?", options: ["A battle scene", "The opening stanza about the slithy toves", "A conversation with the father", "The Jabberwock’s roar"], answer: 1 },
+          { q: "Which of the following best defines the word “galumphing” in context?", options: ["Walking proudly or triumphantly", "Whispering quietly", "Running away in fear", "Hiding in the trees"], answer: 0 },
+          { q: "What literary device is most evident throughout the poem?", options: ["Simile", "Nonsense/Invented language (neologisms)", "Foreshadowing", "Irony"], answer: 1 },
+          { q: "What is the protagonist’s attitude toward danger?", options: ["Fearful and hesitant", "Brave and determined", "Ignorant and careless", "Confused and reluctant"], answer: 1 }
+        ],
+        answerKey: [0, 0, 1, 1, 1, 1, 1, 0, 1, 1],
+      },
+      {
+        title: "The Power of Friendship",
+        text: `Why do humans form friendships? To share experiences and innermost thoughts, easing the pain of loneliness. We need friends for our psychological well-being.
+We identify potential friends by recognizing value and common ground. C.S. Lewis said, "Friendship must be about something." It is about mutual affinity—like attracts like.
+Research shows people with close friends are more satisfied with life and less likely to suffer from depression. Strong social connections reduce the risk of mortality and heart conditions. Humans are social animals who need interaction for robust health.
+Absence of strong social bonds leads to greater health risks. This is why we should check in with our friends and community regularly.
+By developing meaningful relationships, everyone benefits. We fulfill the true purpose of humanity: to help each other and make the world a more connected place.`,
+        questions: [
+          { q: "What does the passage imply about the relationship between shared interests and the formation of friendships?", options: ["Shared interests are sufficient but not necessary for strong friendships", "Mutual affinity often provides the foundation for meaningful connections", "Only trivial common interests, like food, influence friendships", "Friendships based on shared hobbies are less valuable than familial ties"], answer: 1 },
+          { q: "Which of the following best summarizes the evidence used to support the psychological benefits of friendships?", options: ["Anecdotal stories from famous authors", "Peer-reviewed studies and meta-analyses showing improved life satisfaction", "Surveys comparing urban and rural populations", "Historical examples of social communities"], answer: 1 },
+          { q: "What can be inferred about the relationship between friendship and physical health?", options: ["Social connections indirectly influence mortality and chronic disease risk", "Friendship is irrelevant to physical health", "Strong social bonds guarantee complete immunity from illness", "Only psychological benefits affect physical health"], answer: 0 },
+          { q: "How does the author address the potential consequences of social isolation?", options: ["By presenting statistical evidence linking isolation to health risks", "By emphasizing personal anecdotes without research support", "By suggesting isolation enhances independence", "By noting that isolation primarily affects older adults"], answer: 0 },
+          { q: "Why does the author reference C.S. Lewis’s statement, “Friendship must be about something”?", options: ["To highlight that friendships require shared purpose or interests", "To argue that friendship is overrated", "To suggest friendship depends on wealth or status", "To compare Western and Eastern ideas of friendship"], answer: 0 },
+          { q: "According to the passage, which factor differentiates casual acquaintances from meaningful friends?", options: ["Their social media presence", "Mutual engagement and shared values or passions", "Geographic proximity", "Financial contributions to each other"], answer: 1 },
+          { q: "Which reasoning technique is primarily used to argue for the importance of nurturing friendships?", options: ["Inductive reasoning through statistical studies", "Deductive logic from moral philosophy alone", "Emotional appeal without evidence", "Hypothetical scenarios unrelated to reality"], answer: 0 },
+          { q: "What does the passage suggest is the broader societal implication of fostering friendships?", options: ["It increases national GDP", "It contributes to a healthier, happier, and more interconnected society", "It creates dependence on others", "It reduces individual autonomy"], answer: 1 },
+          { q: "How does the passage balance the discussion of psychological and physical benefits of friendships?", options: ["By focusing exclusively on mental well-being", "By integrating research evidence to show both are intertwined", "By prioritizing physical health outcomes over social experiences", "By mentioning only anecdotal support for both benefits"], answer: 1 },
+          { q: "What is the author’s underlying assumption about human nature?", options: ["Humans are naturally solitary and thrive alone", "Humans are inherently social beings who flourish through connections", "Humans benefit from competition more than companionship", "Humans rely primarily on material wealth for well-being"], answer: 1 }
+        ],
+        answerKey: [1, 1, 0, 0, 0, 1, 0, 1, 1, 1],
+      },
+      {
+        title: "The Potion Master's Apprentice",
+        text: `Annabel, the potion master’s apprentice, mixed a sparkling purple potion with yellow stones and animal tongues. When she heard the master wake up, she hid the bowl under the table.
+The next morning, the potion master’s dog spoke to her! "There was a bowl under the table. I tried some. And now I can talk!"
+Annabel was terrified. When the master came in, the dog barked: "Good morning, master!" The master spat his coffee onto the ceiling in shock.
+But he wasn't angry. He realized he could sell the potion. Soon, the shop was busy from dawn till dusk as everyone wanted to talk to their animals. Annabel and the master became wealthy.
+One evening, three huge horses with black hair pushed their way into the house. They did not look friendly.
+"Which of you knows the recipe?" neighed the first horse loudly.
+"Her! Her!" cried the potion master, fleeing out the back door.
+Annabel and her dog were cornered. "You work for that man?" the horse asked.
+Annabel nodded.
+"Not anymore."`,
+        questions: [
+          { q: "What does the purple liquid with gold flecks most likely symbolize in the story?", options: ["Danger and mystery", "Wealth and prosperity", "Magical potential and creativity", "Routine tasks of the potion master"], answer: 2 },
+          { q: "Why does Annabel hide the bowl under the table?", options: ["She wants to surprise the potion master later", "She fears being caught breaking rules", "She wants the potion to finish on its own", "She wants the dog to taste it first"], answer: 1 },
+          { q: "How does the author create a sense of humor in the scene with the talking dog?", options: ["Through exaggerated reactions and absurd events", "By describing the dog’s magical origin", "By focusing on Annabel’s inner thoughts only", "Through detailed explanations of potion ingredients"], answer: 0 },
+          { q: "What is implied about the potion master’s personality?", options: ["He is strict and unforgiving", "He is opportunistic and business-minded", "He dislikes animals", "He is unaware of magical ingredients"], answer: 1 },
+          { q: "Why do townspeople want to talk to animals after Annabel’s potion is discovered?", options: ["To improve their language skills", "To satisfy curiosity, gain control, or spy on others", "To learn magical recipes", "To communicate exclusively with their pets"], answer: 1 },
+          { q: "How does the story portray Annabel’s character development?", options: ["From fearful apprentice to resourceful innovator", "From mischievous child to obedient servant", "From quiet observer to antagonist", "From selfish beginner to greedy merchant"], answer: 0 },
+          { q: "Which event marks the story’s turning point?", options: ["Annabel mixing the potion for the first time", "The dog begins talking after tasting the potion", "The potion master waking up in the middle of the night", "Annabel selling the potion to townspeople"], answer: 1 },
+          { q: "What is the significance of the three horses at the end of the story?", options: ["They symbolize a new magical threat and a challenge for Annabel", "They represent the potion master’s wealth", "They indicate that Annabel will retire", "They are a reward from the townspeople"], answer: 0 },
+          { q: "How does the author maintain suspense throughout the story?", options: ["By alternating between magical surprises and immediate consequences", "By revealing all potion effects at the beginning", "By describing only the townspeople’s actions", "By avoiding dialogue entirely"], answer: 0 },
+          { q: "Which of the following best describes the story’s tone?", options: ["Light-hearted, whimsical, and adventurous", "Serious, instructional, and cautionary", "Mysterious and eerie without humor", "Tragic and somber"], answer: 0 }
+        ],
+        answerKey: [2, 1, 0, 1, 1, 0, 1, 0, 0, 0],
+      },
+    ],
+  },
 };
