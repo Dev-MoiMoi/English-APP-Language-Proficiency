@@ -103,20 +103,23 @@ export default function EmailResultCard({
         year: 'numeric', month: 'long', day: 'numeric',
       }),                          // Template: {{date}}
 
-      // ── Score fields ──
-      SCORE: score !== undefined ? score : 'N/A',     // Template: {{SCORE}}
-      TOTAL: totalQuestions !== undefined ? totalQuestions : 'N/A', // Template: {{TOTAL}}
+      // ── Score fields — matches {{score}} and {{total}} in template ──
+      score: score !== undefined ? score : 'N/A',
+      total: totalQuestions !== undefined ? totalQuestions : 'N/A',
+      score_display: score !== undefined ? `${score} / ${totalQuestions}` : 'N/A',
 
-      // ── Feedback fields ──
-      feedback: aiFeedback || 'No feedback available. Complete the activity to receive personalized feedback.',
-      tips: extractTips(aiFeedback),
+      // ── Feedback fields — matches {{ai_feedback}} and {{improvement_tips}} in template ──
+      ai_feedback: aiFeedback || 'No feedback available. Complete the activity to receive personalized feedback.',
+      improvement_tips: extractTips(aiFeedback),
+
+      // ── Link & contact fields — matches {{website_url}} and {{contact_email}} ──
+      website_url: 'https://digilingph.vercel.app',
+      contact_email: 'support@digilingph.com',
 
       // ── Fallback / extra fields for compatibility ──
       to_name: userName,
       skill_name: skillName,
       cefr_level: levelLabel || level,
-      score_display: score !== undefined ? `${score} / ${totalQuestions}` : 'N/A',
-      ai_feedback: aiFeedback || 'No feedback available.',
       date_completed: new Date().toLocaleDateString('en-PH', {
         year: 'numeric', month: 'long', day: 'numeric',
       }),
