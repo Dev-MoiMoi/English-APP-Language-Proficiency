@@ -12,6 +12,7 @@ import PushButton from './PushButton';
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || '';
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '';
+const EMAILJS_CONFIGURED  = !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY);
 // ─────────────────────────────────────────────────────────────────────────────
 
 const CONTACT_EMAIL = 'support@digilingph.com';
@@ -62,6 +63,12 @@ export default function EmailResultCard({
     if (!canSend) return;
     setStatus('loading');
     setErrorMsg('');
+
+    if (!EMAILJS_CONFIGURED) {
+      setErrorMsg('Email service is not configured. Please contact support@digilingph.com directly.');
+      setStatus('error');
+      return;
+    }
 
     // Extract a tips section from the AI feedback if available
     const extractTips = (fb) => {
