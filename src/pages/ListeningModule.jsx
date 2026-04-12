@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Headphones, ChevronLeft, CheckCircle, XCircle, RotateCcw, PartyPopper, Check } from 'lucide-react';
+import { Headphones, ChevronLeft, CheckCircle, XCircle, RotateCcw, PartyPopper, Check, ChevronDown, ChevronUp, Eye } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { LISTENING_DATA } from '../data/listeningData';
@@ -25,6 +25,7 @@ export default function ListeningModule() {
   const [aiFeedback, setAiFeedback] = useState('');
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState('');
+  const [showAnswerKey, setShowAnswerKey] = useState(false);
 
   useEffect(() => {
     if (VALID_LEVELS.includes(urlLevel)) {
@@ -68,7 +69,7 @@ export default function ListeningModule() {
     }
   };
 
-  const handleReset = () => { setAnswers({}); setSubmitted(false); setAiFeedback(''); setAiError(''); };
+  const handleReset = () => { setAnswers({}); setSubmitted(false); setAiFeedback(''); setAiError(''); setShowAnswerKey(false); };
   const handleSend = () => { if (!email) { alert('Please enter your email.'); return; } setSent(true); };
 
   if (!level) {
@@ -200,7 +201,45 @@ export default function ListeningModule() {
                     </div>
                   </div>
                 </div>
-                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'center', flexDirection:'column' }}>
+                <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'flex-start', flexDirection:'column' }}>
+                  
+                  {/* Collapsible Answer Key */}
+                  <div className="card" style={{ width: '100%', padding: '20px 24px', border: '1px solid var(--border)' }}>
+                    <button 
+                      onClick={() => setShowAnswerKey(!showAnswerKey)}
+                      style={{ 
+                        width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                        background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+                        color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem'
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <Eye size={20} color="var(--listening)" />
+                        View Correct Answer Key
+                      </div>
+                      {showAnswerKey ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    </button>
+                    
+                    {showAnswerKey && (
+                      <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid var(--border)', animation: 'fadeIn 0.3s ease' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+                          {lesson.questions.map((q, idx) => (
+                            <div key={idx} style={{ 
+                              display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', 
+                              background: 'var(--bg-secondary)', borderRadius: 8, fontSize: '0.9rem'
+                            }}>
+                              <span style={{ fontWeight: 800, color: 'var(--listening)', minWidth: 25 }}>Q{idx + 1}:</span>
+                              <span style={{ fontWeight: 600 }}>{String.fromCharCode(65 + lesson.answerKey[idx])}</span>
+                              <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                ({q.options[lesson.answerKey[idx]]})
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
                   {/* AI Feedback */}
                   <div style={{ width:'100%' }}>
                     <AIFeedbackCard
