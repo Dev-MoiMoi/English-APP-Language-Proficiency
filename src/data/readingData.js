@@ -5,8 +5,8 @@
 // ─────────────────────────────────────────────
 
 import imgTimetable from '../assets/Reading/A2 LEVEL/IMG_9699.PNG';
-import imgNoticeboard from '../assets/Reading/B1 LEVEL/IMG_9698.PNG';
-import imgTravelGuide from '../assets/Reading/B1 LEVEL/IMG_9700.PNG';
+import imgAdvertisement from '../assets/Reading/B1 LEVEL/Advertisement.PNG';
+import imgTravelGuide from '../assets/Reading/B1 LEVEL/Travel Guide.PNG';
 
 export const READING_DATA = {
   A1: {
@@ -790,7 +790,8 @@ Great tip, Lou. I’ve got a cork board with pins. I use it in the same way.`,
       },
       {
         title: 'Travel Guide',
-        text: `Learn about the beautiful attractions in San Francisco, Santa Cruz, and Los Angeles. From the Golden Gate Bridge to Disneyland, explore the best of California.`,
+        image: imgTravelGuide,
+        text: `Please refer to the travel guide image provided below to answer the following questions. Explore the best of California — from San Francisco and Santa Cruz to Hollywood and Disneyland.`,
         questions: [
           { q: "Which city is described as having a historic marketplace with trendy restaurants, shops, and street performers?", options: ["San Francisco", "Santa Cruz", "Los Angeles", "Hollywood"], answer: 0 },
           { q: "What can you do at Pier 39 in San Francisco?", options: ["Visit a prison", "See a marketplace with shops and restaurants", "Ride a rollercoaster", "Go skateboarding"], answer: 1 },
@@ -807,7 +808,8 @@ Great tip, Lou. I’ve got a cork board with pins. I use it in the same way.`,
       },
       {
         title: 'Advertisement',
-        text: `Practise understanding real-life announcements. Check out these notices for services, job opportunities, classes, and rentals.`,
+        image: imgAdvertisement,
+        text: `Please refer to the noticeboard image provided below to answer the following questions. Read the real-life announcements carefully for services, job opportunities, classes, and rentals.`,
         questions: [
           { q: "What kind of service is offered in notice A?", options: ["Guitar lessons", "Computer repair", "Drummer for a band", "Babysitting"], answer: 1 },
           { q: "For whom is the \"DRUMMER WANTED\" notice (B) looking for a musician?", options: ["A classical orchestra", "A recently-formed indie rock band", "A jazz ensemble", "A folk music group"], answer: 1 },

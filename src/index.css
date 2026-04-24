@@ -153,15 +153,15 @@ img {
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  border-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px);
+  background: transparent;
+  color: var(--text-main);
+  border-color: var(--border);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.7);
+  background: var(--surface-2);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .btn-skill {
